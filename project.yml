@@ -185,8 +185,8 @@ sidebar:
         entries:
         - title: 조직 및 플릿 ID
           url: "/task-iam-rename-organization.html"
-        - title: ID 및 액세스 관리 API 참조
-          url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
+        - title: 콘솔 로컬 배포 API 참조
+          url: https://docs.netapp.com/us-en/console-local-automation/index.html
       - title: 지원되는 LLM 제공자 및 모델
         url: "/reference-llm-supported-models.html"
       - title: ONTAP 알림 참조

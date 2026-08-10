@@ -616,7 +616,6 @@
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">고객께서 Console 에이전트 VM을 중지했다가 다시 시작해야 하는 경우, 클라우드 공급자의 콘솔을 이용하거나 온프레미스 관리 표준 절차를 사용하여 수행해야 합니다.</block>
   <block id="2402a0b8d9aa0c3e1beaccf0071277cc" category="doc">NetApp Console 로컬 배포 소개</block>
   <block id="258ea65dfbe28db96b93f873d22fbf91" category="inline-link">NetApp Console 로컬 배포 알아보기</block>
-  <block id="ce81420610b8020a6acb739f0390a18d" category="paragraph"><block ref="2fadf269e2027f86d038dabc5375655c" category="inline-link-rx"></block>.</block>
   <block id="01d7fad8bf6934be5b2c4a94892a6089" category="summary">NetApp Console 로컬 배포를 관리 및 모니터링하는 방법을 알아보십시오. 감사 활동, 구독, 유지 관리, 문제 해결 및 멤버 액세스가 포함됩니다.</block>
   <block id="c6c906d845365b31f1a3d974e79792f1" category="doc">NetApp Console 로컬 배포의 관리 및 모니터링에 대해 알아보십시오</block>
   <block id="670ed77781e2c20b187adbc14ae28dad" category="paragraph">NetApp Console 로컬 배포를 완료한 후에는 관리 및 모니터링 툴을 사용하여 활동을 검토하고, VM을 유지 관리하고, 멤버 액세스를 관리할 수 있습니다.</block>
@@ -1358,7 +1357,6 @@
   <block id="2d7f2870497453a86a12da6f94cb0a9f" category="paragraph"><block ref="f7c67828ff7f607ca1bc8919fb69ebbf" category="inline-link-macro-rx"></block>. <block ref="e01d44fc54d486a034f841e933fc70ed" category="inline-link-macro-rx"></block>. <block ref="4c3b986ebd4373d4b40bb3283f715233" category="inline-link-macro-rx"></block>. <block ref="9e153fbb74c19e5f630133420be99e05" category="inline-link-macro-rx"></block>.</block>
   <block id="ac63bb5663971c98e9ad66f59e257a30" category="summary">NetApp Console은 콘솔 에이전트를 사용하여 클라우드 및 온프레미스 스토리지 시스템을 관리하는 SaaS 애플리케이션입니다. NetApp Console 로컬 배포는 정책 시행, 드리프트 수정 및 완벽한 데이터 주권을 제공하는 엔터프라이즈 규모의 ONTAP 플릿 관리를 위한 자체 호스팅 방식의 에이전트리스 가상 머신입니다.</block>
   <block id="267558ffb45143b1115e7dd8dede4d71" category="doc">NetApp Console 로컬 배포와 NetApp Console 비교</block>
-  <block id="b62b0cb68edb564847cb923dcc89b9ec" category="paragraph">&lt;stdin&gt;에서 해결되지 않은 디렉티브 - include::https://raw.githubusercontent.com/NetAppDocs/console-all-family/main/intro-family.adoc[lines=15..-1]</block>
   <block id="78ce23a07fc5f5c4c30ea7cb2384f4ec" category="summary">NetApp Console 로컬 배포에 대한 자주 묻는 질문(배포, 스토리지 클래스, 플릿, RBAC, 모니터링, AI 기반 관리 및 데이터 보호 포함).</block>
   <block id="cecce547077372cc84d04ba0fa938934" category="doc">NetApp Console 로컬 배포 FAQ</block>
   <block id="835a92e241911a3a63a77e05ba970d63" category="paragraph">이 FAQ는 NetApp Console 로컬 배포에 대한 일반적인 질문에 답변합니다. 콘솔 로컬 배포를 배포, 설정 및 관리할 때 유용한 개념, 필수 조건 및 시스템 동작에 중점을 둡니다.</block>
@@ -3688,7 +3686,6 @@
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">참조</block>
   <block id="7ba642558e7e1d23e0a4b6d723fe8cb1" category="sidebar">NetApp Console 로컬 배포 API</block>
   <block id="454d0fa294eacaf6687d76609e9d2de5" category="sidebar">조직 및 플릿 ID</block>
-  <block id="48a692835317bf23f0c6c5786de2ed91" category="sidebar">ID 및 액세스 관리 API 참조</block>
   <block id="cddab4871d91f1348299c2439e79e2c8" category="sidebar">ONTAP 알림 참조</block>
   <block id="4bb64a663d2c295916c54bfd11eb3986" category="sidebar">클러스터 보안 규정 준수 범주</block>
   <block id="6833b9c301b8c18695d73d7766de5136" category="sidebar">스토리지 VM 보안 규정 준수 범주</block>
@@ -3696,4 +3693,67 @@
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="sidebar">지원 등록</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="sidebar">도움말 보기</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">법적 고지</block>
+  <block id="d84803ce394c9284844fcf1a08967ee4" category="paragraph"><block ref="a11bdddbf642d1f60f3b9997ef8c00d9" category="inline-link-rx"></block>.</block>
+  <block id="8e3ec462216d5097444b77ca00f80473" category="admonition">클라우드 및 온프레미스 환경을 관리하고 NetApp에서 플랫폼 인프라를 관리하도록 하려면 NetApp Console을 선택하십시오. 대규모 온프레미스 ONTAP 환경을 관리하고 완벽한 데이터 주권 및 정책 기반 스토리지 관리가 필요한 경우 NetApp Console 로컬 배포를 선택하십시오.</block>
+  <block id="d7500dc8af696cd476663bebb9d0fcb4" category="paragraph">NetApp은 NetApp Console을 SaaS 애플리케이션으로 호스팅하고 유지 관리합니다. 가입 후 즉시 스토리지 관리를 시작할 수 있습니다. 스토리지 시스템 관리를 위해 클라우드 또는 온프레미스 환경에 경량 Console 에이전트를 배포합니다. 에이전트는 NetApp Console 플랫폼에 아웃바운드로 연결되며, NetApp은 플랫폼 인증, 업그레이드 및 가용성을 자동으로 처리합니다.</block>
+  <block id="773ad4889739d9b22df6b5f152501006" category="paragraph">NetApp Console은 제한된 모드(아웃바운드 연결이 제한된 자체 퍼블릭 클라우드에 설치)와 프라이빗 모드(온프레미스 또는 클라우드에 설치하고 NetApp Console 플랫폼에 연결할 수 없는 모드, 에어갭 환경 포함)도 지원합니다.</block>
+  <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">NetApp Console 배포 모드에 대해 알아보세요</block>
+  <block id="5ceffe99385ecce35b5a538a16ca57cb" category="paragraph"><block ref="dc7c11e9da585b9fa1e35ca44da95ccc" category="inline-link-rx"></block>.</block>
+  <block id="6bc8e262d6c87c1cc67ba2e2ef69c080" category="paragraph">NetApp Console은 Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3, Google Cloud Storage, E-Series, StorageGRID, 온프레미스 ONTAP 클러스터 등의 클라우드 스토리지를 포함하여 가장 광범위한 스토리지 시스템을 지원합니다. NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Copy and Sync, NetApp Data Classification 등을 포함한 전체 NetApp 데이터 서비스 제품군에 대한 액세스를 제공합니다. NetApp Console은 Digital Advisor, Lifecycle Planning, Sustainability 대시보드 등의 지원 계약 기능도 제공합니다.</block>
+  <block id="abd3ebf1d0176fca066a577a665824f3" category="paragraph">NetApp Console은 가장 많은 기능을 원하고, 운영 유지 관리에 드는 노력을 줄이며, 유연한 라이선스를 원하는 하이브리드 클라우드 환경을 관리하는 조직에 가장 적합합니다.</block>
+  <block id="78c9351d6bfa969cec1e259c5314fb98" category="inline-link">NetApp Console에 대해 알아보십시오^.</block>
+  <block id="a005dfa7e9da2ab070c9b2a2cc506605" category="paragraph"><block ref="a005dfa7e9da2ab070c9b2a2cc506605" category="inline-link-rx"></block></block>
+  <block id="fcc4637d90c046c4a4ef32a9afdaa6fc" category="paragraph">NetApp Console 로컬 배포를 사용하면 관리 트래픽이 환경 외부로 나가지 않고 NetApp Console 제어 플레인을 온프레미스 인프라 내에서 완전히 실행할 수 있습니다. 가상 어플라이언스 이미지를 사용하여 콘솔을 가상 머신으로 배포하고 vCenter 환경의 다른 가상 머신처럼 관리할 수 있습니다. 콘솔 에이전트는 필요하지 않습니다. 가상 머신은 ONTAP 클러스터와 직접 통신합니다.</block>
+  <block id="5fb781e175de9970e2718bb94cc3d721" category="paragraph">NetApp 콘솔 프라이빗 모드는 에어갭 및 온프레미스 배포도 지원하지만, 콘솔 로컬 배포는 엔터프라이즈 규모의 ONTAP 플릿 관리를 위해 특별히 설계되었습니다. 이 모드는 다른 NetApp 콘솔 배포 모드에서는 사용할 수 없는 기능을 추가합니다.</block>
+  <block id="0d7759ae1f20023b009816231b4ec556" category="list-text">스토리지 클래스 정책</block>
+  <block id="704be31d8e2a42e0c7ff6b6f16b73c3e" category="list-text">스토리지 표준을 성능, 용량 및 계층화 요구 사항을 묶어 재사용 가능한 템플릿으로 한 번만 정의합니다. 모든 프로비저닝은 승인된 클래스를 사용하며, Console 로컬 배포는 워크로드를 지속적으로 모니터링하여 규정 준수 여부를 확인하고 편차를 식별합니다.</block>
+  <block id="6d84cd31d161fe86d10b8600c9e49fd4" category="list-text">Fleet 관리</block>
+  <block id="7385a9be1dc0677e5961772473ab82cd" category="list-text">클러스터를 비즈니스 구조를 반영하는 폴더와 플릿으로 구성한 다음, 조직, 폴더 또는 플릿 범위에서 관리 권한을 위임하십시오.</block>
+  <block id="26f4e34d0f8df693380313a828150255" category="list-text">Workload Analyzer</block>
+  <block id="48fa264a7a3c3c0d64a82ae09d190200" category="list-text">지연 시간, 처리량, 초당 입출력 작업 수 및 시간 경과에 따른 구성 변경 사항 간의 상관 관계를 분석하여 워크로드에 영향을 미치기 전에 성능 문제를 찾아냅니다.</block>
+  <block id="f54523e7e9970026552c0beada420de7" category="list-text">대규모 언어 모델 통합</block>
+  <block id="dbebae0d47896a2bb083de1589f27131" category="list-text">자연어를 사용하여 스토리지를 프로비저닝하고, 경고를 조사하고, 스토리지 환경에 대한 상황별 답변을 얻으려면 자체 대규모 언어 모델에 연결하십시오.</block>
+  <block id="8375d985c183af61065e987103e69be9" category="list-text">안내형 및 자동화된 문제 해결</block>
+  <block id="2d9389b28f495b8afdcdf8f214f11df3" category="list-text">워크로드가 스토리지 클래스를 벗어나거나 경고가 발생하면 Console 로컬 배포를 통해 Fix-It 권장 사항을 제공합니다. 안내에 따라 단계별로 문제를 해결하거나 원클릭 자동 복구 기능을 사용하여 수동 작업 없이 규정 준수를 복원할 수 있습니다.</block>
+  <block id="73c797fde7608d30c65279e6ca248835" category="list-text">이메일 및 웹훅을 통한 알림 전송</block>
+  <block id="69c0257b1ba8a3ba7687d4f7a9883d7f" category="list-text">스토리지 조건 변경 시 관련 팀에 알림이 전달되도록 이메일 및 웹훅 알림 채널을 구성합니다. 웹훅은 기존 모니터링 및 인시던트 관리 툴과 통합됩니다.</block>
+  <block id="00c24ecc0e9a6f1c6a5202f40e8c96c1" category="paragraph">콘솔 로컬 배포는 온프레미스 ONTAP 클러스터 및 NetApp Backup and Recovery를 지원합니다. 또한 연합 인증을 위해 Active Directory와 통합되며 로컬 사용자를 위한 다중 요소 인증을 지원합니다.</block>
+  <block id="be6ca74d1ea996c7c4fe59d3f22d39a4" category="paragraph">콘솔 로컬 배포는 정책 기반 프로비저닝, 자동화된 규정 준수 검사 및 완벽한 데이터 주권이 필요한 대규모 온프레미스 ONTAP 환경을 보유한 조직에 가장 적합합니다.</block>
+  <block id="70b86d6aa7fb00fd1d760b33b8607159" category="inline-link-macro">NetApp Console 로컬 배포에 대해 알아보십시오^.</block>
+  <block id="f64bf1d04df251b82d06554b478f9ae4" category="paragraph"><block ref="f64bf1d04df251b82d06554b478f9ae4" category="inline-link-macro-rx"></block></block>
+  <block id="0161e3d40bdbea6ca6998c8c60165b33" category="section-title">기능 비교</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">기능</block>
+  <block id="23dad8eedc041cc12dbd56726f7f5a94" category="cell">예 (콘솔 에이전트 필요)</block>
+  <block id="f92b8f818d9b311ddfe493bf8fd9d4d1" category="cell">예 (콘솔 가상 머신과의 직접 통신)</block>
+  <block id="5a33f8c167d1b84a718d0a9ab656e684" category="cell">클라우드 스토리지 시스템(Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3 등)</block>
+  <block id="5caa8b77e08ebd3908f7b342222cc4f7" category="cell">E-Series 및 StorageGRID</block>
+  <block id="cc6088539286339733631d73fb51774b" category="cell">NetApp Backup and Recovery</block>
+  <block id="19cbafc0246850c97323cac4fb786794" category="cell">NetApp Disaster Recovery</block>
+  <block id="9a0927d2ec4654dfab564a09f0cadbf9" category="cell">NetApp Ransomware Resilience</block>
+  <block id="4b3238b2edd994dbf80a66b2fce8841e" category="cell">NetApp Copy and Sync</block>
+  <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp Data Classification</block>
+  <block id="b003a63279cc18b6fb1177d6fe5ae8b8" category="cell">Digital Advisor, 수명 주기 계획, 지속 가능성</block>
+  <block id="f2f74222833c136454ac1c309093ce22" category="cell">스토리지 클래스 정책 및 규정 준수 모니터링</block>
+  <block id="99a7a1aa741fd89b57934cd02731f4af" category="cell">플릿 관리(폴더 및 플릿)</block>
+  <block id="d7ae72f8784c3d332b0fa036311ef934" category="cell">AI 지원 운영을 위한 대규모 언어 모델 통합</block>
+  <block id="c72a03504491ce72b87c21f210031a3e" category="section-title">콘솔 설정 및 보안</block>
+  <block id="a0e3089d312c100208595d685b4104d2" category="cell">배포 모델</block>
+  <block id="9e2f8f0cf1d9ef87b70b0927b7aa6315" category="cell">Software as a service, NetApp에서 호스팅(다양한 배포 모드 제공)</block>
+  <block id="e94cfdb1bcf6790d1866d9d05ab27a2c" category="cell">자체 인프라에서 호스팅되는 가상 머신</block>
+  <block id="ab73a743c1f5fee13984f7219394896a" category="cell">Console 에이전트 필요</block>
+  <block id="85ed230bbcc941c129c9222b688edfe4" category="cell">소프트웨어 업그레이드</block>
+  <block id="18989411927d889b19d609bcc0020172" category="cell">자동, NetApp 관리</block>
+  <block id="e1ba155a9f2e8c3be94020eef32a0301" category="cell">수동</block>
+  <block id="bd521aa973861d923b4649240bf09964" category="cell">사용자 인터페이스 액세스</block>
+  <block id="860d51de2751d60b75aa2bf4908d091f" category="cell">NetApp 콘솔 애플리케이션(인터넷 또는 가상 머신 액세스)</block>
+  <block id="04628071892bff31fcda3d0180ce0e14" category="cell">콘솔 가상 머신(로컬, 인터넷 연결 필요 없음)</block>
+  <block id="a492925ae64557e89b32f29da418b5eb" category="cell">데이터 주권</block>
+  <block id="8128bb2b2b16d567cc51992879a88b83" category="cell">관리 트래픽은 NetApp Console 플랫폼으로 전송됩니다.</block>
+  <block id="9a85d1c8f123f061c5e7f2ebb079e094" category="cell">데이터나 관리 트래픽이 사용자 환경 외부로 유출되지 않습니다.</block>
+  <block id="eed7d7eea79968152bcb0157d198eeea" category="cell">ID 페더레이션</block>
+  <block id="53a3be21a870370dce986e82b79657cb" category="cell">다중 요소 인증(로컬 사용자)</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="cell">라이센싱</block>
+  <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">마켓플레이스 구독 및 자체 라이선스 사용</block>
+  <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">Bring-your-own-license</block>
+  <block id="955bb7127a670884e7aac906d810238a" category="sidebar">콘솔 로컬 배포 API 참조</block>
 </blocks>

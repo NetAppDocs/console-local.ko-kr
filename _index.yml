@@ -82,13 +82,13 @@ indexpage:
   - title: API 문서
     links:
     - title: Agentic Platform
-      url: "/agentic/get-configs.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/agentic/get-configs.html
     - title: 자산
-      url: "/asset/get-organizations-aggregates.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/asset/get-organizations-aggregates.html
     - title: ID 및 액세스 관리
-      url: "/tenancyv4/get-fleets.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/tenancyv4/get-fleets.html
     - title: 스토리지 관리
-      url: "/storage-management/get-v1-organizations-capacitypolicies.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/storage-management/get-v1-organizations-capacitypolicies.html
   - title: 블로그 및 커뮤니티
     links:
     - title: NetApp Console 로컬 배포

@@ -7,4 +7,4 @@
 [[introducing-netapp-console-local-deployment]]
 === NetApp Console 로컬 배포 소개
 
-https://docs.netapp.com/us-en/console-local/netapp-console-local.html["NetApp Console 로컬 배포 알아보기"].
+https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Console 로컬 배포 알아보기"].
