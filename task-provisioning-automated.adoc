@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: task-provisioning-automated.html 
+keywords: automated provisioning, automation, policy-driven, storage class, netapp console 
+summary: 스토리지 클래스 및 정책을 사용하여 NetApp Console 로컬 배포에서 자동 스토리지 프로비저닝을 구성합니다. 
+---
+= NetApp Console 로컬 배포에서 스토리지를 자동으로 프로비저닝합니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 자동 프로비저닝을 사용하여 스토리지 클래스 표준 및 플릿 용량에 따라 스토리지를 할당합니다. 자동 프로비저닝은 일관된 결과를 얻고 수동 의사 결정을 줄이려는 경우에 가장 적합합니다.
+
+.필수 액세스 역할
+슈퍼 관리자, 조직 관리자, 폴더 또는 플릿 관리자, 또는 스토리지 관리자. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+자동 프로비저닝은 일반적으로 용량 및 성능 여유 공간을 기준으로 사용 가능한 시스템 중에서 가장 적합한 배치 위치를 선택한 다음 스토리지 클래스에 맞춰 설정을 조정하여 워크로드를 프로비저닝합니다.
+
+
+
+[[before-you-begin]]
+== 시작하기 전에
+
+* 대상 플릿에서 최소 하나 이상의 ONTAP 클러스터가 검색되었는지 확인하십시오.
+* 클래스 기반 결과를 얻으려면 스토리지 클래스가 존재하고 플릿과 연결되어 있는지 확인하십시오.
+

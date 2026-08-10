@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: concept-secure-access.html 
+keywords: security, access control, MFA, multi-factor authentication, AD, Active Directory, LDAP, LDAPS, directory services, authentication, zero trust, secure access governance, reduce attack surface, netapp console local 
+summary: Active Directory 통합 및 다중 요소 인증을 포함하여 NetApp Console 로컬 배포에서 사용할 수 있는 보안 옵션에 대해 알아보십시오. 
+---
+= NetApp Console 로컬 배포에 대한 보안 액세스에 대해 알아보십시오.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포는 스토리지 관리 환경을 보호하고 액세스 권한을 제어하기 위해 여러 계층의 보안을 제공합니다.
+
+
+
+[[active-directory-integration]]
+== Active Directory 통합
+
+NetApp Console 로컬 배포를 Active Directory에 연결하여 사용자가 기존 회사 자격 증명으로 로그인할 수 있도록 하십시오. 이렇게 하면 Console 로컬 배포에서 별도의 암호를 설정할 필요가 없어지고 조직에 추가하는 사용자에 대해 디렉터리 기반 로그인을 지원합니다.
+
+link:task-iam-active-directory-integrate.html["Active Directory를 NetApp Console 로컬 배포와 통합"].
+
+
+
+[[multi-factor-authentication]]
+== 다중 요소 인증
+
+사용자는 자격 증명이 유출되더라도 무단 액세스를 방지하기 위해 추가적인 인증 계층인 다단계 인증(MFA)을 활성화할 수 있습니다.
+
+link:task-user-settings.html["NetApp Console 로컬 배포에 대해 MFA 활성화"].
+
+
+
+[[identity-and-access-management]]
+== ID 및 액세스 관리
+
+사용자 인증 후, NetApp Console 로컬 배포 환경 내에서 사용자가 수행할 수 있는 작업을 제어하고 모니터링합니다.
+
+역할 기반 액세스 제어를 사용하여 각 구성원이 보고 관리할 수 있는 항목을 정의하십시오. 구성원을 특정 플릿에 할당하여 각자의 책임과 관련된 스토리지 리소스에만 액세스할 수 있도록 하십시오.
+
+* link:concept-identity-and-access-management.html["NetApp Console 로컬 배포 ID 및 액세스 관리에 대해 알아보십시오"]
+* link:concept-iam-rbac.html["NetApp Console 로컬 배포 역할 기반 액세스 제어에 대해 알아보기"]
+* link:task-iam-manage-members-permissions.html["NetApp Console 로컬 배포에서 멤버를 추가하고 역할을 할당합니다."]
+* link:task-iam-users-fleets-assign.html["NetApp Console 로컬 배포에서 플릿 액세스 할당 관리"]
+
+
+
+
+[[audit-logging]]
+== 감사 로깅
+
+NetApp Console 로컬 배포 환경에서 모든 사용자 활동(API 및 서비스 계정 사용자 포함)을 추적하여 규정 준수 및 보안 조사를 수행할 수 있습니다.
+
+link:task-audit-console-activity.html["NetApp Console 로컬 배포에 대한 감사 로그 보기"].

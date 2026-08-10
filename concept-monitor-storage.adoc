@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: concept-monitor-storage.html 
+keywords: monitor, health, performance, alerts, workload analyzer, remediation, netapp console local, console local 
+summary: NetApp Console 로컬 배포는 전체 스토리지 상태에 대한 대시보드, 심층적인 볼륨 분석, 구성 가능한 알림, 안내 또는 자동화된 문제 해결 기능을 제공하여 워크로드에 영향을 미치기 전에 스토리지 문제를 식별하고 해결할 수 있도록 지원합니다. 
+---
+= NetApp Console 로컬 배포의 스토리지 모니터링
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포를 사용하면 대시보드, 경고, 심층 분석 및 문제 해결 기능을 통해 여러 플릿에서 스토리지를 모니터링할 수 있으므로 워크로드에 영향을 미치기 전에 문제를 발견하고 해결할 수 있습니다.
+
+
+
+[[monitor-fleet-wide-health-with-dashboards]]
+== 대시보드를 통해 전체 플리트 상태를 모니터링합니다.
+
+먼저 대시보드를 사용하여 스토리지 상태 및 성능을 빠르게 확인하십시오. 홈 페이지에서 주요 지표를 한눈에 확인하고, 대시보드 테이블을 열어 사전 정의된 대시보드와 사용자 지정 대시보드를 확인하며, 더 자세한 정보가 필요할 때는 알림, 조사 및 해결 섹션으로 이동하십시오.
+
+* link:task-storage-dashboard.html["NetApp Console 로컬 배포에서 홈 페이지 메트릭 보기"]
+* link:task-dashboard-manage.html["NetApp Console 로컬 배포에서 대시보드를 최신 상태로 유지"]
+* link:concept-custom-dashboards.html["NetApp Console 로컬 배포에서 사용자 지정 대시보드에 대해 알아보십시오."]
+
+
+
+
+[[investigate-performance-issues]]
+== 성능 문제 조사
+
+워크로드 분석기를 사용하여 개별 볼륨의 성능 문제를 조사하십시오. 이 도구는 지연 시간, 처리량, IOPS 및 구성 변경 사항 간의 상관 관계를 분석하여 근본 원인을 정확히 파악할 수 있도록 도와줍니다.
+
+* link:concept-workload-analyzer.html["NetApp Console 로컬 배포 워크로드 분석기에 대해 알아보세요."]
+* link:task-analyzer-volume-latency-investigate.html["NetApp Console 로컬 배포 환경에서 볼륨의 높은 지연 시간 문제 조사"]
+* link:task-analyzer-volume-throughput-investigate.html["NetApp Console 로컬 배포 환경에서 볼륨에 대한 높은 처리량 요구 사항을 조사합니다."]
+* link:reference-workload-analyzer-metrics.html["NetApp Console 로컬 배포에서 워크로드 분석기 메트릭에 대해 알아보세요."]
+
+
+
+
+[[configure-alerts-and-notifications]]
+== 알림 및 통지 설정
+
+스토리지 상태에 대한 주의가 필요한 경우 담당자에게 알림이 전달되도록 경고 정책 및 알림 채널을 구성하십시오. 예를 들어 용량 부족 경고는 스토리지 팀에, 보호 경고는 조치를 취할 수 있는 백업 관리자에게 전달할 수 있습니다.
+
+link:task-alert-rules-manage.html["NetApp Console 로컬 배포에서 알림 및 경고 정책 구성"]. link:task-alerts-monitor.html["NetApp Console 로컬 배포에서 스토리지 알림 보기"].
+
+
+
+[[remediate-issues]]
+== 문제 해결
+
+문제가 감지되면 NetApp Console 로컬 배포에서 직접 해결하십시오.
+
+* *자동화된 문제 해결* — NetApp Console 로컬 배포는 사전 정의된 규칙에 따라 시정 조치를 자동으로 적용합니다.
+* *안내된 수정* — 각 작업을 완전히 제어하면서 단계별 권장 사항에 따라 문제를 해결합니다.
+

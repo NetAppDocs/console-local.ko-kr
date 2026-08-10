@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: task-customize-dashboard-cards.html 
+keywords: add card, dashboard card, card template, widget, preview, netapp console local 
+summary: 범위, 템플릿, 리소스 및 시간 창을 설정하여 NetApp Console 로컬 배포에서 대시보드 카드를 사용자 지정합니다. 
+---
+= NetApp Console 로컬 배포에서 카드 사용자 지정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포 환경에서 SLA 위험, 용량 압박 또는 반복적인 경고 노이즈 등 운영자가 가장 중요하게 생각하는 신호에 집중할 수 있도록 대시보드 카드를 사용자 지정할 수 있습니다. 이 항목을 활용하여 팀에서 내려야 하는 운영 관련 의사 결정에 맞춰 대시보드 보기를 구성하십시오.
+
+
+
+[[before-you-begin]]
+== 시작하기 전에
+
+* 대시보드 카드를 배치할 대시보드를 생성하거나 엽니다.
+* 사용 가능한 템플릿 및 메트릭을 link:reference-dashboard-card-templates.html["NetApp Console 로컬 배포의 사용자 정의 대시보드 카드 및 메트릭에 대해 알아보십시오."]에서 검토합니다.
+
+
+
+
+[[add-cards-while-refining-an-existing-dashboard]]
+== 기존 대시보드를 세분화하면서 카드 추가
+
+기존 대시보드를 구체화하고 특정 운영 질문에 답변하는 카드를 빠르게 추가해야 할 때 이 옵션을 사용하십시오.
+
+.단계
+. 카드를 추가하려는 대시보드를 엽니다.
+. *카드 추가*를 선택합니다.
+. 카드에 사용할 플릿, 시스템 또는 볼륨 등 * 리소스 유형 * 을 선택한 다음 사용 가능한 리소스 목록에서 리소스를 선택하십시오.
+. 측정항목과 카드 유형을 선택하려면 *다음*을 선택합니다.
+. 표시할 메트릭을 선택하세요. 메트릭 유형별로 필터링할 수 있습니다. *메트릭 유형*에서 *성능*, *용량*, *상태* 또는 *알림*을 선택하거나 이름으로 특정 메트릭을 검색할 수 있습니다. 사용 가능한 메트릭은 선택한 리소스 유형에 따라 다릅니다.
++
+link:reference-dashboard-card-templates.html#metrics-list["사용 가능한 측정 지표에 대해 알아보십시오."]
+
+. 대시보드에 포함할 카드를 선택하고 *다음*을 선택합니다.
++
+한 번에 하나의 카드만 선택할 수 있습니다. 카드 미리보기에서는 선택한 측정항목과 리소스 유형에 대한 실시간 데이터를 확인할 수 있습니다.
+
+. 카드 이름을 지정하세요. 이름은 대시보드 내에서 고유해야 합니다.
+. 카드 미리보기를 검토하고 카드 이름과 설명을 입력한 다음 *추가*를 선택합니다.
+. 추가 카드에 대해서도 이 단계를 반복하십시오.
+. 대시보드를 저장합니다.
+
+
+
+
+[[related-information]]
+== 관련 정보
+
+* link:task-storage-dashboard.html["NetApp Console 로컬 배포에서 홈 페이지 메트릭 보기"]
+* link:concept-custom-dashboards.html["NetApp Console 로컬 배포에서 사용자 지정 대시보드에 대해 알아보십시오."]
+* link:task-dashboard-create.html["사용자 지정 대시보드 만들기"]
+* link:task-dashboard-manage.html["사용자 지정 대시보드 관리"]
+* link:reference-dashboard-card-templates.html["NetApp Console 로컬 배포의 사용자 정의 대시보드 카드 및 메트릭에 대해 알아보십시오."]
+

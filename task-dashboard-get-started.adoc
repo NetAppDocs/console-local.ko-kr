@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard-get-started.html 
+keywords: dashboards, quick start, get started, custom dashboards, predefined dashboards, monitoring, netapp console local 
+summary: NetApp Console 로컬 배포 환경에서 대시보드 사용을 시작하려면 홈 페이지 및 사전 정의된 대시보드를 검토하고, 사용자 지정 대시보드를 생성하고, 최신 상태로 유지하십시오. 
+---
+= NetApp Console 로컬 배포에서 대시보드 시작하기
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포 환경에서는 다음 워크플로를 따라 광범위한 보기에서 특정 보기로 모니터링하십시오. 홈 페이지 대시보드를 검토하고, 사전 정의된 대시보드를 검토하고, 사용자 지정 대시보드를 생성하고, 대시보드를 최신 상태로 유지하십시오.
+
+.필수 액세스 역할
+모든 역할. 대시보드에는 사용자가 볼 수 있는 권한이 있는 리소스만 표시됩니다. 사용 가능한 리소스 목록에 리소스가 표시되지 않으면 해당 리소스를 볼 수 있는 권한이 없는 것입니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"] 홈 페이지에서 기준 상태 확인
+[role="quick-margin-para"]
+홈 페이지 대시보드를 사용하여 조직 수준의 용량, 알림, 성능 및 데이터 보호 상태를 검토할 수 있습니다.
+
+[role="quick-margin-list"]
+* link:task-storage-dashboard.html["NetApp Console 로컬 배포에서 홈 페이지 메트릭 보기"]
+* link:concept-monitor-storage.html["NetApp Console 로컬 배포에서 스토리지 모니터링에 대해 알아보기"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] 다른 사전 정의된 대시보드 검토
+[role="quick-margin-para"]
+*Storage > 대시보드*를 열어 역할별 추가 보기를 위한 사전 정의된 대시보드를 검토하십시오.
+
+[role="quick-margin-list"]
+* link:task-dashboard-manage.html["NetApp Console 로컬 배포에서 대시보드 관리"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3"] 집중 모니터링을 위한 맞춤형 대시보드 구축
+[role="quick-margin-para"]
+특정 리소스, 지표 및 기간에 대한 맞춤형 보기가 필요할 때 사용자 지정 대시보드를 만드십시오.
+
+[role="quick-margin-list"]
+* link:task-dashboard-create.html["사용자 지정 대시보드 만들기"]
+* link:task-customize-dashboard-cards.html["NetApp Console 로컬 배포에서 대시보드 카드 사용자 지정"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 대시보드를 최신 상태로 유지합니다
+[role="quick-margin-para"]
+우선순위가 변경될 경우 사용자 지정 대시보드를 편집, 복제 또는 삭제하여 대시보드를 업데이트합니다.
+
+[role="quick-margin-list"]
+* link:task-dashboard-manage.html["NetApp Console 로컬 배포에서 대시보드 관리"]
+* link:reference-dashboard-card-templates.html["NetApp Console 로컬 배포의 사용자 정의 대시보드 카드 및 메트릭에 대해 알아보십시오."]
+
+
+.관련 정보
+* link:concept-custom-dashboards.html["NetApp Console 로컬 배포에서 사용자 지정 대시보드에 대해 알아보십시오."]
+* link:task-storage-dashboard.html["NetApp Console 로컬 배포에서 홈 페이지 메트릭 보기"]
+

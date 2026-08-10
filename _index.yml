@@ -1,0 +1,99 @@
+---
+indexpage:
+  title: NetApp Console 로컬 배포 설명서
+  summary: NetApp Console 로컬 배포 사용
+  keywords: storage management, data protection, operational efficiency, cost optimization,
+    business continuity, unified management, self-hosted, high availability, LLM integration,
+    role-based access control, storage provisioning
+  lead: NetApp Console 로컬 배포를 통해 스토리지 인프라를 관리, 모니터링 및 보호하십시오.
+  tiles:
+  - title: NetApp Console 로컬 배포에 대해 알아보십시오.
+    links:
+    - title: NetApp Console 로컬 배포에 대해 알아보십시오.
+      url: "/concept-netapp-console-local.html"
+    - title: ID 및 액세스 관리에 대해 알아보십시오
+      url: "/concept-identity-and-access-management.html"
+    - title: NetApp Console 로컬 배포를 사용한 스토리지 관리에 대해 알아보십시오.
+      url: "/concept-manage-storage.html"
+    - title: LLM 통합(AI 기반 관리)에 대해 알아보기
+      url: "/concept-llm-integration.html"
+    - title: NetApp Backup and Recovery에 대해 알아보세요
+      url: "/concept-data-services.html"
+    - title: NetApp Console 로컬 배포와 NetApp Console 비교
+      url: "/console-differences.html"
+  - title: Console 로컬 배포를 실행하고 스토리지 시스템을 추가합니다.
+    links:
+    - title: Console 로컬 배포에 대해 알아보기
+      url: "/concept-deploy-netapp-console-local.html"
+    - title: vCenter 환경에 Console 로컬 배포를 설치합니다.
+      url: "/task-install-agent-on-prem-ova.html"
+    - title: NetApp Console 로컬 배포에 스토리지 시스템 추가
+      url: "/task-add-systems.html"
+    - title: NetApp Console 설정 빠른 시작
+      url: "/task-quick-start-console-setup.html"
+    - title: LLM을 연결하고 Console 도우미를 활성화합니다.
+      url: "/task-llm-connect.html"
+    - title: 알림을 위한 이메일 서버 연결
+      url: "/task-console-configure-notifications-delivery.html"
+  - title: 액세스 및 조직 설정
+    links:
+    - title: ID 및 액세스 시작하기
+      url: "/task-iam-fleet-mgmt-get-started.html"
+    - title: 폴더 및 플릿 생성
+      url: "/task-iam-manage-folders-fleets.html"
+    - title: 멤버 추가 및 역할 할당
+      url: "/task-iam-manage-members-permissions.html"
+    - title: Active Directory와 통합
+      url: "/task-iam-active-directory-integrate.html"
+  - title: 스토리지 프로비저닝 및 표준화
+    links:
+    - title: 스토리지 등급 및 정책에 대해 알아보기
+      url: "/concept-storage-classes.html"
+    - title: 스토리지 클래스를 생성합니다
+      url: "/task-storage-class-manage.html"
+    - title: 수동으로 스토리지 프로비저닝
+      url: "/task-provisioning-manual.html"
+    - title: 스토리지 자동 제공
+      url: "/task-provisioning-automated.html"
+  - title: 스토리지 모니터링, 조사 및 개선
+    links:
+    - title: NetApp Console에서 스토리지 상태 모니터링에 대해 알아봅니다
+      url: "/concept-monitor-storage.html"
+    - title: 홈페이지 통계 보기
+      url: "/task-storage-dashboard.html"
+    - title: NetApp Console 로컬 배포에서 대시보드 시작하기
+      url: "/task-dashboard-get-started.html"
+    - title: 워크로드 분석기를 사용하여 볼륨 조사
+      url: "/concept-workload-analyzer.html"
+    - title: 알림 보기 및 관리
+      url: "/task-alerts-monitor.html"
+  - title: AI 기반 관리 사용
+    links:
+    - title: NetApp Console 어시스턴트 사용
+      url: "/task-console-asst-use.html"
+    - title: 지원되는 LLM 제공자 및 모델
+      url: "/reference-llm-supported-models.html"
+  - title: 콘솔 로컬 배포 유지 관리
+    links:
+    - title: vCenter에 설치된 Console 로컬 배포 유지 관리
+      url: "/task-console-local-vm-config.html"
+    - title: NetApp Console 로컬 배포 작업 감사
+      url: "/task-audit-console-activity.html"
+  - title: API 문서
+    links:
+    - title: Agentic Platform
+      url: "/agentic/get-configs.html"
+    - title: 자산
+      url: "/asset/get-organizations-aggregates.html"
+    - title: ID 및 액세스 관리
+      url: "/tenancyv4/get-fleets.html"
+    - title: 스토리지 관리
+      url: "/storage-management/get-v1-organizations-capacitypolicies.html"
+  - title: 블로그 및 커뮤니티
+    links:
+    - title: NetApp Console 로컬 배포
+      url: https://www.netapp.com/console
+    - title: NetApp Data Services
+      url: https://www.netapp.com/data-services/
+    - title: NetApp 커뮤니티
+      url: https://community.netapp.com/

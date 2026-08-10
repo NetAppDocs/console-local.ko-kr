@@ -1,0 +1,125 @@
+---
+sidebar: sidebar 
+permalink: concept-netapp-console-local.html 
+keywords: netapp console local, overview, self-hosted, data sovereignty, storage management, ONTAP, fleet management, RBAC, policy enforcement, storage governance 
+summary: NetApp Console 로컬 배포에 대해 알아보십시오. NetApp Console은 자체 환경에 배포할 수 있는 자체 호스팅 스토리지 관리 플랫폼입니다. 
+---
+= NetApp Console 로컬 배포에 대해 알아보십시오.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포를 사용하면 NetApp Console 자율 제어 플레인을 자체 인프라에서 호스팅하고 실행할 수 있습니다.
+
+통합 스토리지 관리, 정책 시행, 대규모 자동화 및 AI 기반 운영을 제공합니다. 데이터, 메타데이터 또는 관리 트래픽이 사용자 환경 외부로 유출되지 않습니다.
+
+
+
+[[deploy-and-operate-console-in-your-own-infrastructure]]
+== Console을 자체 인프라에 배포하고 운영합니다.
+
+NetApp Console 로컬 배포는 자체 인프라에서 실행되므로 팀에서 배포, 연결 및 일상적인 운영을 제어할 수 있습니다. 콘솔 에이전트를 배포하고, 콘솔 가상 머신을 유지 관리하며, 모니터링 및 관리 트래픽에 필요한 네트워크 경로를 관리합니다. 이를 통해 기업 관리자는 운영 경계를 완벽하게 제어하면서 관리 데이터를 환경 내부에 유지할 수 있습니다.
+
+* link:task-install-agent-on-prem-ova.html["vCenter에서 OVA를 사용하여 NetApp Console 로컬 배포 설치"].
+* link:task-console-local-vm-config.html["NetApp Console 로컬 배포를 위해 vCenter 또는 ESXi 호스트를 유지 관리하십시오"].
+* link:reference-ports-on-prem.html["NetApp Console 로컬 배포에서 온프레미스 Console 에이전트용 포트에 대해 알아보십시오."].
+
+
+
+
+[[automate-storage-operations-with-apis-and-service-accounts]]
+== API와 서비스 계정을 사용하여 스토리지 운영 자동화
+
+NetApp Console 로컬 배포는 API 기반 통합을 지원하므로 조직에서 반복적인 스토리지 작업을 자동화할 수 있습니다. 서비스 계정을 통해 애플리케이션은 할당된 역할로 인증하고 작업을 수행할 수 있습니다. 대화형 사용자에게 적용되는 것과 동일한 역할 기반 액세스 제어 및 감사 제어가 이러한 작업에 적용됩니다. 이를 통해 엔터프라이즈 자동화를 지원하는 동시에 액세스 범위를 지정하고 책임성을 유지할 수 있습니다.
+
+* link:task-iam-manage-members-permissions.html["NetApp Console 로컬 배포 조직에 구성원을 추가합니다."].
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetApp Console IAM용 API에 대해 알아보십시오."^]
+
+
+
+
+[[control-access-with-rbac-and-active-directory-integration]]
+== RBAC 및 Active Directory 통합을 통한 액세스 제어
+
+NetApp Console 로컬 배포는 제로 트러스트 역할 기반 액세스 제어(RBAC)를 제공하여 사용자가 관리하는 플릿 및 리소스 내에서 볼 수 있는 권한과 수행할 수 있는 작업을 제한합니다. Active Directory와 통합하여 사용자가 기존 회사 자격 증명으로 로그인할 수 있으며, 로컬 사용자는 다단계 인증(MFA)을 추가하여 추가적인 검증 계층을 확보할 수 있습니다. 액세스 거버넌스는 조직의 전반적인 ID 및 액세스 관리 방침과 일관성을 유지합니다.
+
+* link:concept-identity-and-access-management.html["NetApp Console 로컬 배포의 ID 및 액세스 관리에 대해 알아보십시오"].
+* link:concept-secure-access.html["NetApp Console 로컬 배포에 대한 보안 액세스에 대해 알아보십시오."].
+
+
+
+
+[[organize-fleets-and-delegate-storage-administration]]
+== 플리트를 구성하고 스토리지 관리를 위임합니다
+
+NetApp Console 로컬 배포는 리소스를 폴더 및 플릿으로 구성하여 관리 규모를 확장합니다. 플릿을 환경, 사업부 또는 지역에 매핑한 다음 조직, 폴더 또는 플릿 범위에서 관리 권한을 위임하여 소유권을 명확하게 유지할 수 있습니다. 이러한 구조는 대규모 스토리지 팀이 정책 일관성 및 거버넌스를 유지하면서 작업을 분산하는 데 도움이 됩니다.
+
+* link:concept-folders-fleets-overview.html["NetApp Console 로컬 배포에서 폴더 및 플릿에 대해 알아보기"].
+* link:concept-storage-fleets.html["NetApp Console 로컬 배포에서 스토리지 플릿에 대해 알아보십시오."].
+
+
+
+
+[[track-and-export-administrative-activity-for-compliance]]
+== 규정 준수를 위한 관리 활동 추적 및 내보내기
+
+모든 관리 작업은 감사 기록을 생성합니다. 보안 및 규정 준수 팀은 이러한 기록을 사용하여 사고를 조사하고, 제어 효과를 입증하고, 감사 요구 사항을 충족할 수 있습니다. 웹훅을 통해 감사 로그를 syslog 서버로 내보내면 중앙 집중식 모니터링, 장기 보존 및 분석이 가능합니다. NetApp Console 로컬 배포는 자체 환경에서 실행되므로 로그 데이터는 인프라 외부로 유출되지 않습니다.
+
+* link:task-audit-console-activity.html["NetApp Console 로컬 배포 활동 감사"].
+
+
+
+
+[[provision-storage-consistently-with-storage-class-policies]]
+== 스토리지 클래스 정책에 따라 일관되게 스토리지를 프로비저닝합니다.
+
+NetApp Console 로컬 배포는 스토리지 클래스(성능, 용량 및 계층화 정책을 재사용 가능한 정의로 묶은 템플릿)를 통해 일관된 스토리지 동작을 적용합니다. 관리자는 스토리지 표준을 한 번만 정의하면 됩니다. 관리자와 자동화된 워크플로는 승인된 클래스를 사용하여 환경 전체의 모든 프로비저닝 작업을 수행합니다. 이를 통해 구성 불일치를 방지하고, 초보 관리자가 프로비저닝 결정을 내리는 데 소요되는 시간을 줄이며, 모든 워크로드가 조직의 표준을 즉시 충족하도록 보장합니다. 프로비저닝 후에도 Console 로컬 배포는 각 워크로드의 규정 준수 여부를 지속적으로 모니터링합니다.
+
+* link:concept-manage-storage.html["NetApp Console 로컬 배포를 사용한 스토리지 관리에 대해 알아보십시오."].
+
+
+
+
+[[monitor-storage-class-compliance-and-remediate-drift-automatically]]
+== 스토리지 클래스 규정 준수 여부를 모니터링하고 규정 위반 사항을 자동으로 수정합니다.
+
+NetApp Console 로컬 배포는 워크로드에 사용된 스토리지 클래스를 기준으로 모든 워크로드를 모니터링합니다. 클러스터 구성 직접 변경이나 성능 저하 등으로 워크로드가 규정을 위반하는 경우, NetApp Console 로컬 배포는 즉시 위반 사항을 표시합니다. 관리자는 안내에 따라 문제 해결 단계를 수행하거나 자동화된 문제 해결 기능을 구성하여 수동 개입 없이 일반적인 규정 위반 상황을 해결할 수 있습니다. 이러한 지속적인 규정 준수 관리는 감사 위험을 줄이고 정기 검토 사이에도 환경의 규정 준수를 유지합니다.
+
+
+
+[[monitor-storage-health-and-receive-alerts-across-fleets]]
+== 전체 스토리지 상태를 모니터링하고 알림을 받습니다.
+
+NetApp Console 로컬 배포를 통해 관리하는 모든 클러스터의 상태와 성능을 한 곳에서 모니터링할 수 있습니다. 전체 클러스터 대시보드는 주의가 필요한 클러스터와 볼륨을 표시합니다. 사용자 지정 대시보드를 사용하면 관리자가 자신의 책임에 맞는 모니터링 보기를 구축할 수 있습니다. 워크로드 분석기는 시간 경과에 따른 지연 시간, 처리량, 리소스 활용률 및 구성 변경 사항 간의 상관 관계를 분석하여 문제가 워크로드에 영향을 미치기 전에 근본 원인을 파악할 수 있도록 지원합니다.
+
+조건 변경 시 적절한 팀에 알림이 전달되도록 이메일 및 웹훅 전송 채널을 구성합니다. 조직 관리자는 대상을 설정하고, 스토리지 관리자는 이를 알림 규칙에 적용하여 운영 모델에 맞는 대응 경로를 설정합니다. 이를 통해 기업 팀은 용량, 성능 및 보호 이벤트에 더욱 신속하게 대응할 수 있습니다.
+
+* link:concept-monitor-storage.html["NetApp Console 로컬 배포에서 스토리지 상태 모니터링에 대해 알아보세요."].
+* link:task-console-configure-notifications-delivery.html["NetApp Console 로컬 배포에서 알림 전달 채널 설정"].
+* link:task-alert-rules-manage.html["NetApp Console 로컬 배포에서 알림에 대한 알림 규칙 구성"].
+
+
+
+
+[[provision-storage-and-investigate-alerts-with-natural-language]]
+== 자연어를 사용하여 스토리지를 프로비저닝하고 알림을 조사합니다.
+
+NetApp Console 로컬 배포는 자체 대규모 언어 모델(LLM)에 연결하여 AI 기반 스토리지 관리를 제공할 수 있습니다. 워크로드를 일반 언어로 설명하여 프로비저닝 계획을 생성하거나, Console에 활성 경고 조사를 요청하거나, 스토리지 환경에 대한 상황별 답변을 얻을 수 있습니다. 모든 AI 작업은 스토리지 클래스 및 계정에 적용되는 역할 기반 액세스 제어의 가이드라인을 준수하며, 민감한 작업은 진행하기 전에 확인이 필요합니다. Console 로컬 배포는 관리자가 구성한 LLM 엔드포인트로만 요청을 전송합니다.
+
+* link:concept-llm-integration.html["NetApp Console 로컬 배포에서 LLM 통합에 대해 알아보세요."].
+
+
+
+
+[[back-up-and-restore-storage-with-netapp-backup-and-recovery]]
+== NetApp Backup and Recovery를 사용하여 스토리지를 백업 및 복원합니다.
+
+프로비저닝 및 모니터링 외에도 NetApp Console 로컬 배포를 통해 NetApp Backup and Recovery에 액세스하여 동일한 인터페이스에서 데이터를 보호할 수 있습니다. 데이터를 백업 및 복원하여 보호 및 복구 요구 사항을 충족할 수 있습니다. 스토리지와 함께 데이터 보호를 관리하면 거버넌스를 일관되게 유지하고 팀이 운영에 필요한 툴 수를 줄일 수 있습니다.
+
+* link:concept-data-services.html["NetApp Console 로컬 배포에서 데이터 서비스에 대해 알아보십시오."].
+

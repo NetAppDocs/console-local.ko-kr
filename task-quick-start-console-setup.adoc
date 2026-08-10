@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-console-setup.html 
+keywords: quick start, setup, set up, console local, admin setup, getting started, folders, fleets, rbac, members, data services, netapp console 
+summary: NetApp Console 로컬 배포를 설정하려면 소프트웨어를 설치하고, 조직을 계획 및 생성하고, 통합을 구성하고, 데이터 서비스를 설정해야 합니다. 
+---
+= NetApp Console 로컬 배포 설정을 위한 빠른 시작
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포를 설치한 후에는 적절한 팀이 적절한 스토리지 리소스를 안전하게 관리할 수 있도록 조직을 설정하십시오. 이 체크리스트를 사용하여 구조를 계획하고, 리소스를 구성하고, 구성원을 추가하고, 통합을 구성하고, 데이터 서비스를 활성화하십시오.
+
+.필수 액세스 역할
+최고 관리자 또는 조직 관리자. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"] NetApp Console 로컬 배포 설치
+[role="quick-margin-list"]
+* 배포 프로세스를 이해하려면 설치 워크플로를 검토하십시오. link:concept-deploy-netapp-console-local.html["NetApp Console 로컬 배포를 위한 설치 워크플로에 대해 알아보십시오."].
+* vCenter에 NetApp Console 로컬 배포를 설치합니다. link:task-install-agent-on-prem-ova.html["NetApp Console 로컬 배포 설치"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] 조직 계획
+[role="quick-margin-list"]
+* 폴더와 플릿이 리소스를 구성하는 방법을 알아보세요. link:concept-folders-fleets-overview.html["폴더와 플릿에 대해 알아보기"].
+* 역할 기반 액세스 제어(RBAC)가 구성원에게 필요한 액세스 권한을 부여하는 방식을 이해하십시오. link:concept-iam-rbac.html["NetApp Console 로컬 배포의 역할 기반 액세스 제어에 대해 알아보십시오"].
+* ID 및 액세스 관리 워크플로를 검토하십시오. link:task-iam-fleet-mgmt-get-started.html["플릿 및 리소스 관리를 위한 IAM 시작하기"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3"] 조직을 설정합니다
+[role="quick-margin-list"]
+* NetApp Console 로컬 배포에 스토리지 시스템을 추가합니다. link:task-add-systems.html["스토리지 시스템 추가"].
+* 회사 구조에 맞는 폴더 및 플릿 계층 구조를 생성하십시오. link:task-iam-manage-folders-fleets.html["폴더 및 플릿 생성"].
+* 리소스를 올바른 폴더 및 플릿과 연결하세요. link:task-iam-manage-resources.html["리소스를 폴더 및 플릿과 연결합니다"].
+* 멤버를 추가하고 초기 역할을 할당합니다. link:task-iam-manage-members-permissions.html["멤버 추가 및 역할 할당"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 통합 및 서비스 구성
+[role="quick-margin-list"]
+* Active Directory와 통합하여 디렉터리 사용자가 콘솔 로컬 배포에 액세스할 수 있도록 합니다. link:task-iam-active-directory-integrate.html["Active Directory와 통합"].
+* 대규모 언어 모델(LLM)을 연결하여 Console 도우미 및 AI 기반 관리 기능을 활성화하십시오. link:task-llm-connect.html["LLM 연결"].
+* 콘솔 로컬 배포에서 알림을 전달하는 방식을 구성합니다. link:task-console-configure-notifications-delivery.html["알림 전달 구성"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] NetApp Backup and Recovery 설정
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html#use-a-netapp-backup-and-recovery-byol-license["NetApp Backup and Recovery 라이선스를 취득하십시오."^]. 고급 백업 및 복구 서비스에 액세스하지 않으려면 이 단계를 건너뛸 수 있습니다.
+* NetApp Console 로컬 배포에 NetApp Backup and Recovery 라이선스를 추가합니다. link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["NetApp Console 로컬 배포에 라이선스 추가"^].
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["사용자에게 NetApp Backup and Recovery에 대한 액세스 권한을 부여합니다."].
+

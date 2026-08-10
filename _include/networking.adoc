@@ -1,0 +1,74 @@
+= 
+:allow-uri-read: 
+
+
+전용 호스트:: 해당 에이전트는 다른 애플리케이션과 공유하는 호스트에서는 지원되지 않습니다. 호스트는 전용 호스트여야 합니다.
+
+
+VPC 및 서브넷:: 콘솔 에이전트를 생성할 때 에이전트가 위치할 VPC와 서브넷을 지정해야 합니다.
+
+
+VNet 및 서브넷:: 콘솔 에이전트를 생성할 때 에이전트가 위치할 VNet과 서브넷을 지정해야 합니다.
+
+
+대상 네트워크와의 연결:: 콘솔 에이전트를 사용하려면 시스템을 생성하고 관리하려는 위치에 대한 네트워크 연결이 필요합니다. 예를 들어, Cloud Volumes ONTAP 시스템을 생성하려는 네트워크나 온프레미스 환경의 스토리지 시스템이 이에 해당합니다.
+
+
+아웃바운드 인터넷 액세스:: 콘솔 에이전트를 배포하는 네트워크 위치는 특정 엔드포인트에 연결하기 위해 아웃바운드 인터넷 연결이 있어야 합니다.
+
+
+NetApp 콘솔에서 접속한 엔드포인트:: SaaS 계층을 통해 제공되는 웹 기반 NetApp Console을 사용하면 데이터 관리 작업을 완료하기 위해 여러 엔드포인트에 연결됩니다. 여기에는 Console에서 Console 에이전트를 배포하기 위해 연결되는 엔드포인트도 포함됩니다.
++
+--
+link:reference-networking-saas-console.html["NetApp 콘솔에서 연결된 엔드포인트 목록을 확인합니다."].
+
+--
+
+
+Azure 지역:: Cloud Volumes ONTAP를 사용하는 경우, Console 에이전트는 관리하는 Cloud Volumes ONTAP 시스템과 동일한 Azure 지역에 배포하거나 Cloud Volumes ONTAP 시스템의  https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 지역 쌍"^]에 배포해야 합니다. 이 요구 사항을 충족하면 Cloud Volumes ONTAP와 연결된 스토리지 계정 간에 Azure Private Link 연결이 사용됩니다.
++
+--
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAP가 Azure Private Link를 사용하는 방법을 알아보십시오."^]
+
+--
+
+
+포트:: 사용자가 직접 시작하거나 Cloud Volumes ONTAP에서 NetApp 지원으로 AutoSupport 메시지를 전송하기 위한 프록시로 사용되지 않는 한, Console 에이전트로 수신되는 트래픽은 없습니다.
++
+--
+* HTTP(80) 및 HTTPS(443)는 로컬 UI에 대한 액세스를 제공하며 이는 드문 상황에서 사용됩니다.
+* SSH(22)는 문제 해결을 위해 호스트에 연결해야 하는 경우에만 필요합니다.
+* 외부 인터넷 연결이 불가능한 서브넷에 Cloud Volumes ONTAP 시스템을 배포하는 경우 포트 3128을 통한 인바운드 연결이 필요합니다.
++
+Cloud Volumes ONTAP 시스템에 AutoSupport 메시지를 전송하기 위한 외부 인터넷 연결이 없는 경우, NetApp Console은 콘솔 에이전트에 포함된 프록시 서버를 사용하도록 해당 시스템을 자동으로 구성합니다. 필요한 사항은 콘솔 에이전트의 보안 그룹에서 포트 3128을 통한 인바운드 연결을 허용하는 것뿐입니다. 콘솔 에이전트를 배포한 후 이 포트를 열어야 합니다.
+
+
+
+--
+
+
+프록시 서버:: NetApp은 명시적 프록시 구성과 투명 프록시 구성을 모두 지원합니다. 투명 프록시를 사용하는 경우 프록시 서버의 인증서만 제공하면 됩니다. 명시적 프록시를 사용하는 경우 IP 주소와 자격 증명도 필요합니다.
++
+--
+* IP 주소
+* 자격 증명
+* HTTPS 인증서
+
+
+--
+
+
+Azure의 공용 IP 주소:: Azure의 Console 에이전트 VM에서 공용 IP 주소를 사용하려면 Console이 해당 공용 IP 주소를 사용하도록 IP 주소가 Basic SKU를 사용해야 합니다.
++
+--
+image:screenshot-azure-sku.png["Azure에서 새 IP 주소를 생성할 때 SKU 필드에서 기본을 선택할 수 있는 스크린샷입니다."]
+
+표준 SKU IP 주소를 대신 사용하는 경우, Console은 공용 IP 대신 Console 에이전트의 _개인_ IP 주소를 사용합니다. Console에 액세스하는 데 사용하는 컴퓨터가 해당 개인 IP 주소에 액세스할 수 없는 경우, Console에서 수행하는 작업이 실패합니다.
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 설명서: 공용 IP SKU"^]
+
+--
+
+
+NTP 활성화:: NetApp Data Classification을 사용하여 회사 데이터 소스를 스캔할 계획이라면 콘솔 에이전트와 NetApp Data Classification 시스템 모두에서 네트워크 시간 프로토콜(NTP) 서비스를 활성화하여 시스템 간 시간을 동기화해야 합니다. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetApp 데이터 분류에 대해 자세히 알아보세요."^]
+

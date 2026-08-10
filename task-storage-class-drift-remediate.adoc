@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-storage-class-drift-remediate.html 
+keywords: storage class drift, drift remediation, compliance, fix-it, guided remediation, automated remediation, drift detection, storage governance, storage standards, netapp console local 
+summary: NetApp Console 로컬 배포 환경에서 스토리지 클래스 드리프트를 찾고, 분석하고, 해결합니다. 
+---
+= NetApp Console 로컬 배포에서 스토리지 클래스 드리프트 해결
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 드리프트 관련 경고를 찾고, 드리프트 결과를 분석하고, 스토리지 클래스 의도와 더 이상 일치하지 않는 워크로드를 수정할 수 있습니다.
+
+.필수 역할
+스토리지 관리자
+
+
+NOTE: 권한이 있는 플릿의 워크로드만 보고 수정할 수 있습니다.
+
+
+
+[[remediate-drift]]
+== 표류 현상 수정
+
+워크로드가 스토리지 클래스의 의도와 더 이상 일치하지 않으면 NetApp Console 로컬 배포에서 경고가 발생합니다. 이 경고를 사용하여 편차를 분석하고 권장되는 해결 방법을 적용하십시오.
+
+일부 문제는 경고에서 직접 해결할 수 있습니다. 다른 문제의 경우, 워크로드 구성을 업데이트하거나 다른 스토리지 클래스를 할당하여 규정 준수를 복원하십시오. 해결 워크플로는 변경 사항을 적용하기 전에 예상되는 영향을 보여줍니다.
+
+.단계
+. *스토리지 > 스토리지 클래스*를 선택합니다.
++
+스토리지 클래스별 드리프트 요약은 *스토리지 클래스별 드리프트* 영역에 표시됩니다. 전체 목록은 표에 표시됩니다.
+
+. *드리프트* 열에서 해당 스토리지 클래스에 대한 *보기*를 선택합니다.
++
+필터가 적용된 *알림 > 개요* 페이지가 열립니다.
+
+. 알림을 선택하여 알림 세부 정보 페이지를 엽니다.
+. *분석*을 선택합니다.
+. *Workload analyzer*에서 결과를 검토하십시오.
++
+구성 드리프트 결과의 경우, 의도한 설정과 실제 설정을 비교하여 변경된 사항을 파악하십시오.
+
+. *수정* 등 권장되는 해결 조치를 선택하십시오.
+. 제안된 변경 사항을 검토하고 시정 조치를 적용하십시오.
+. *Storage > Storage classes*로 돌아가서 워크로드가 더 이상 드리프트된 것으로 표시되지 않는지 확인하십시오.
++
+규정 준수 평가는 최근 구성 변경 사항을 반영하는 데 몇 분 정도 소요될 수 있습니다. 워크로드가 여전히 편차로 표시되는 경우, 경고 세부 정보 페이지로 돌아가서 *분석*을 선택하여 나머지 결과를 검토하십시오.
+
+
+
+
+
+[[related-information]]
+== 관련 정보
+
+* link:concept-storage-classes.html#storage-class-drift-and-compliance["NetApp Console 로컬 배포의 스토리지 클래스 드리프트 및 준수에 대해 알아보십시오"]
+* link:concept-console-alerts.html["스토리지 알림에 대해 알아보기"]
+* link:task-alerts-monitor.html["알림 보기"]
+

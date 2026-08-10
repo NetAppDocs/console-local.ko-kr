@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-predefined-roles.html 
+keywords: predefined roles, iam roles, Organization admin, Folder or fleet admin, Super admin, storage roles, analyst roles, backup and recovery roles, role categories, rbac, identity and access management, access roles, netapp console local 
+summary: NetApp Console 로컬 배포 ID 및 액세스 관리에는 조직 구성원에게 할당할 수 있는 사전 정의된 역할이 포함되어 있습니다. 
+---
+= NetApp Console 로컬 배포 액세스 역할
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포의 ID 및 액세스 관리(IAM)는 조직 구성원에게 리소스 계층 구조의 여러 수준에 걸쳐 할당할 수 있는 사전 정의된 역할을 제공합니다. 이러한 역할을 할당하기 전에 각 역할에 포함된 권한을 이해해야 합니다. 역할은 플랫폼, 애플리케이션 및 데이터 서비스의 세 가지 범주로 나뉩니다.
+
+
+
+[[platform-roles]]
+== 플랫폼 역할
+
+플랫폼 역할은 역할 할당 및 사용자 관리를 포함하여 NetApp Console 로컬 배포 관리 권한을 부여합니다. Console 로컬 배포에는 여러 플랫폼 역할이 있습니다.
+
+[cols="1,2"]
+|===
+| 플랫폼 역할 | 책임 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["조직 관리자"] | 조직 내 모든 플릿과 폴더에 무제한으로 접근할 수 있으며, 모든 플릿이나 폴더에 구성원을 추가하고, 특정 역할이 명시적으로 지정되지 않은 모든 작업을 수행하고 모든 데이터 서비스를 사용할 수 있습니다. 이 역할을 가진 사용자는 적절한 자격 증명이 있는 경우 폴더와 플릿을 생성하고, 역할을 할당하고, 사용자를 추가하고, 시스템을 관리하는 등 조직을 관리합니다. 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["폴더 또는 플릿 관리자"] | 사용자는 할당된 플릿 및 폴더에 대한 무제한 액세스 권한을 갖습니다. 사용자는 자신이 관리하는 폴더 또는 플릿에 구성원을 추가할 수 있을 뿐 아니라, 할당된 폴더 또는 플릿 내의 리소스에 대해 모든 작업을 수행하고 모든 데이터 서비스 또는 애플리케이션을 사용할 수 있습니다. 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["Federation 관리자"] | 사용자가 Console과 디렉터리 서비스 페더레이션을 생성 및 관리할 수 있도록 하여 기존 디렉터리 자격 증명으로 인증할 수 있게 합니다. 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["페더레이션 뷰어"] | 콘솔을 통해 기존 디렉터리 서비스 페더레이션을 볼 수 있습니다. 페더레이션을 생성하거나 관리할 수는 없습니다. 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["최고 관리자"] | 사용자에게 모든 관리자 역할을 부여합니다. 이 역할은 콘솔 관리 권한을 여러 사용자에게 분산할 필요가 없는 소규모 조직을 위해 설계되었습니다. 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["슈퍼 뷰어"] | 사용자에게 모든 뷰어 역할을 부여합니다. 이 역할은 콘솔 관리 책임을 여러 사용자에게 분산할 필요가 없는 소규모 조직을 위해 설계되었습니다. 
+|===
+
+
+[[application-roles]]
+== 애플리케이션 역할
+
+다음은 애플리케이션 범주에 속하는 역할 목록입니다. 각 역할은 지정된 범위 내에서 특정 권한을 부여합니다. 필요한 애플리케이션 또는 플랫폼 역할이 없는 사용자는 해당 애플리케이션에 액세스할 수 없습니다.
+
+[cols="1,2"]
+|===
+| 애플리케이션 역할 | 책임 
+
+
+| link:reference-iam-analyst-roles.html["운영 지원 분석가"] | 감사 페이지 등 알림 및 모니터링 툴에 대한 액세스를 제공합니다. 
+
+
+| link:reference-iam-storage-roles.html["스토리지 관리자"] | 스토리지 상태 및 거버넌스 기능을 관리하고, 스토리지 리소스를 검색하며, 기존 시스템을 수정 및 삭제할 수 있습니다. 
+
+
+| link:reference-iam-storage-roles.html["스토리지 뷰어"] | 스토리지 상태 및 거버넌스 기능을 확인하고 이전에 검색된 스토리지 리소스를 볼 수 있습니다. 기존 스토리지 시스템은 검색, 수정 또는 삭제할 수 없습니다. 
+
+
+| link:reference-iam-storage-roles.html["시스템 상태 전문가"] | 스토리지, 상태 및 거버넌스 기능을 관리하며, 기존 시스템을 수정하거나 삭제할 수 없는 것을 제외하고 스토리지 관리자의 모든 권한을 갖습니다. 
+|===
+
+
+[[data-service-roles]]
+== 데이터 서비스 역할
+
+다음은 데이터 서비스 범주에 속하는 역할 목록입니다. 각 역할은 지정된 범위 내에서 특정 권한을 부여합니다. 필요한 데이터 서비스 역할 또는 플랫폼 역할이 없는 사용자는 데이터 서비스에 액세스할 수 없습니다.
+
+[cols="1,2"]
+|===
+| 데이터 서비스 역할 | 책임 
+
+
+| link:reference-iam-backup-rec-roles.html["백업 및 복구 최고 관리자"] | NetApp Backup and Recovery에서 필요한 작업을 수행하십시오. 
+
+
+| link:reference-iam-backup-rec-roles.html["백업 및 복구 관리자"] | 로컬 스냅샷에 백업하고, 2차 스토리지에 복제하고, 오브젝트 스토리지에 백업합니다. 
+
+
+| link:reference-iam-backup-rec-roles.html["백업 및 복구 복원 관리자"] | 백업 및 복구에서 워크로드를 복원합니다. 
+
+
+| link:reference-iam-backup-rec-roles.html["백업 및 복구 클론 관리자"] | Backup and Recovery에서 애플리케이션과 데이터를 복제합니다. 
+
+
+| link:reference-iam-backup-rec-roles.html["백업 및 복구 뷰어"] | 백업 및 복구 정보를 확인합니다. 
+
+
+| 분류 뷰어 | 사용자가 NetApp Data Classification 스캔 결과를 볼 수 있습니다. 이 역할을 가진 사용자는 액세스 권한이 있는 리소스에 대한 규정 준수 정보를 확인하고 보고서를 생성할 수 있습니다. 이러한 사용자는 볼륨, 버킷 또는 데이터베이스 스키마의 스캔을 활성화하거나 비활성화할 수 없습니다. Data Classification에는 관리자 역할이 없습니다. 
+
+
+| SnapCenter 관리자 | 온프레미스 ONTAP 클러스터의 스냅샷을 NetApp Backup and Recovery for Applications를 사용하여 백업할 수 있는 기능을 제공합니다. 이 역할을 가진 구성원은 다음 작업을 수행할 수 있습니다. * Backup and Recovery > Applications에서 모든 작업 수행 * 권한이 있는 플릿 및 폴더의 모든 시스템 관리 * 모든 NetApp Console 서비스 사용 SnapCenter에는 뷰어 역할이 없습니다. 
+|===
+
+
+[[related-links]]
+== 관련 링크
+
+* link:concept-identity-and-access-management.html["NetApp Console ID 및 액세스 관리에 대해 알아보십시오"]
+* link:task-iam-fleet-mgmt-get-started.html["NetApp Console에서 ID 및 액세스 시작하기"]
+* link:task-iam-manage-members-permissions.html["NetApp Console 조직에서 멤버를 추가하고 역할을 할당합니다"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetApp Console IAM용 API에 대해 알아보십시오."^]
+

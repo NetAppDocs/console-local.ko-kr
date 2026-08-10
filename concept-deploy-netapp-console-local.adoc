@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept-deploy-netapp-console-local.html 
+keywords: deploy, install, vCenter, Linux, high availability, deployment options, netapp console local 
+summary: vCenter 및 Linux 설치 등 NetApp Console 로컬 배포를 위한 배포 옵션에 대해 알아보십시오. 
+---
+= NetApp Console 로컬 배포를 위한 배포 옵션
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포를 vCenter 환경에 설치하십시오.
+
+
+
+[[install-in-your-vcenter-environment]]
+=== vCenter 환경에 설치
+
+사전 구성된 OVA 이미지를 사용하여 VMware vCenter 환경에 NetApp Console 로컬 배포를 가상 어플라이언스로 배포하십시오.
+
+link:task-install-agent-on-prem-ova.html["vCenter 환경에 NetApp Console 로컬 배포를 설치합니다"].
+
+
+
+[[next-steps]]
+== 다음 단계
+
+배포 후 다음 작업을 완료하여 시작하십시오.
+
+* link:task-add-systems.html["NetApp Console 로컬 배포에 스토리지 시스템 추가"]
+* link:task-iam-manage-members-permissions.html["NetApp Console 로컬 배포에서 멤버를 추가하고 역할을 할당합니다."]
+

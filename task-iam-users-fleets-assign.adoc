@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-iam-users-fleets-assign.html 
+keywords: assign members, fleet, folder, access control, roles, storage management, netapp console 
+summary: NetApp Console 로컬 배포에서 폴더 및 스토리지 플릿에 대한 멤버 액세스 할당을 감사하거나 변경합니다. 
+---
+= NetApp Console 로컬 배포에서 플릿 액세스 할당 보기 또는 변경
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 폴더 및 스토리지 플릿에 대한 멤버 액세스 할당을 감사하거나 변경할 수 있습니다. 폴더 및 플릿 관리자는 일반적으로 자신이 관리하는 범위만 표시되는 이 보기에서 작업합니다.
+
+.필수 액세스 역할
+최고 관리자, 조직 관리자, 폴더 관리자 또는 플릿 관리자. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+또는 여러 폴더나 그룹에 걸쳐 특정 멤버의 모든 역할을 관리할 수도 있습니다. link:task-iam-manage-roles.html["구성원 액세스 관리"].
+
+
+
+[[how-folder-and-fleet-access-works]]
+== 폴더 및 플릿 액세스 작동 방식
+
+콘솔 로컬 배포는 역할 기반 액세스 제어(RBAC)를 사용합니다. 폴더 수준에서 할당한 역할은 해당 폴더 내의 모든 플릿 및 하위 폴더에 적용되며, 플릿 수준에서 할당한 역할은 해당 플릿의 리소스에만 적용됩니다. link:concept-iam-rbac.html#role-inheritance["NetApp Console 로컬 배포에서 역할 상속에 대해 알아보십시오."].
+
+
+NOTE: 구성원이 폴더 또는 조직으로부터 역할을 상속받은 경우, 플릿 수준에서 해당 역할을 변경할 수 없습니다. 상속된 액세스 권한을 변경하려면 상위 범위에서 역할을 변경해야 합니다.
+
+
+
+[[view-members-assigned-to-a-folder-or-fleet]]
+== 폴더 또는 플릿에 할당된 구성원 보기
+
+특정 폴더 또는 플릿을 관리할 수 있는 사용자를 정확히 검토하십시오. 예를 들어, 새 프로덕션 ONTAP 클러스터를  `Production-US-East`플릿에 연결하기 전에 플릿의 액세스 탭을 열어 액세스 권한이 있는 사용자를 확인하십시오.
+
+.단계
+. *관리* > *ID 및 액세스*를 선택합니다.
+. *Organization*을 선택합니다.
+. 조직 페이지에서 표의 폴더 또는 플릿으로 이동하고 image:icon-action.png["점 세 개가 있는 아이콘"]을 선택한 다음 *폴더 편집* 또는 *플릿 편집*을 선택합니다.
+. 폴더 또는 플릿에 액세스할 수 있는 구성원을 보려면 *액세스*를 선택합니다.
+
+
+
+
+[[modify-member-access-from-a-folder-or-fleet]]
+== 폴더 또는 플릿에서 멤버 액세스 권한 수정
+
+이미 조직에 속한 구성원의 역할을 특정 폴더 또는 플릿에 맞춰 조정할 수 있습니다. 예를 들어, 팀원이 개발 플릿에서 프로덕션 플릿으로 이동할 때 다른 플릿의 액세스 권한에는 영향을 주지 않고 프로덕션 플릿에서 해당 구성원의 Storage viewer 권한을 Storage admin 권한으로 승격시킬 수 있습니다.
+
+새 멤버를 추가하고 첫 번째 역할을 할당하려면 온보딩 작업을 사용하십시오. link:task-iam-manage-members-permissions.html["멤버 추가 및 역할 할당"].
+
+.단계
+. 조직 페이지에서 표의 폴더 또는 플릿으로 이동하고 image:icon-action.png["점 세 개가 있는 아이콘"]을 선택한 다음 *폴더 편집* 또는 *플릿 편집*을 선택합니다.
+. *액세스*를 선택하여 액세스 권한이 있는 구성원 목록을 확인합니다.
+. 멤버 액세스 수정:
++
+** *멤버 역할 변경*: 조직 관리자 이외의 역할을 가진 멤버의 경우, 기존 역할을 선택하고 새 역할을 선택하십시오. 변경 사항은 이 범위에만 적용되며, 상위 범위에서 상속된 역할은 여기에 표시되지 않습니다.
+** *이 범위에서 멤버 액세스 제거*: 이 폴더 또는 플릿에 직접 역할이 정의된 멤버의 경우, 해당 역할을 제거하여 이 범위에서의 액세스 권한을 취소합니다. 이렇게 해도 해당 멤버가 조직에서 제거되거나 다른 범위에서 가진 역할에는 영향을 미치지 않습니다.
++
+link:task-iam-manage-roles.html#remove-a-member-from-your-organization["조직에서 구성원 제거"].
+
+
+
+. *적용*을 선택합니다.
+

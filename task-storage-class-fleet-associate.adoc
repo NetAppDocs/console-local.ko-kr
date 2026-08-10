@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-storage-class-fleet-associate.html 
+keywords: associate, storage class, fleet, assign, netapp console 
+summary: NetApp Console 로컬 배포에서 스토리지 클래스를 플릿과 연결하여 일관된 스토리지 정책을 적용하십시오. 
+---
+= NetApp Console 로컬 배포에서 스토리지 클래스를 플릿과 연결합니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 스토리지 클래스를 플릿과 연결하여 환경별 표준을 적용하고, 운영자가 사용할 수 있는 옵션을 제어하고, 할당된 클래스에 대한 규정 준수 검사를 간소화할 수 있습니다.
+
+.필수 액세스 역할
+슈퍼 관리자, 조직 관리자, 폴더 또는 플릿 관리자, 또는 스토리지 관리자. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+
+
+[[associate-a-storage-class-with-a-fleet]]
+== 스토리지 클래스를 플릿에 연결합니다.
+
+스토리지 클래스를 플릿과 연결하면 해당 플릿 내에서 프로비저닝 및 지속적인 규정 준수 모니터링이 가능합니다.
+
+.단계
+. 관리하려는 플릿을 엽니다.
+. 스토리지 클래스에 대한 플릿 구성 영역을 찾으십시오.
+. 플릿과 연결할 스토리지 클래스를 하나 이상 선택하십시오.
+. *저장*을 선택합니다.
+
+
+.확인
+. 플릿에서 프로비저닝 워크플로를 시작하고 스토리지 클래스를 선택할 수 있는지 확인합니다.
+

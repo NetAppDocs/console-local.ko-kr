@@ -1,0 +1,52 @@
+= 
+:allow-uri-read: 
+
+
+공유 VPC를 사용하여 서비스 프로젝트에 리소스를 배포하는 경우 권한을 준비해야 합니다.
+
+이 표는 참고용이며, IAM 구성이 완료되면 사용자의 환경이 권한 표를 반영해야 합니다.
+
+.공유 VPC 권한 보기
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| 신원 | 작성자 | 호스팅 위치 | 서비스 프로젝트 권한 | 호스트 프로젝트 권한 | 목적 
+
+
+| 에이전트를 배포하기 위한 Google 계정 | 사용자 지정 | 서비스 프로젝트  a| 
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["에이전트 배포 정책"]
+ a| 
+컴퓨팅.networkUser
+| 서비스 프로젝트에 에이전트 배포 
+
+
+| 에이전트 서비스 계정 | 사용자 지정 | 서비스 프로젝트  a| 
+link:reference-permissions-gcp.html["에이전트 서비스 계정 정책"]
+| compute.networkUser deploymentmanager.editor | 서비스 프로젝트에서 Cloud Volumes ONTAP 및 서비스 배포 및 유지 관리 
+
+
+| Cloud Volumes ONTAP 서비스 계정 | 사용자 지정 | 서비스 프로젝트 | storage.admin 멤버: NetApp Console 서비스 계정( serviceAccount.user) | 해당 없음 | (선택 사항) NetApp Cloud Tiering 및 NetApp Backup and Recovery의 경우 
+
+
+| Google APIs 서비스 에이전트 | Google Cloud | 서비스 프로젝트  a| 
+(기본값) 편집기
+ a| 
+컴퓨팅.networkUser
+| 배포를 대신하여 Google Cloud API와 상호 작용합니다. 콘솔이 공유 네트워크를 사용할 수 있도록 합니다. 
+
+
+| Google Compute Engine 기본 서비스 계정 | Google Cloud | 서비스 프로젝트  a| 
+(기본값) 편집기
+ a| 
+컴퓨팅.networkUser
+| 배포를 대신하여 Google Cloud 인스턴스 및 컴퓨팅 인프라를 배포합니다. 콘솔에서 공유 네트워크를 사용할 수 있도록 합니다. 
+|===
+참고:
+
+. deploymentmanager.editor는 방화벽 규칙을 배포에 전달하지 않고 콘솔에서 규칙을 생성하도록 선택한 경우에만 호스트 프로젝트에 필요합니다. NetApp 콘솔은 규칙이 지정되지 않은 경우 VPC0 방화벽 규칙이 포함된 배포를 호스트 프로젝트에 생성합니다.
+. firewall.create 및 firewall.delete 권한은 방화벽 규칙을 배포에 전달하지 않고 Console에서 직접 생성하도록 선택한 경우에만 필요합니다. 이러한 권한은 Console 계정의 .yaml 파일에 있습니다. 공유 VPC를 사용하여 HA 페어를 배포하는 경우, 이러한 권한은 VPC1, 2, 3에 대한 방화벽 규칙을 생성하는 데 사용됩니다. 다른 모든 배포의 경우, 이러한 권한은 VPC0에 대한 규칙을 생성하는 데에도 사용됩니다.
+. 클라우드 티어링을 사용하려면 티어링 서비스 계정에 프로젝트 수준뿐 아니라 서비스 계정 자체에 serviceAccount.user 역할이 있어야 합니다. 현재 프로젝트 수준에서 serviceAccount.user를 할당하면 getIAMPolicy로 서비스 계정을 조회할 때 권한이 표시되지 않습니다.
+
+
+====

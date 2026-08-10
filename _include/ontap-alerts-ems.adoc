@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+* link:https://docs.netapp.com/us-en/ontap-ems/acp-auto-events.html["ONTAP EMS 및 사용 가능한 알림에 대해 자세히 알아보십시오."^]
+

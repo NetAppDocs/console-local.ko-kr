@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-add-systems.html 
+keywords: add storage systems, ONTAP, cluster, discover storage, fleet, storage discovery, centralized monitoring, storage management, netapp console local 
+summary: NetApp Console 로컬 배포에 스토리지 시스템을 추가합니다. 
+---
+= NetApp Console 로컬 배포에 스토리지 시스템 추가
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에 스토리지 시스템을 추가하여 스토리지 인프라의 모니터링, 인벤토리 관리 및 관리를 활성화합니다. 스토리지 시스템이 추가되면 Console 로컬 배포에서 시스템을 검색하고 모니터링 및 관리 작업에 사용할 수 있는 정보를 수집하기 시작합니다.
+
+시작하기 전에 스토리지 시스템을 추가하는 데 필요한 권한이 있는지, 그리고 Console 로컬 배포에서 스토리지 시스템에 접근할 수 있는지 확인하십시오.
+
+.단계
+. *Storage > Management*를 선택합니다.
+. 범위 드롭다운 목록에서 스토리지 시스템을 추가할 플릿을 선택합니다.
+. *시스템 추가*를 선택합니다.
+. 스토리지 시스템 연결 정보 및 자격 증명을 포함하여 필요한 스토리지 시스템 세부 정보를 입력하십시오.
+. 입력한 정보를 검토하고 *추가*를 선택합니다.
++
+스토리지 시스템이 선택한 플릿에 추가됩니다. Console 로컬 배포를 통해 시스템 검색 및 모니터링이 시작됩니다. 환경 및 네트워크 연결 상태에 따라 시스템이 완전히 관리되는 상태로 표시되기까지 몇 분 정도 소요될 수 있습니다.
+
+
+
+
+NOTE: 또한 *관리 > ID 및 액세스* 페이지에서 *시스템 추가*를 선택하고 필요한 시스템 정보를 입력하여 스토리지 시스템을 추가할 수 있습니다.

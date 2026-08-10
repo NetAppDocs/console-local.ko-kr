@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: task-console-asst-use.html 
+keywords: console assistant, ai assistant, ask questions, provision storage, natural language, agentic, netapp console local 
+summary: 콘솔 도우미를 사용하여 스토리지를 프로비저닝하고, 경고를 조사하고, NetApp Console 로컬 배포 환경에서 자연어로 답변을 얻을 수 있습니다. 
+---
+= NetApp Console 로컬 배포에서 NetApp Console 어시스턴트 사용
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 NetApp Console 어시스턴트를 사용하여 스토리지를 관리하고 자연어로 답변을 얻으십시오. 필요한 사항을 일반 언어로 설명하면 NetApp Console 로컬 배포가 스토리지 정책 및 역할 기반 액세스 내에서 해당 작업을 수행합니다.
+
+
+NOTE: LLM을 콘솔 어시스턴트에 연결하여 AI 기능을 활성화하는 방법에 대한 이 문서는 기술 미리 보기로 제공됩니다. 이 미리 보기 제공을 통해 NetApp은 정식 출시 전에 제공 세부 정보, 콘텐츠 및 일정을 수정할 권리를 보유합니다.
+
+도우미의 작업은 사용자에게 할당된 역할 기반 액세스 권한에 따라 제한됩니다. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+
+
+[[see-what-you-can-do-with-the-console-assistant]]
+== 콘솔 도우미로 무엇을 할 수 있는지 확인해 보세요.
+
+콘솔 어시스턴트는 NetApp Console 로컬 배포 환경에 대한 자연어 인터페이스입니다. 질문을 하거나 작업을 설명하면 답변이나 제안된 작업을 반환합니다. 이 어시스턴트는 다음과 같은 기능을 제공합니다.
+
+* *스토리지 프로비저닝* 워크로드를 쉬운 언어로 설명하세요. 어시스턴트가 스토리지 클래스와 배치 위치를 권장하고, 세부 정보를 확인하면 볼륨 또는 LUN을 생성합니다. 예를 들어 특정 용량의 CIFS 볼륨을 생성하도록 요청할 수 있습니다. 어시스턴트는 클러스터와 스토리지 가상 머신(SVM)을 식별하고 필요한 매개변수를 입력한 후 스토리지를 프로비저닝합니다.
+* *검색 및 안내 받기* 스토리지 환경에 대한 질문을 하고, Console 로컬 배포 기능을 찾고, NetApp 설명서 및 최신 제품 현황을 통해 상황에 맞는 답변을 얻으세요.
+* *경고 조사* 어시스턴트에게 활성화된 경고를 조사해 달라고 요청하십시오. 어시스턴트는 문제를 분석하고 해결 방법을 제안하거나, 사용자의 확인을 받아 문제 해결 조치를 수행합니다.
+
+
+어시스턴트는 관리자가 Console 로컬 배포에서 구성한 LLM 엔드포인트로만 요청을 보냅니다. 스토리지 변경 작업을 수행하기 전에 확인을 요청하며, 모든 작업은 계정에 할당된 역할 기반 액세스 제어를 준수합니다.
+
+
+
+[[confirm-that-you-can-use-the-console-assistant]]
+== 콘솔 도우미를 사용할 수 있는지 확인하십시오.
+
+* 조직 관리자 또는 최고 관리자는 대규모 언어 모델(LLM)을 콘솔 로컬 배포에 연결하여 Console assistant를 활성화해야 합니다. 대시보드에 *Console assistant* 버튼이 표시되지 않으면 관리자에게 활성화를 요청하십시오. 자세한 내용은 link:task-llm-connect.html["LLM을 연결하고 NetApp Console 도우미를 활성화하십시오"]을 참조하십시오.
+* 어시스턴트가 수행하려는 작업에 필요한 역할 기반 액세스 제어가 설정되어 있는지 확인하십시오.
+
+
+
+
+[[ask-the-console-assistant-a-question-or-request-an-action]]
+== 콘솔 도우미에게 질문하거나 작업을 요청하십시오.
+
+콘솔 도우미를 열고 액세스 모드를 선택한 다음 요청을 설명하는 프롬프트를 입력하십시오.
+
+.단계
+. NetApp Console 로컬 배포 대시보드에서 *콘솔 도우미* 버튼을 선택합니다.
+. 액세스 모드를 선택합니다.
++
+** 변경 작업을 하지 않고 질문이나 지침을 얻으려면 *읽기 전용*을 선택합니다.
+** 어시스턴트가 스토리지 인프라에서 작업할 수 있도록 *읽기/쓰기* 를 선택합니다.
+
+
+. 질문이나 작업을 설명하는 프롬프트를 입력한 다음 *보내기*를 선택하십시오.
++
+예를 들면 다음과 같습니다. `Create a 10GiB volume for home directories named home, and share it with Everyone set to FULL_CONTROL.`
+
+. 어시스턴트의 응답을 검토하십시오.
++
+** 질문에 대해 어시스턴트는 조치를 취할 수 있는 답변을 반환합니다.
+** 작업의 경우, 어시스턴트는 제안된 작업을 표시하고, 권한 수준 등 누락된 세부 정보를 요청한 다음, 진행하기 전에 확인을 요청합니다.
+
+
+. 작업을 확인하십시오. 볼륨 생성 등 비동기 작업의 경우, 어시스턴트가 요청을 완료하기 위한 작업을 생성합니다.
+. 요청 진행 상황을 확인하려면 도우미에게 문의하세요. 예를 들어,  `Let me know when the job completes`를 입력하면 도우미가 현재 상태를 알려줍니다.
+

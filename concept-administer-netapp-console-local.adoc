@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: concept-administer-netapp-console-local.html 
+keywords: administer Console local deployment, audit, audit log, compliance, SIEM, webhook, VM maintenance, access management, demonstrate compliance, operational visibility, netapp console local 
+summary: NetApp Console 로컬 배포를 관리 및 모니터링하는 방법을 알아보십시오. 감사 활동, 구독, 유지 관리, 문제 해결 및 멤버 액세스가 포함됩니다. 
+---
+= NetApp Console 로컬 배포의 관리 및 모니터링에 대해 알아보십시오
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포를 완료한 후에는 관리 및 모니터링 툴을 사용하여 활동을 검토하고, VM을 유지 관리하고, 멤버 액세스를 관리할 수 있습니다.
+
+
+
+[[audit-activity]]
+== 감사 활동
+
+사용자 및 API 활동을 검토하고, Console 작업 상태를 추적하고, 감사 로그를 다운로드하고, 더 긴 보존 기간이나 추가 분석이 필요한 경우 로그를 외부 툴로 내보낼 수 있습니다.
+
+* link:task-audit-console-activity.html["NetApp Console 로컬 배포 활동 감사"]
+* link:task-console-configure-notifications-delivery.html["NetApp Console 로컬 배포에서 알림 전달 채널 설정"]
+
+
+
+
+[[licenses-and-subscriptions]]
+== Licenses and subscriptions
+
+라이선스 및 구독 정보를 활용하여 콘솔 환경에 대한 서비스 사용 권한 및 구독 상태를 파악하십시오.
+
+link:https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["라이선스 및 구독에 대해 알아보기"^].
+
+
+
+[[maintain-and-troubleshoot-the-console-local-deployment-vm]]
+== 콘솔 로컬 배포 VM 유지 관리 및 문제 해결
+
+콘솔 로컬 배포를 호스팅하는 VM을 유지 관리하고, 네트워크 및 시스템 설정을 검토하고, 진단 툴에 액세스하고, 서비스 또는 에이전트가 예상대로 작동하지 않을 때 문제를 해결합니다.
+
+link:task-console-local-vm-config.html["vCenter 또는 ESXi 호스트를 Console 로컬 배포를 위해 유지 관리하십시오."].
+
+
+
+[[manage-users-and-access]]
+== 사용자 및 접근 권한 관리
+
+조직 전체의 구성원 액세스 권한을 검토하고, 전체 시스템 수준에서 액세스 권한을 조정하고, MFA 복구 및 서비스 계정 자격 증명 등 보안 설정을 관리합니다.
+
+* link:task-iam-manage-roles.html["NetApp Console에서 멤버 액세스 관리"]
+* link:task-iam-users-fleets-assign.html["NetApp Console 로컬 배포에서 플릿 액세스 할당 보기 또는 변경"]
+* link:task-manage-member-security.html["NetApp Console 로컬 배포에서 멤버 보안 관리"]
+

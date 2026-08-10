@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-folders-fleets.html 
+keywords: folders, fleets, resource hierarchy, create folders, create fleets, iam, identity and access management, fleet id, initial iam setup, fleet hierarchy design, folder hierarchy configuration, rbac setup, tenancy setup, organizational onboarding, team structure alignment, delegated administration model, access governance planning, operational readiness 
+summary: 비즈니스 구조에 맞춰 폴더와 플릿을 추가합니다. 폴더와 플릿을 생성한 후에는 리소스를 연결하고 해당 플릿에 대한 멤버 액세스 권한을 관리할 수 있습니다. 
+---
+= NetApp Console 로컬 배포 조직에 폴더 및 플릿 추가
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포 환경에서 비즈니스 구조에 맞춰 폴더와 플릿을 생성하고, 액세스를 제어하고, 리소스를 구성합니다.
+
+.필수 액세스 역할
+최고 관리자, 조직 관리자, 폴더 관리자 또는 플릿 관리자. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+NetApp Console 로컬 배포는 조직을 생성할 때 기본 플릿 하나를 생성합니다. 필요에 따라 플릿을 추가하고 폴더로 그룹화할 수 있습니다. link:concept-identity-and-access-management.html["NetApp Console의 리소스 계층 구조에 대해 알아보십시오."].
+
+
+
+[[using-folders-and-fleets-to-organize-resources]]
+== 폴더와 플릿을 사용하여 리소스 구성
+
+폴더와 플릿은 팀의 실제 업무 방식에 맞춰 조직을 구성하는 데 사용하는 두 가지 핵심 요소입니다. 예를 들어, 지역별로 폴더를 만들고 각 폴더 안에 프로덕션 플릿과 개발 플릿을 각각 구성할 수 있습니다.
+
+* 폴더는 관련 플릿을 그룹화하고 위임된 관리 및 역할 상속을 지원합니다.
+* 플릿은 관리를 위해 리소스를 연결하고 사용자에게 운영 액세스 권한을 부여하는 곳입니다.
+
+
+먼저 폴더와 플릿을 생성한 다음 나중에 리소스와 멤버 액세스 권한을 추가할 수 있습니다. 이렇게 하면 Console 로컬 배포에서 사용자와 리소스를 추가하기 전에 리소스 계층 구조를 계획할 수 있습니다. 구조가 이미 정의된 경우 플릿을 생성할 때 리소스를 추가하고 액세스 권한을 할당할 수 있습니다. 플릿은 언제든지 업데이트할 수 있습니다.
+
+예를 들어, 프로덕션 클러스터는 프로덕션 플릿에, 테스트 클러스터는 테스트 플릿에 배치하고 각 팀에게 자신이 소유한 플릿에만 액세스 권한을 부여합니다.
+
+
+
+[[folders]]
+=== 폴더
+
+폴더는 사업부, 지역 또는 팀 등 비즈니스 구조별로 플릿을 정리합니다. 폴더를 중첩하여 조직 구조를 그대로 반영할 수 있습니다.
+
+폴더 수준에서 할당된 역할은 하위 폴더 및 플릿에 상속됩니다. 또한 폴더를 사용하여 해당 계층 구조 부분에 대한 플릿 할당 작업을 폴더 또는 플릿 관리자에게 위임할 수 있습니다.
+
+
+NOTE: 구성원들은 폴더가 아닌 플릿 단위로 작업합니다. 폴더에만 연결된 리소스는 플릿에 연결되기 전까지는 구성원들이 관리할 수 없습니다.
+
+예를 들어, 지역 기업은 폴더를 사용하여 사업부 및 워크로드별로 ONTAP 스토리지를 구성할 수 있습니다. 북미 지역을 위한 최상위 폴더를 만들고, 프로덕션 및 개발 환경용 하위 폴더를 생성한 다음, SAP, VMware 및 백업 볼륨을 호스팅하는 ONTAP 클러스터용 플릿을 만들 수 있습니다. 북미 폴더에 할당된 스토리지 관리자는 모든 하위 플릿에 대한 액세스 권한을 상속받는 반면, 애플리케이션 팀은 자신이 관리하는 플릿에만 액세스할 수 있습니다.
+
+
+
+[[fleets]]
+=== 플리트
+
+구성원들이 리소스를 관리할 수 있도록 리소스를 플릿과 연결하세요. 플릿은 조직 바로 아래에 있거나 폴더 안에 있을 수 있습니다.
+
+예를 들어, 한 의료 회사는 별도의 프로덕션 및 개발 플릿에서 ONTAP 스토리지를 사용합니다. 프로덕션 플릿은 임상 애플리케이션과 환자 기록 데이터베이스를 실행하고, 개발 플릿은 테스트 및 검증을 지원합니다. 이러한 분리를 통해 실제 데이터를 보호하고, 프로덕션 액세스 관리를 강화하며, 감사 가능성과 최소 권한 제어를 지원하고, 개발 팀이 환자 대면 워크로드에 영향을 주지 않고 작업할 수 있습니다.
+
+사용자는 *시스템* 페이지에서 할당된 플릿 간을 탐색하여 각 플릿과 관련된 리소스를 관리할 수 있습니다.
+
+
+
+[[add-a-folder-or-fleet]]
+== 폴더 또는 플릿 추가
+
+리소스 및 멤버 액세스에 대한 새로운 경계가 필요할 때마다 플릿을 추가하고, 관련 플릿을 그룹화하고 관리를 위임하려면 폴더를 추가합니다. 예를 들어,  `Production` 폴더에  `Production-US-East` 플릿과  `Production-EU-West` 플릿을 추가한 다음, 지역 책임자에게 해당 플릿에 대해서만 폴더 또는 플릿 관리자 역할을 부여할 수 있습니다.
+
+최대 7단계의 계층 구조를 만들 수 있습니다.
+
+플리트 또는 폴더를 생성할 때 리소스를 추가하고 멤버 액세스 권한을 할당할 수도 있고, 나중에 할당할 수도 있습니다.
+
+.단계
+. *관리 > ID 및 액세스*를 선택합니다.
+. *Organization*을 선택합니다.
+. *조직* 페이지에서 *폴더 또는 플릿 추가*를 선택합니다.
+. *폴더* 또는 *플릿*을 선택합니다.
+. *이름 및 위치* 에서 폴더 또는 플릿의 이름을 입력하고 위치를 선택합니다.
+
+
+[[associate-resource-folder]]
+. 선택 사항: *리소스* 섹션을 확장하여 리소스를 플릿 또는 폴더와 연결합니다.
++
+.. 연결하려는 리소스 옆의 확인란을 선택한 다음 *플릿과 연결*을 선택합니다. 아직 Console 로컬 배포에 시스템을 추가하지 않은 경우 이 단계는 나중에 수행할 수 있습니다.
++
+
+NOTE: 구성원은 해당 리소스가 플릿에 할당되기 전까지는 폴더 내의 리소스에 액세스할 수 없습니다.
+
+
+
+. 선택 사항: *액세스* 섹션을 확장하여 멤버에게 액세스 권한을 할당할 수 있습니다. *멤버 추가*를 선택하여 액세스 권한과 역할을 할당합니다. 기본적으로 플릿을 생성한 사용자가 해당 플릿에 대한 액세스 권한을 갖습니다.
++
+link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+. *추가*를 선택합니다.
+
+
+
+
+[[rename-a-folder-or-fleet]]
+== 폴더 또는 플리트 이름 변경
+
+필요에 따라 폴더 또는 플릿의 이름을 변경합니다. 이름 변경은 연결된 리소스나 멤버 액세스에 영향을 미치지 않습니다.
+
+.단계
+. *조직* 페이지에서 표의 함대 또는 폴더로 이동하고 image:icon-action.png["점 세 개가 있는 아이콘"]을 선택한 다음 *폴더 편집* 또는 *함대 편집*을 선택합니다.
+. *수정* 페이지에서 새 이름을 입력하고 *적용*을 선택합니다.
+
+
+
+
+[[delete-a-folder-or-fleet]]
+== 폴더 또는 플릿 삭제
+
+팀 재편성이나 플릿 완료 후 등 더 이상 필요하지 않은 폴더와 플릿을 삭제합니다.
+
+폴더 또는 플릿을 삭제하기 전에 다음 사항을 확인하십시오.
+
+* 폴더 또는 플릿에 리소스가 포함되어 있지 않은지 확인하십시오. link:task-iam-manage-resources.html#remove-resource["리소스 연결을 제거하는 방법을 알아보십시오."].
+* 폴더 또는 플릿에 대한 액세스 권한이 여전히 있는 구성원을 검토하십시오. link:task-iam-users-fleets-assign.html["멤버 액세스 권한 할당 보기"].
+* 필요에 따라 구성원 액세스 권한을 제거하거나 업데이트하십시오. link:task-iam-users-fleets-assign.html["멤버 액세스 할당 수정"].
+* 함대를 삭제하려면 먼저 자원을 대상 함대로 옮겨야 합니다. link:task-iam-manage-resources.html["플릿 간에 리소스를 이동하는 방법을 알아보십시오"].
+
+
+.단계
+. *조직* 페이지에서 표의 플릿 또는 폴더로 이동하여 image:icon-action.png["점 세 개가 있는 아이콘"]을 선택한 다음 *삭제*를 선택합니다.
+. 폴더 또는 플릿을 삭제할지 확인합니다.
+
+
+
+
+[[manage-fleets-and-folders-in-netapp-console-local-deployment]]
+== NetApp Console 로컬 배포에서 플릿 및 폴더 관리
+
+초기 설정 후에는 다음 작업을 수행할 수 있습니다.
+
+* *폴더 및 플릿에 대한 리소스 연결 관리*: link:task-iam-manage-resources.html["리소스를 플릿 및 폴더와 연결하는 방법을 알아보십시오."].
+* *폴더 또는 플릿 하나에 대한 보기 또는 액세스 권한 업데이트*: link:task-iam-users-fleets-assign.html["플릿에 대한 사용자 액세스 권한을 부여하는 방법을 알아보십시오."].
+* *여러 폴더와 플릿에서 한 멤버 관리*: link:task-iam-manage-roles.html["구성원 액세스 관리 방법을 알아보십시오"].
+* *추가 멤버를 추가하고 초기 권한을 할당합니다*: link:task-iam-manage-members-permissions.html["멤버 및 권한 관리 방법을 알아보십시오."].
+
+
+
+
+[[related-information]]
+== 관련 정보
+
+* link:concept-identity-and-access-management.html["NetApp Console의 ID 및 액세스 관리에 대해 알아보십시오."]
+* link:task-iam-fleet-mgmt-get-started.html["NetApp Console에서 ID 및 액세스 시작하기"]
+* link:task-iam-users-fleets-assign.html["플리트 액세스 할당 관리"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["ID 및 액세스 API에 대해 알아보기"^]
+

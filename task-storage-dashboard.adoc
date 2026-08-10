@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: task-storage-dashboard.html 
+keywords: storage dashboard, home page, fleet health, capacity monitoring, IOPS, performance metrics, alerts, storage KPIs, monitoring, netapp console local 
+summary: NetApp Console 로컬 배포 환경에서는 홈 페이지에서 메트릭을 확인할 수 있습니다. 
+---
+= NetApp Console 로컬 배포에서 홈 페이지 메트릭 보기
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포의 홈 페이지 대시보드를 스토리지 상태 및 성능 모니터링을 위한 기본 시작점으로 사용하십시오. 이 대시보드는 플릿 상태, 경고, 보안, 용량 사용량, 지연 시간, 처리량 및 IOPS에 대한 주요 지표를 제공합니다.
+
+홈 페이지 대시보드는 사용자가 보기 권한을 가진 플릿 및 시스템만 자동으로 표시하도록 범위가 제한됩니다. 역할별 모니터링을 위해 홈 페이지에 사용자 지정 대시보드를 추가할 수도 있습니다.
+
+카드를 계층형 문제 해결 워크플로로 활용하세요. 먼저 *Fleet health*와 *Alerts*를 통해 위험 집중 지역을 파악합니다. *System health status*와 *Recommended remediations*를 사용하여 영향을 받는 리소스를 식별합니다. *Capacity usage*, *Latency*, *Throughput*, *IOPS*를 사용하여 근본 원인을 조사합니다.
+
+
+
+[[fleet-health]]
+== 플릿 상태
+
+*플릿 상태* 카드는 시스템 수, 사용 용량, 보안 규정 준수 및 중요 알림을 포함하여 상위 5개 플릿의 주요 상태 요약을 보여줍니다. 이 카드를 사용하여 즉각적인 조치가 필요한 플릿을 파악할 수 있습니다. 플릿 이름을 선택하면 선택한 플릿에 대한 전용 대시보드를 볼 수 있습니다.
+
+
+
+[[recommended-remediations]]
+== 권장되는 개선 조치
+
+*권장 조치 사항* 카드에는 현재 해결 중인 문제와 권장 조치 사항이 나열됩니다. 이 카드는 용량 부족, 오프라인 리소스 및 보호 관련 위험을 기준으로 조치 사항의 우선순위를 지정합니다.
+
+
+
+[[alerts]]
+== 알림
+
+*경고* 카드는 선택한 기간 동안의 경고 발생량을 요약하여 심각도별로 분류합니다. 이 카드를 사용하여 현재 발생한 사고의 규모를 파악하고, 심각, 경고 또는 정보 경고의 최근 변동 사항을 확인할 수 있습니다.
+
+
+
+[[security]]
+== 보안
+
+*보안* 카드에는 시스템 규정 준수 및 랜섬웨어 관련 제어 등 규정 준수 및 보호 지표가 요약되어 표시됩니다. 이 화면을 사용하여 리소스 전반의 보안 추세를 모니터링할 수 있습니다.
+
+
+
+[[capacity-usage]]
+== 용량 사용
+
+*용량 사용량* 카드는 선택한 플릿 또는 시스템 전체에 대한 예상 및 과거 사용량 추세를 표시합니다. 이 카드를 사용하여 성장 패턴을 파악하고 추가 용량 확보를 계획하십시오.
+
+
+
+[[latency]]
+== 지연 시간
+
+*지연 시간* 카드는 선택한 시스템 전체의 응답 시간 변화를 시간 경과에 따라 추적합니다. 이 추세를 활용하여 성능 지연 현상을 감지하고 리소스 간의 상대적 지연 시간을 비교할 수 있습니다.
+
+
+
+[[throughput]]
+== 처리량
+
+*처리량* 카드는 선택한 시스템의 데이터 전송 속도를 시간에 따라 보여줍니다. 이 카드를 사용하여 작업 부하 강도를 파악하고 처리량 수요 변화를 모니터링할 수 있습니다.
+
+
+
+[[iops]]
+== IOPS
+
+*IOPS* 카드는 시간에 따른 입출력 작업률을 보여줍니다. 이 카드를 사용하여 시스템 간 활동 수준을 비교하고 지속적인 또는 간헐적인 I/O 수요를 파악할 수 있습니다.
+
+
+
+[[dashboard-card-example-metric-card]]
+== 대시보드 카드 (예시 지표 카드)
+
+하단의 *대시보드* 영역에는 선택한 프로덕션 범위의 평균 지연 시간 등 사용자가 선택한 사용자 지정 대시보드를 포함할 수 있습니다. 이러한 카드를 사용하여 팀, 작업량 또는 목표별로 집중적인 모니터링을 수행할 수 있습니다.
+
+
+
+[[system-health-status]]
+== 시스템 상태
+
+*시스템 상태* 카드에는 각 시스템과 해당 시스템의 현재 상태가 나열됩니다. 이 카드를 사용하여 비정상적인 시스템을 신속하게 식별하고 상태 변화를 경고 및 성능 신호와 연관시킬 수 있습니다.
+
+
+
+[[related-information]]
+== 관련 정보
+
+* link:concept-custom-dashboards.html["NetApp Console 로컬 배포에서 사용자 지정 대시보드에 대해 알아보십시오."]
+* link:reference-dashboard-card-templates.html["NetApp Console 로컬 배포의 사용자 정의 대시보드 카드 및 메트릭에 대해 알아보십시오."]
+

@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: concept-manage-storage-workflow.html 
+keywords: storage management workflow, storage classes, provisioning, storage class policies, ONTAP, fleet, drift detection, compliance monitoring, storage governance, operational efficiency, netapp console local 
+summary: NetApp Console 로컬 배포에서 스토리지 클래스, 정책 및 프로비저닝 방법을 포함하여 스토리지를 관리하는 방법에 대해 알아보십시오. 
+---
+= NetApp Console 로컬 배포에서의 스토리지 관리 워크플로 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 NetApp Console(로컬)은 일관되고 재사용 가능한 표준을 사용하여 대규모로 ONTAP 스토리지를 관리할 수 있도록 지원합니다. 모든 볼륨 또는 LUN에 대해 일회성 결정을 내리는 대신, 승인된 동작을 한 번 정의하면 수동으로 프로비저닝하든, 자동화된 배치를 사용하든, AI 지원 계획 및 승인 워크플로를 사용하든 관계없이 전체 플릿에 적용할 수 있습니다.
+
+이 페이지는 플릿, 스토리지 클래스 정책 및 스토리지 클래스를 사용하여 ONTAP 스토리지를 관리하는 스토리지 관리자를 위한 시작점입니다. 전체 워크플로를 체계적으로 정리하고 자세한 절차에 대한 링크를 제공합니다.
+
+이러한 개념을 처음 접하는 경우 [NetApp Console 로컬 배포를 통한 스토리지 관리 알아보기](concept-manage-storage.html)부터 시작하십시오.
+
+
+
+[[prerequisites-and-dependencies]]
+== 필수 조건 및 종속성
+
+조직 관리자는 스토리지 시스템이 검색되어 올바른 플릿에 할당되었는지 확인해야 합니다. 스토리지 관리자는 시스템이 해당 플릿에 속해 있고 RBAC를 통해 액세스 권한이 부여될 때까지 표준을 적용하거나 플릿을 프로비저닝할 수 없습니다.
+
+RBAC 액세스 권한이 필요합니다. 표준을 정의하고 스토리지를 프로비저닝할 플릿에 대한 액세스 권한이 있는지 확인하십시오.
+
+
+
+[[typical-workflow]]
+== 일반적인 워크플로
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"] 플릿 및 액세스 검토
+[role="quick-margin-list"]
+* 사용 가능한 플릿을 검토하고 스토리지를 관리하려는 플릿에 대한 액세스 권한이 있는지 확인하십시오.
+* 스토리지 표준을 생성하거나 할당하기 전에 권한 및 범위를 검증하십시오.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] 스토리지 클래스 정책을 정의합니다
+[role="quick-margin-list"]
+* 사용자의 표준을 반영하는 스토리지 클래스 정책을 정의하십시오.
+* 성능, 보호, 배치 등의 요구사항을 재사용 가능한 정책으로 정리합니다.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3"]스토리지 클래스 생성
+[role="quick-margin-list"]
+* 정책을 워크로드 템플릿으로 조합하여 스토리지 클래스를 생성합니다.
+* 일관된 템플릿을 사용하여 워크로드가 표준에 맞게 프로비저닝되도록 하십시오.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 스토리지 클래스를 플릿과 연결합니다
+[role="quick-margin-list"]
+* 스토리지 클래스를 해당 클래스가 적용되는 플릿과 연결합니다.
+* 범위 클래스를 적절한 플릿에 할당하여 프로비저닝 중에 올바른 옵션이 표시되도록 합니다.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] 볼륨 또는 LUN 프로비저닝
+[role="quick-margin-list"]
+* 운영 모델에 맞는 방법을 사용하여 볼륨 또는 LUN을 프로비저닝하십시오.
+* 팀에서 스토리지를 요청, 승인 및 제공하는 방식에 맞는 워크플로를 선택하십시오.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["6"] 워크로드 모니터링 및 드리프트 수정
+[role="quick-margin-list"]
+* 정의된 정책에서 벗어나는 상황을 감지하기 위해 작업 부하를 모니터링합니다.
+* 정책 정합성을 복원하기 위해 비준수 구성을 수정하십시오.
+

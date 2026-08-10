@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: task-iam-fleet-mgmt-get-started.html 
+keywords: iam, quick start, get started, get started with iam, identity and access management 
+summary: NetApp Console 로컬 배포에서 폴더 및 플릿 계층 구조를 생성하고, 멤버를 추가하고, 리소스를 추가하고, 해당 리소스를 올바른 플릿에 배치하여 ID 및 액세스를 설정하십시오. 
+---
+= NetApp Console 로컬 배포에서 ID 및 액세스 시작하기
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 폴더 및 플릿 계층 구조를 설정하고, 멤버와 시작 권한을 추가하고, 리소스를 올바른 플릿에 추가 및 배치하여 해당 팀에서 리소스에 액세스하고 관리할 수 있도록 합니다.
+
+.필수 액세스 역할
+최고 관리자, 조직 관리자, 폴더 관리자 또는 플릿 관리자. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+초기 설정을 완료하려면 *조직 관리자* 또는 *슈퍼 관리자* 역할이 필요합니다. 설정 후에는 조직 변경 사항에 따라 리소스, 구성원 액세스 및 플릿 액세스를 관리합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"] 리소스 추가 또는 검색
+[role="quick-margin-para"]
+Console 로컬 배포에 시스템을 추가합니다. 초기 설정 시, 일반적으로 기본 플릿이 선택된 상태에서 시스템이 추가됩니다.
+
+[role="quick-margin-para"]
+리소스를 만들거나 찾는 방법을 알아보세요:
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["온프레미스 ONTAP 클러스터"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] 폴더 및 플릿 계층 구조 생성
+[role="quick-margin-para"]
+비즈니스 계층 구조에 맞는 추가 플릿과 폴더를 생성합니다.
+
+[role="quick-margin-para"]
+link:task-iam-manage-folders-fleets.html["폴더와 플릿을 활용하여 리소스를 체계적으로 관리하는 방법을 알아보십시오."].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3"] 올바른 플릿에 리소스를 연결합니다
+[role="quick-margin-para"]
+콘솔 로컬 배포에서 시스템을 추가하거나 검색하면 해당 리소스가 현재 선택된 플릿에 자동으로 연결됩니다. 시스템을 적절한 팀에서 사용할 수 있도록 하려면 계층 구조에서 해당 플릿에 시스템을 연결해야 합니다.
+
+[role="quick-margin-list"]
+* link:task-iam-manage-resources.html["폴더와 플릿에서 리소스를 관리하는 방법을 알아보십시오."].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 멤버를 추가하고 초기 권한을 할당합니다
+[role="quick-margin-para"]
+구성원을 추가하고 관리 범위에 따라 조직, 폴더 또는 플릿 수준에서 역할을 할당합니다.
+
+[role="quick-margin-para"]
+link:task-iam-manage-members-permissions.html["멤버 및 해당 권한을 관리하는 방법을 알아보십시오."].
+
+
+
+[[after-initial-setup]]
+== 초기 설정 후
+
+초기 설정이 완료되면 조직 변경에 따라 액세스 및 리소스 배치를 관리합니다.
+
+* link:task-iam-manage-resources.html["폴더 및 플릿에서 리소스 관리"]
+* link:task-iam-manage-roles.html["멤버 중심 방식으로 여러 그룹 및 폴더에 걸쳐 멤버 액세스 권한을 관리합니다."]
+* link:task-iam-users-fleets-assign.html["특정 플릿 또는 폴더에 액세스할 수 있는 사용자 관리(플릿 중심)"]
+* link:task-iam-manage-folders-fleets.html#delete-a-folder-or-fleet["더 이상 필요하지 않은 폴더와 플릿을 삭제합니다."]
+
+
+.관련 정보
+* link:concept-identity-and-access-management.html["NetApp Console의 ID 및 액세스 관리에 대해 알아봅니다"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["ID 및 액세스 관리를 위한 API에 대해 알아보십시오."^]
+

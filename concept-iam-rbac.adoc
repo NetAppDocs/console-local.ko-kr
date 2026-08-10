@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: concept-iam-rbac.html 
+keywords: roles, permissions, role-based access control, rbac, iam, identity and access management, least privilege, access control, NetApp Console local access, organization access, folder access, fleet access, resource access, directory users, AD, Active Directory, directory services 
+summary: 'NetApp Console 로컬 배포에 대한 사용자 액세스를 역할 기반 액세스 제어(RBAC)를 사용하여 관리하고, 조직, 폴더 또는 플릿 수준에서 미리 정의된 역할을 할당합니다. 각 역할은 사용자가 할당된 범위 내에서 수행할 수 있는 작업을 정의하는 특정 권한을 부여합니다.' 
+---
+= NetApp Console 로컬 배포의 역할 기반 액세스 제어에 대해 알아보십시오
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에 대한 사용자 액세스를 역할 기반 액세스 제어(RBAC)를 사용하여 관리하고, 조직, 폴더 또는 플릿 수준에서 미리 정의된 역할을 할당합니다. 각 역할은 사용자가 할당된 범위 내에서 수행할 수 있는 작업을 정의하는 특정 권한을 부여합니다.
+
+NetApp Console 로컬 배포 역할을 최소 권한 원칙에 따라 설계하므로 각 역할에는 해당 작업에 필요한 권한만 포함됩니다. 이러한 접근 방식은 각 구성원이 필요한 권한만 갖도록 액세스를 제한하여 보안을 강화합니다.
+
+리소스를 폴더와 플릿으로 정리한 후에는 조직 구성원에게 특정 폴더 또는 플릿에 대한 역할을 할당하여 해당 구성원이 자신의 책임만 수행할 수 있도록 하십시오.
+
+예를 들어, 특정 플릿 레벨에 대한 백업 및 복구 관리자 역할을 구성원에게 할당하여 전체 조직에 대한 광범위한 액세스 권한을 부여하지 않고도 해당 플릿 내의 리소스에 대한 백업 및 복구 작업을 수행할 수 있도록 허용할 수 있습니다. 동일한 사용자에게 조직 내 여러 플릿에 대한 역할을 부여할 수도 있습니다.
+
+구성원의 책임에 따라 동일하거나 서로 다른 범위에 대해 여러 역할을 할당할 수 있습니다. 예를 들어, 소규모 조직에서는 동일한 구성원에게 조직 수준에서 Storage admin 역할과 Backup and Recovery admin 역할을 모두 할당할 수 있지만, 대규모 조직에서는 플릿 수준에서 각 역할에 서로 다른 구성원을 할당할 수 있습니다.
+
+
+
+[[types-of-console-organization-members]]
+== 콘솔 조직 구성원의 유형
+
+NetApp Console 로컬 배포는 다음과 같은 유형의 멤버를 지원합니다.
+
+* _Users_: 개별 사용자는 로컬 자격 증명을 사용하는 NetApp Console 로컬 배포에 추가하는 로컬 사용자이거나 통합된 Active Directory 또는 LDAP 서비스를 통해 인증하는 디렉터리 사용자일 수 있습니다. 두 유형의 사용자 모두 NetApp Console 로컬 배포에서 리소스에 액세스할 수 있는 역할을 할당받을 수 있습니다.
+* _서비스 계정_: 애플리케이션이나 서비스가 API를 통해 NetApp Console 로컬 배포와 상호 작용하는 데 사용하는 비인간 계정입니다. 서비스 계정은 Console 로컬 배포 조직에 직접 추가할 수 있습니다.
+
+
+link:task-iam-manage-members-permissions.html#add-members["조직에 구성원을 추가하는 방법을 알아보십시오."]
+
+
+
+[[predefined-roles-in-netapp-console-local-deployment]]
+== NetApp Console 로컬 배포의 사전 정의된 역할
+
+NetApp Console 로컬 배포에는 조직 구성원에게 할당할 수 있는 사전 정의된 역할이 포함되어 있습니다. 각 역할에는 구성원이 할당된 범위(조직, 폴더 또는 플릿) 내에서 수행할 수 있는 작업을 지정하는 권한이 포함됩니다.
+
+NetApp Console 로컬 배포 역할은 최소 권한 원칙을 사용하여 구성원이 작업에 필요한 권한만 갖도록 보장하며, 제공하는 액세스 유형에 따라 역할을 분류합니다.
+
+* 플랫폼 역할: 콘솔 로컬 배포 관리 권한 제공
+* 데이터 서비스 역할: Ransomware Resilience 및 Backup and Recovery 등 특정 데이터 서비스를 관리하기 위한 권한을 제공합니다.
+* 애플리케이션 역할: 스토리지 관리 권한과 Console 로컬 배포 이벤트 및 알림 감사 권한을 제공합니다.
+
+
+구성원의 책임에 따라 여러 역할을 할당할 수 있습니다. 예를 들어 특정 플릿에 대해 스토리지 관리자 역할과 백업 및 복구 관리자 역할을 모두 구성원에게 할당할 수 있습니다.
+
+구성원의 액세스 권한을 선택하려면 역할 범주를 구성원의 책임과 일치시킨 다음, 구성원이 해당 액세스 권한을 가져야 하는 범위(조직, 폴더 또는 플릿)에 맞춰 역할을 할당하십시오. link:concept-folders-fleets-overview.html#organization-design-examples["NetApp Console 로컬 배포에서 다양한 조직이 역할과 범위를 구성하는 방식에 대해 알아보세요."].
+
+link:reference-iam-predefined-roles.html["NetApp Console 로컬 배포에서 멤버에게 할당할 수 있는 사전 정의된 역할에 대해 알아보십시오."].
+
+
+
+[[how-role-inheritance-works]]
+[[role-inheritance]]
+== 역할 상속의 작동 방식
+
+조직 또는 폴더 수준에서 역할을 할당하면 해당 역할은 계층 구조의 해당 부분 내의 하위 범위에 상속됩니다. 즉, 조직 수준 역할은 조직 전체에 적용되고, 폴더 수준 역할은 해당 폴더 내의 모든 하위 폴더 및 플릿에 적용되며, 플릿 수준 역할은 해당 플릿에 속한 리소스에만 적용됩니다.
+
+멤버에게 유지하려는 액세스 권한에 맞는 범위를 사용하십시오. 예를 들어, 한 지역 내 여러 플릿에서 동일한 액세스 권한이 필요한 경우 폴더 수준에서 역할을 할당하십시오. 멤버가 하나의 플릿에만 액세스해야 하는 경우 플릿 수준에서 역할을 할당하십시오.
+
+하위 범위에서 상속된 액세스 권한은 재정의할 수 없습니다. 구성원이 조직 또는 폴더에서 역할을 상속받은 경우, 원래 권한을 부여했던 상위 범위에서 해당 할당을 변경해야 합니다.
+
+link:concept-folders-fleets-overview.html["NetApp Console 로컬 배포에서 폴더 및 플릿에 대해 알아보기"]. link:task-iam-manage-roles.html["구성원 액세스 관리"]. link:task-iam-users-fleets-assign.html["플리트 액세스 할당 관리"].

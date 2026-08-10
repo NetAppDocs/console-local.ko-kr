@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: task-install-agent-on-prem-ova.html 
+keywords: install agent, on-premises agent installation, vCenter, ESXi, VMware, OVA, deploy Console local deployment, agent deployment, netapp console local 
+summary: VMWare 사용자라면 OVA 파일을 사용하여 VCenter에 콘솔 에이전트를 설치할 수 있습니다. OVA 다운로드 또는 URL은 NetApp Console 로컬 배포를 통해 확인할 수 있습니다. 
+---
+= vCenter에서 OVA를 사용하여 NetApp Console 로컬 배포 설치
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+OVA를 사용하여 VCenter에 NetApp Console 로컬 배포를 설치할 수 있습니다. OVA 다운로드 또는 URL은 NetApp 지원 사이트에서 확인할 수 있습니다.
+
+
+
+[[prepare-to-install-netapp-console-local-deployment]]
+== NetApp Console 로컬 배포 설치 준비
+
+설치하기 전에 VM 호스트가 요구 사항을 충족하고 NetApp Console 로컬 배포가 인터넷 및 대상 네트워크에 액세스할 수 있는지 확인하십시오. NetApp Backup and Recovery 등 NetApp 데이터 서비스를 사용하려면 NetApp Console 로컬 배포가 사용자를 대신하여 작업을 수행할 수 있도록 클라우드 공급자 자격 증명을 생성하십시오.
+
+
+
+[[review-netapp-console-local-deployment-host-requirements]]
+=== NetApp Console 로컬 배포 호스트 요구 사항을 검토합니다
+
+NetApp Console 로컬 배포를 설치하기 전에 호스트 시스템이 설치 요구 사항을 충족하는지 확인하십시오.
+
+* CPU: 16코어 또는 16개의 vCPU
+* RAM: 64 GB
+* 디스크 공간: 596GB (씩 프로비저닝 권장)
+* vSphere 7.0u3 이상, 가상 하드웨어 버전 19 이상
+
+
+
+NOTE: ESXi 호스트에 직접 설치하는 대신 vCenter 환경에 NetApp Console 로컬 배포를 설치하십시오.
+
+
+
+[[set-up-network-access-for-the-netapp-console-local-deployment]]
+[[network-access-agent]]
+=== NetApp Console 로컬 배포를 위한 네트워크 액세스 설정
+
+NetApp Console 로컬 배포는 서비스 간 통신을 위해 고정 주소 공간을 사용합니다. 내부 네트워크에는 10.42.0.0/16 및 10.43.0.0/16 IP 범위가 사용됩니다. Console 로컬 배포를 설치하기 전에 Console 로컬 배포에 할당된 VLAN에서 이러한 IP 범위가 다른 VM, DHCP 범위, DNS 레코드 또는 로드 밸런서 VIP 풀에 할당되지 않았는지 확인하십시오.
+
+에이전트 인터페이스의 IP 주소를 변경하는 방법에 대한 지침은 기술 자료 문서 "Agent IP conflict with existing network"를 참조하십시오.
+
+
+
+[[install-netapp-console-local-deployment-in-your-vcenter-environment]]
+== VCenter 환경에 NetApp Console 로컬 배포를 설치하십시오.
+
+NetApp은 vCenter 환경에 NetApp Console 로컬 배포 설치를 지원합니다. OVA 파일에는 VMware 환경에 배포할 수 있는 사전 구성된 VM 이미지가 포함되어 있습니다.
+
+
+
+[[download-the-ova-or-copy-the-url]]
+=== OVA를 다운로드하거나 URL을 복사합니다.
+
+OVA를 다운로드합니다.
+
+. NetApp 지원 사이트에서 Console 로컬 배포 소프트웨어를 다운로드하십시오.
+
+
+
+
+[[deploy-netapp-console-local-deployment-in-your-vcenter]]
+=== VCenter에 NetApp Console 로컬 배포를 배포합니다
+
+콘솔 로컬 배포를 진행하려면 VCenter 환경에 로그인하십시오.
+
+.단계
+. 환경에 따라 필요한 경우 자체 서명 인증서를 신뢰할 수 있는 인증서 목록에 업로드하십시오. 설치 후 이 인증서를 교체할 수 있습니다.
+. 콘텐츠 라이브러리 또는 로컬 시스템에서 OVA 파일을 배포하십시오.
++
+|===
+
+
+| 로컬 시스템에서 | 콘텐츠 라이브러리에서 
+
+
+| a. 마우스 오른쪽 버튼을 클릭하고 *OVF 템플릿 배포...*를 선택합니다. b. URL에서 OVA 파일을 선택하거나 해당 위치로 이동한 다음 *다음*을 선택합니다. | a. 콘텐츠 라이브러리로 이동하여 Console OVA를 선택합니다. b. *작업* > *이 템플릿에서 새 VM 만들기*를 선택합니다. 
+|===
+. 콘솔을 배포하려면 OVF 템플릿 배포 마법사를 완료하십시오.
+. 가상 머신의 이름과 폴더를 선택한 다음 *다음*을 선택합니다.
+. 컴퓨팅 리소스를 선택한 다음 *다음*을 선택하십시오.
+. 템플릿의 세부 정보를 검토한 후 *다음*을 선택합니다.
+. 라이선스 계약에 동의한 후 *다음*을 선택합니다.
+. 사용할 프록시 구성 유형을 선택하십시오. 명시적 프록시, 투명 프록시 또는 프록시 없음.
+. VM을 배포할 데이터 저장소를 선택한 다음 *다음*을 선택하십시오. 호스트 요구 사항을 충족하는지 확인하십시오.
+. VM을 연결할 네트워크를 선택한 다음 *다음*을 선택하십시오. 네트워크가 IPv4이고 필요한 엔드포인트에 대한 외부 인터넷 액세스가 가능한지 확인하십시오.
+. *템플릿 사용자 지정* 창에서 다음 필드를 작성합니다.
++
+** *프록시 정보*
++
+*** 명시적 프록시를 선택한 경우 프록시 서버 호스트 이름 또는 IP 주소와 포트 번호, 사용자 이름 및 비밀번호를 입력하십시오.
+*** 투명 프록시를 선택한 경우 해당 인증서를 업로드하십시오.
+
+
+** *가상 머신 구성*
++
+*** *구성 검사 건너뛰기*: 이 확인란은 기본적으로 선택 해제되어 있습니다. 즉, NetApp Console 로컬 배포 시 네트워크 액세스를 검증하기 위한 구성 검사를 실행합니다.
++
+**** NetApp은 설치 과정에 NetApp Console 로컬 배포에 대한 구성 검사가 포함되도록 이 확인란을 선택 해제하는 것을 권장합니다. 구성 검사는 NetApp Console 로컬 배포가 필요한 엔드포인트에 네트워크 액세스할 수 있는지 확인합니다. 연결 문제로 인해 배포가 실패하는 경우, NetApp Console 로컬 배포 호스트에서 유효성 검사 보고서와 로그를 확인할 수 있습니다. 경우에 따라 NetApp Console 로컬 배포에 네트워크 액세스가 가능하다고 확신하는 경우 이 검사를 건너뛸 수 있습니다.
+
+
+*** *유지 관리 암호*:  `maint` 사용자가 NetApp Console 로컬 배포 유지 관리 콘솔에 액세스할 수 있도록 암호를 설정합니다.
+*** *NTP 서버*: 시간 동기화를 위해 하나 이상의 NTP 서버를 지정하십시오.
+*** *호스트 이름*: 이 VM의 호스트 이름을 설정하십시오. 검색 도메인을 포함해서는 안 됩니다. 예를 들어, FQDN이 console10.searchdomain.company.com인 경우 console10으로 입력해야 합니다.
+*** *기본 DNS*: 이름 확인에 사용할 기본 DNS 서버를 지정합니다.
+*** *보조 DNS*: 이름 확인에 사용할 보조 DNS 서버를 지정합니다.
+*** 검색 도메인: 호스트 이름을 확인할 때 사용할 검색 도메인 이름을 지정합니다. 예를 들어, FQDN이 console10.searchdomain.company.com인 경우 searchdomain.company.com을 입력합니다.
+*** *IPv4 주소*: 호스트 이름에 매핑된 IP 주소입니다.
+*** *IPv4 서브넷 마스크*: IPv4 주소에 대한 서브넷 마스크입니다.
+*** *IPv4 게이트웨이 주소*: IPv4 주소의 게이트웨이 주소입니다.
+
+
+
+
+. *다음*을 선택하십시오.
+. *완료 준비* 창에서 세부 정보를 검토하고 *마침*을 선택하십시오.
++
+vSphere 작업 표시줄에는 NetApp Console 로컬 배포가 배포되는 동안 진행 상황이 표시됩니다.
+
+. VM의 전원을 켭니다.
+

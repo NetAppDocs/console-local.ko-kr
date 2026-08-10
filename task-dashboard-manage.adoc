@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard-manage.html 
+keywords: manage dashboard, view dashboards, edit dashboard, clone dashboard, delete dashboard, netapp console local 
+summary: NetApp Console 로컬 배포 환경에서 사용자 지정 대시보드를 열고, 편집하고, 복제하고, 삭제하여 대시보드를 보고 관리할 수 있습니다. 
+---
+= NetApp Console 로컬 배포에서 대시보드 관리
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 사용자 지정 대시보드를 관리하여 운영 상황에 맞춰 보기 방식을 유지할 수 있습니다. 팀, 플릿 및 우선순위가 변경됨에 따라 대시보드를 편집, 복제 및 삭제할 수 있습니다.
+
+이 작업은 *저장소 > 대시보드*에 있는 사용자 지정 대시보드에만 적용됩니다. 미리 정의된 홈 페이지 대시보드는 같은 방식으로 편집할 수 없습니다.
+
+
+
+[[view-dashboards]]
+== 대시보드 보기
+
+사용자 지정 및 사전 정의된 대시보드를 확인하여 열거나, 편집하거나, 복제하거나, 삭제하려는 대시보드를 찾으십시오.
+
+
+TIP: 미리 정의된 대시보드를 복제하여 편집 가능한 사용자 지정 버전을 만들 수 있습니다.
+
+.단계
+. *Storage > 대시보드*를 선택합니다.
+. 대시보드 표를 검토하여 열고자 하는 대시보드를 찾으십시오.
+. 대시보드 이름을 선택하여 열고 해당 지표를 확인합니다.
+. 필요한 경우 제공되는 기능을 사용하여 사용자 지정 대시보드를 편집, 복제 또는 삭제할 수 있습니다.
+
+
+
+
+[[update-a-dashboard-as-priorities-change]]
+== 우선순위가 변경될 때 대시보드를 업데이트합니다
+
+운영 우선순위가 변경되어 표시할 카드와 지표를 조정해야 할 경우 대시보드를 편집하십시오.
+
+.단계
+. *Storage > 대시보드*를 선택합니다.
+. 편집하려는 대시보드를 엽니다.
+. 대시보드에서 기존 카드를 수정하려면 카드의 작업 메뉴에서 편집을 선택합니다.
+. *카드 추가*를 선택하여 대시보드에 새 카드를 추가합니다.
++
+link:task-customize-dashboard-cards.html["NetApp Console 로컬 배포에서 카드 사용자 지정"].
+
+. 대시보드를 저장하려면 *변경 사항 저장*을 선택합니다.
++
+** 작업 메뉴에서 *새 대시보드로 저장*을 선택하여 변경 사항을 새 대시보드로 저장할 수도 있습니다. 이 옵션은 현재 모니터링 요구 사항에 맞는 새 버전을 만들면서 기존 대시보드는 다른 팀이나 그룹을 위해 유지하려는 경우에 유용합니다.
+** 작업 메뉴에서 *변경 내용 취소*를 선택하여 변경 사항을 취소할 수도 있습니다. 이 옵션은 대시보드의 마지막으로 저장된 버전으로 되돌리려는 경우에 유용합니다.
+
+
+
+
+
+
+[[reuse-a-custom-dashboard-for-another-resource-or-fleet]]
+== 다른 리소스 또는 플릿에 대해 사용자 지정 대시보드를 재사용합니다.
+
+검증된 레이아웃을 다른 팀, 시스템 또는 모니터링 시나리오에 재사용하려면 처음부터 다시 만들지 않고 대시보드를 복제하십시오.
+
+
+TIP: 미리 정의된 대시보드를 복제하여 편집 가능한 사용자 지정 버전을 만들 수 있습니다.
+
+.단계
+. *Storage > 대시보드*를 선택합니다.
+. 복제하려는 대시보드의 작업 메뉴에서 *복제*를 선택합니다.
++
+콘솔 로컬 배포는 원본 대시보드의 모든 카드를 포함하는 복사본을 생성합니다.
+
+. 복제된 대시보드의 이름과 설명을 입력합니다.
+. 방금 생성한 복제 대시보드를 선택합니다. 새로운 모니터링 시나리오에 맞게 메트릭, 리소스 및 카드 유형을 변경합니다.
++
+link:task-customize-dashboard-cards.html["NetApp Console 로컬 배포에서 카드 사용자 지정"].
+
+
+
+
+
+[[remove-dashboards-you-no-longer-use]]
+== 더 이상 사용하지 않는 대시보드를 제거합니다.
+
+대시보드가 현재 운영에 더 이상 도움이 되지 않고 활성 사용 사례에 집중된 대시보드 목록을 유지하려는 경우 해당 대시보드를 삭제하십시오.
+
+.단계
+. *Storage > 대시보드*를 선택합니다.
+. 제거하려는 대시보드에 대해 *삭제*를 선택합니다.
+. 삭제를 확인하세요.
+
+
+
+
+[[related-information]]
+== 관련 정보
+
+* link:task-storage-dashboard.html["NetApp Console 로컬 배포에서 홈 페이지 메트릭 보기"]
+* link:task-dashboard-get-started.html["NetApp Console 로컬 배포에서 대시보드 시작하기"]
+* link:concept-custom-dashboards.html["NetApp Console 로컬 배포에서 사용자 지정 대시보드에 대해 알아보십시오."]
+* link:task-dashboard-create.html["사용자 지정 대시보드 만들기"]
+* link:task-customize-dashboard-cards.html["NetApp Console 로컬 배포에서 대시보드 카드 사용자 지정"]
+

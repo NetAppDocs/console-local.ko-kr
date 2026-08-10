@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: concept-monitor-fleets-inventory.html 
+keywords: inventory, fleet inventory, systems, volumes, capacity, security, performance, monitoring, ONTAP, clusters, fleet visibility, capacity planning, storage governance, netapp console local 
+summary: 인벤토리를 사용하여 NetApp Console 로컬 배포에서 플릿 상태를 모니터링하고 스토리지 리소스를 조사할 수 있습니다. 
+---
+= NetApp Console 로컬 배포에서 인벤토리를 사용하여 플릿 모니터링
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포 환경에서 인벤토리를 사용하여 플릿 상태를 모니터링하고 환경 전반의 스토리지 리소스를 조사할 수 있습니다. 인벤토리는 용량, 보안 및 성능 보기를 제공하여 문제를 식별하고 리소스 활용률을 파악하며 관리형 스토리지 시스템을 추적하는 데 도움을 줍니다.
+
+인벤토리는 주로 정보 확인 및 진단용 작업 공간입니다. 인벤토리에서 전체 스토리지 시스템의 시스템, 볼륨 및 기타 스토리지 오브젝트를 검토하고 스토리지 리소스 프로비저닝 등 일반적인 작업을 수행할 수 있습니다. 고급 스토리지 관리 작업을 위해 NetApp Console 로컬 배포를 통해 System Manager로 이동합니다.
+
+
+
+[[access-inventory]]
+== 액세스 인벤토리
+
+다음 등을 포함하여 Console 로컬 배포의 여러 영역에서 *Inventory*에 액세스할 수 있습니다.
+
+* 홈페이지
+* 플릿 개요 페이지
+* Fleet 상태 카드 및 관련 인벤토리 보기
+
+
+*Inventory*를 입력하는 위치에 따라 표시되는 범위는 조직 수준 또는 플리트 수준일 수 있습니다.
+
+
+
+[[inventory-views]]
+== 인벤토리 보기
+
+*인벤토리*는 스토리지 환경의 다양한 측면을 분석하는 데 도움이 되는 여러 보기를 제공합니다.
+
+용량:: 용량 활용률을 확인하고 스토리지 리소스를 소비하는 시스템, 볼륨 및 기타 스토리지 오브젝트를 식별합니다.
+보안:: 관리형 스토리지 리소스 전반에 걸쳐 보안 관련 정보 및 규정 준수 상태를 검토합니다.
+성능:: 성능 관련 지표를 분석하고 추가 조사가 필요할 수 있는 리소스를 파악합니다.
+
+
+표시되는 정보는 선택한 보기 방식과 오브젝트 유형에 따라 다릅니다.
+
+
+
+[[investigate-storage-resources]]
+== 스토리지 리소스 조사
+
+*인벤토리*를 사용하여 다음을 수행하세요.
+
+* 플리트 상태 모니터링
+* 스토리지 용량 사용량 검토
+* 관리형 스토리지 시스템 추적
+* 용량을 소모하는 볼륨 및 기타 오브젝트를 식별합니다.
+* 잠재적인 보안 또는 성능 문제를 조사합니다.
+* 관리 조치가 필요한 리소스를 찾습니다.
+
+
+*인벤토리*는 환경에 대한 개괄적인 파악에서 특정 스토리지 리소스에 대한 보다 상세한 조사로 전환하는 데 도움을 줍니다.
+
+
+
+[[provision-storage-resources]]
+== 스토리지 리소스 프로비저닝
+
+인벤토리에는 볼륨 및 LUN 등 스토리지 리소스를 프로비저닝할 수 있는 워크플로가 포함되어 있습니다.
+
+리소스를 프로비저닝할 때 기존 관리형 스토리지 시스템을 선택하고 워크로드에 필요한 구성 설정을 제공합니다.
+
+
+
+[[inventory-and-alerts]]
+== 재고 및 알림
+
+알림은 사용자 환경 내의 특정 스토리지 오브젝트 및 조건에 대해 생성됩니다.
+
+알림을 선택하면 Console 로컬 배포에서 추가 조사 또는 관리 작업을 위해 System Manager로 연결될 수 있습니다. *Inventory*는 스토리지 환경 및 관리 리소스의 전반적인 상태에 대한 더 폭넓은 가시성을 제공하여 알림을 보완합니다.
+
+
+
+[[advanced-management-tasks]]
+== 고급 관리 작업
+
+*Inventory* 를 사용하면 조치가 필요한 리소스를 식별할 수 있지만, 일부 고급 스토리지 관리 작업은 System Manager에서 수행됩니다.
+
+예를 들면 다음과 같습니다.
+
+* 고급 워크로드 관리
+* 리소스 재배치 및 최적화 작업
+* 상세 시스템 관리 활동
+
+
+문제를 파악하고 조사하려면 *인벤토리*를 사용하고, 더 심층적인 관리 기능이 필요할 때는 System Manager를 사용하십시오.

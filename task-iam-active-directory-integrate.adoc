@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-iam-active-directory-integrate.html 
+keywords: AD, Active Directory, LDAP, directory services, directory users, authentication, user management, netapp console 
+summary: 디렉터리 기반 로그인 및 사용자 조회를 위해 NetApp Console 로컬 배포를 Active Directory와 통합합니다. 
+---
+= NetApp Console 로컬 배포를 Active Directory와 통합
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포를 Active Directory와 통합하여 디렉터리 기반 로그인 및 사용자 조회를 구현하십시오. 디렉터리 서비스를 사용하여 사용자를 인증한 다음 NetApp Console 로컬 배포에서 해당 사용자에게 액세스 권한을 할당하십시오.
+
+.필수 액세스 역할
+최고 관리자 또는 조직 관리자. link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보기"].
+
+Active Directory와 통합하면 콘솔 로컬 배포는 기존 디렉터리를 통해 사용자를 인증합니다. 디렉터리 사용자를 추가한 후에는 콘솔 액세스 역할을 할당하여 해당 사용자가 액세스할 수 있는 항목을 제어합니다.
+
+Active Directory 통합은 기존 제어, 감사 추적 및 정책을 Console 로컬 배포 액세스에 적용하여 규정 준수 요구 사항을 충족하는 데에도 도움이 됩니다.
+
+[NOTE]
+====
+* Active Directory 통합은 페더레이션 그룹을 생성하지 않고, 디렉터리-그룹 할당을 동기화하지 않으며, 액세스 권한을 자동으로 부여하지 않습니다. 관리자는 Console 로컬 배포에서 디렉터리 사용자를 조직에 추가하고 역할을 할당해야 합니다.
+* Active Directory 통합은 한 번에 하나만 지원됩니다. 통합이 구성되면 *통합 추가* 버튼이 비활성화됩니다. 다른 디렉터리로 전환하려면 기존 통합을 먼저 비활성화하거나 삭제해야 합니다.
+* 디렉터리 사용자는 다단계 인증(MFA)을 구성하거나 사용하지 않습니다. Console 로컬 배포는 로컬 사용자에 대해서만 MFA를 지원합니다. link:task-manage-member-security.html["구성원 보안 설정을 관리하는 방법을 알아보십시오."].
+
+
+====
+
+
+[[before-you-begin]]
+== 시작하기 전에
+
+Active Directory와 통합하기 전에 다음 사항을 확인하십시오.
+
+* Active Directory 도메인과 디렉터리를 쿼리할 수 있는 자격 증명
+* LDAP 서버 주소와 디렉터리 트리의 기본 고유 이름(DN)
+* Console 로컬 배포에서 포트 389(LDAP) 또는 636(LDAPS)의 LDAP 서버로의 네트워크 액세스
+* LDAPS를 사용할 계획인 경우 SSL/TLS 인증서
+
+
+.단계
+. *관리 > ID 및 액세스*를 선택합니다.
+. 연합 페이지를 열려면 *디렉토리 서비스*를 선택합니다.
+. *통합 추가*를 선택합니다.
+. Active Directory 서버에 대한 연결 정보를 입력하십시오.
++
+** 통합을 설명하는 이름입니다.
+** *LDAP 호스트*: LDAP 서버의 호스트 이름 또는 IP 주소입니다. 서버가 여러 개인 경우 기본 서버를 입력하십시오.
+** 포트 번호는 LDAP의 경우 389번, LDAPS의 경우 636번입니다.
+** 연결 시간 초과(밀리초)입니다. 기본값은 1000ms입니다.
+
+
+. LDAPS를 사용하려면 *SSL/TLS 사용*을 선택하십시오. LDAP 서버가 LDAPS를 지원하고 Console에서 필요한 인증서에 액세스할 수 있는지 확인하십시오.
+. 연결을 테스트하십시오. 연결에 실패하면 LDAP 호스트, 포트, 네트워크 연결 상태 및 SSL/TLS 인증서를 확인하십시오.
+. 테스트가 성공하면 디렉터리와 사용자 정보를 입력하십시오.
++
+** *기본 DN 바인딩*: 이 앱이 디렉터리에 연결하는 데 사용할 LDAP/AD 계정의 바인딩 DN을 입력하고 해당 계정의 바인딩 자격 증명(암호)을 입력합니다. Console은 이러한 정보를 사용하여 LDAP에 바인딩하고 연결의 유효성을 검사합니다.
+** *사용자 DN*: 디렉터리를 조회할 수 있는 권한이 있는 사용자 계정입니다. 예:  `CN=ldap-reader,OU=Service Accounts,DC=example,DC=com`.
+
+
+. 통합을 저장하려면 *추가*를 선택합니다.
+
+
+.완료한 후
+통합을 저장한 후 디렉터리 사용자를 조직에 추가하고 역할을 할당하십시오. 디렉터리 사용자를 추가하려면 먼저 하나 이상의 Active Directory 통합을 구성하고 활성화해야 합니다. link:task-iam-manage-members-permissions.html["디렉터리 사용자 추가 및 역할 할당 방법을 알아보십시오."].
+
+
+
+[[disable-or-enable-an-active-directory-integration]]
+== Active Directory 통합 비활성화 또는 활성화
+
+통합을 비활성화하면 구성을 삭제하지 않고 디렉터리 기반 인증을 일시적으로 중단할 수 있습니다. 디렉터리 서비스를 비활성화하면 디렉터리 사용자는 해당 디렉터리를 통해 로그인할 수 없습니다.
+
+.단계
+. *관리 > ID 및 액세스*를 선택합니다.
+. 연합 페이지를 열려면 *디렉토리 서비스*를 선택합니다.
+. 통합 목록에서 해당 통합을 찾고 해당 행의 작업 메뉴를 선택합니다.
+. 통합을 일시 중단하려면 *사용 안 함*을 선택하고, 복원하려면 *사용*을 선택합니다.
+
+
+
+
+[[delete-an-active-directory-integration]]
+== Active Directory 통합 삭제
+
+통합을 삭제하면 디렉터리 서비스 구성이 영구적으로 제거됩니다. 삭제하기 전에 해당 통합에 연결된 디렉터리 사용자에 대한 경고를 검토하십시오. 사용자 액세스에 영향을 미칠 수 있습니다.
+
+.단계
+. *관리 > ID 및 액세스*를 선택합니다.
+. 연합 페이지를 열려면 *디렉토리 서비스*를 선택합니다.
+. 통합 목록에서 해당 통합을 찾고 해당 행의 작업 메뉴를 선택합니다.
+. *삭제*를 선택하고 삭제를 확인합니다.
+

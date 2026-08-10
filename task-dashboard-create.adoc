@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard-create.html 
+keywords: create dashboard, custom dashboard, add dashboard, metrics, cards, card templates, fleet monitoring, storage visibility, performance monitoring, capacity monitoring, netapp console local 
+summary: NetApp Console 로컬 배포에서 사용자 정의 대시보드를 생성하고, 카드를 추가하고, 사용할 수 있는 모니터링 뷰를 저장합니다. 
+---
+= NetApp Console 로컬 배포 환경에서 모니터링 목표용 대시보드 구축
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 사용자 정의 대시보드를 생성하고, 카드를 추가하며, 일일 운영을 위한 모니터링 뷰를 저장합니다.
+
+바로 사용할 수 있는 조직 수준 모니터링 기능만 필요한 경우, 미리 정의된 홈 페이지 대시보드부터 시작하십시오. 역할별 보기, 리소스 수준 타겟팅 또는 맞춤형 카드 레이아웃이 필요한 경우 사용자 지정 대시보드를 생성하십시오.
+
+.콘솔 로컬 배포 대시보드 가이드라인
+* 대시보드를 생성한 사용자만 해당 대시보드를 볼 수 있습니다. 콘솔 홈 페이지에 대시보드를 추가하더라도 다른 사용자와 공유할 수 없습니다.
+* 권한이 있는 리소스만 볼 수 있습니다. 사용 가능한 리소스 목록에 리소스가 표시되지 않으면 해당 리소스를 볼 권한이 없는 것입니다.
+* 시작하기 전에 대시보드에서 추적할 측정 항목 유형과 리소스를 파악하십시오. link:reference-dashboard-card-templates.html["NetApp Console 로컬 배포의 사용자 정의 대시보드 카드 및 메트릭에 대해 알아보십시오."]
+
+
+
+
+[[build-a-dashboard-for-your-monitoring-goals]]
+== 모니터링 목표에 맞는 대시보드를 구축하세요
+
+차량 상태, 성능 저하 지점, 알림 추세 등 업무에 중요한 지표를 한 곳에서 모니터링해야 할 때 대시보드를 생성하십시오.
+
+.단계
+. *Storage > 대시보드*를 선택합니다.
+. *대시보드 추가*를 선택합니다.
++
+콘솔 로컬 배포는 기본 이름과 설명 없이 새 대시보드를 생성합니다.
+
+. *카드 추가*를 선택합니다.
+. 카드에 사용할 플릿, 시스템 또는 볼륨 등 * 리소스 유형 * 을 선택한 다음 사용 가능한 리소스 목록에서 리소스를 선택하십시오.
+. 측정항목과 카드 유형을 선택하려면 *다음*을 선택합니다.
+. 표시할 메트릭을 선택하세요. 메트릭 유형별로 필터링할 수 있습니다. *메트릭 유형*에서 *성능*, *용량*, *상태* 또는 *알림*을 선택하거나 이름으로 특정 메트릭을 검색할 수 있습니다. 사용 가능한 메트릭은 선택한 리소스 유형에 따라 다릅니다.
++
+link:reference-dashboard-card-templates.html#metrics-list["사용 가능한 측정 지표에 대해 알아보십시오."]
+
+. 대시보드에 포함할 카드를 선택하고 *다음*을 선택합니다.
++
+한 번에 하나의 카드만 선택할 수 있습니다. 카드 미리보기에서는 선택한 측정항목과 리소스 유형에 대한 실시간 데이터를 확인할 수 있습니다.
+
+. 카드 이름을 지정하세요. 이름은 대시보드 내에서 고유해야 합니다.
+. 카드 미리보기를 검토하고 카드 이름과 설명을 입력한 다음 *추가*를 선택합니다.
+. 추가 카드에 대해서도 이 단계를 반복하십시오.
+. 연필 아이콘을 선택하여 대시보드 이름과 설명을 편집하고 용도를 설명하십시오.
+. '카드 추가' 버튼 오른쪽에 있는 작업 메뉴를 선택하고 *대시보드 저장*을 선택합니다.
++
+저장된 대시보드는 *스토리지 > 대시보드*에서 확인할 수 있습니다.
+
+. 선택적으로, 작업 메뉴에서 *홈페이지에 추가*를 선택하여 이 대시보드를 홈페이지에 추가할 수 있습니다. 대시보드가 홈페이지에 추가됩니다. 직접 만든 사용자 지정 대시보드는 본인만 볼 수 있습니다. 다른 사람과 공유되지 않습니다.
+
+
+
+
+[[related-information]]
+== 관련 정보
+
+* link:task-storage-dashboard.html["NetApp Console 로컬 배포에서 홈 페이지 메트릭 보기"]
+* link:concept-custom-dashboards.html["NetApp Console 로컬 배포에서 사용자 지정 대시보드에 대해 알아보십시오."]
+* link:task-customize-dashboard-cards.html["NetApp Console 로컬 배포에서 대시보드 카드 사용자 지정"]
+* link:task-dashboard-manage.html["NetApp Console 로컬 배포에서 대시보드 관리"]
+

@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-storage-roles.html 
+keywords: storage roles, Storage admin, Storage viewer, System health specialist, ONTAP management, storage governance, identity and access management, access roles, rbac, netapp console local 
+summary: NetApp Console 로컬 배포에서 스토리지 관리 기능에 대한 액세스 권한을 사용자에게 부여하려면 다음과 같은 역할을 할당할 수 있습니다. 스토리지 관리를 위한 관리자 역할 또는 모니터링을 위한 뷰어 역할을 사용자에게 할당할 수 있습니다. 
+---
+= NetApp Console 로컬 배포를 위한 스토리지 액세스 역할
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 스토리지 관리 기능에 대한 액세스 권한을 사용자에게 부여하려면 다음과 같은 역할을 할당할 수 있습니다. 스토리지 관리를 위한 관리자 역할 또는 모니터링을 위한 뷰어 역할을 사용자에게 할당할 수 있습니다.
+
+관리자는 다음과 같은 스토리지 리소스 및 기능에 대해 사용자에게 스토리지 역할을 할당할 수 있습니다.
+
+스토리지 리소스:
+
+* 온프레미스 ONTAP 클러스터
+
+
+콘솔 서비스 및 기능:
+
+* 스토리지 상태 기능
+
+
+.NetApp Console 로컬 배포에서 스토리지 역할 예시
+다국적 기업인 XYZ Corporation은 대규모 스토리지 엔지니어 및 스토리지 관리자 팀을 보유하고 있습니다. 이 팀은 담당 지역의 스토리지 자산을 관리할 수 있지만, 사용자 관리 및 라이선스 관리와 같은 핵심 Console 로컬 배포 작업에 대한 접근 권한은 제한됩니다.
+
+12명으로 구성된 팀 내에서 2명의 사용자에게 *Storage viewer* 역할이 부여되어 자신이 할당된 Console 로컬 배포 플릿과 관련된 스토리지 리소스를 모니터링할 수 있습니다. 나머지 9명에게는 소프트웨어 업데이트 관리, Console 로컬 배포를 통한 ONTAP System Manager 액세스, 스토리지 리소스 검색(시스템 추가) 기능이 포함된 *Storage admin* 역할이 부여됩니다. 팀 내 1명에게는 *System health specialist* 역할이 부여되어 해당 지역의 스토리지 리소스 상태를 관리할 수 있지만 시스템을 수정하거나 삭제할 수는 없습니다. 이 사용자는 할당된 플릿의 스토리지 리소스에 대한 소프트웨어 업데이트도 수행할 수 있습니다.
+
+해당 조직에는 사용자 관리 및 라이선스 관리를 포함하여 Console 로컬 배포의 모든 측면을 관리할 수 있는 *Organization admin* 역할을 가진 사용자가 두 명 더 있으며, 할당된 폴더 및 플릿에 대한 Console 로컬 배포 관리 작업을 수행할 수 있는 *Folder or fleet admin* 역할을 가진 사용자도 여러 명 있습니다.
+
+다음 표는 각 스토리지 역할이 수행하는 작업을 보여줍니다.
+
+[cols="40,20a,20a,20a"]
+|===
+| 기능 및 작업 | 스토리지 관리자 | 시스템 상태 전문가 | 스토리지 뷰어 
+
+
+4+| *스토리지 관리*: 
+
+
+| 새 리소스 검색(시스템 추가)  a| 
+예
+ a| 
+예
+ a| 
+아니요
+
+
+
+| 추가된 시스템 보기  a| 
+예
+ a| 
+예
+ a| 
+아니요
+
+
+
+| 콘솔에서 시스템 삭제  a| 
+예
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 시스템 수정  a| 
+예
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+4+| *System manager 액세스* 
+
+
+| 자격 증명을 입력할 수 있습니다  a| 
+예
+ a| 
+예
+ a| 
+아니요
+
+|===

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-fleets.html 
+keywords: switch fleets, fleets, navigate between fleets, fleet navigation, iam, identity and access management, netapp console local 
+summary: 조직에 여러 플리트가 포함되어 있고 해당 플리트에 대한 액세스 권한이 있는 경우 언제든지 플리트 간에 전환할 수 있습니다. 
+---
+= NetApp Console 로컬 배포에서 플릿 간 전환
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포 환경에서 여러 플릿에 액세스할 수 있는 경우 언제든지 플릿 간에 전환할 수 있습니다.
+
+
+NOTE: *ID 및 액세스* 페이지를 보고 있는 동안에는 다른 플릿으로 전환할 수 없습니다.
+
+.단계
+. 콘솔 로컬 배포의 상단 헤더에서 *Scope*를 선택합니다.
+. 조직 내 플리트를 살펴보고 원하는 플리트를 선택한 다음 *전환*을 선택합니다.
++
+image:screenshot-iam-switch-projects-select.png["새 플릿을 선택할 수 있는 범위 메뉴의 스크린샷입니다."]
+
+

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-on-prem.html 
+keywords: networking, network requirements, ports, on-premises, TCP, HTTP, HTTPS, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local 
+summary: 콘솔 에이전트는 온프레미스 Linux 호스트에 수동으로 설치할 경우 _인바운드_ 포트를 사용합니다. 계획 수립 시 이러한 포트를 참조하십시오. 
+---
+= NetApp Console 로컬 배포에서 온프레미스 Console 에이전트용 포트
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 콘솔 에이전트는 온프레미스 Linux 호스트에 수동으로 설치할 경우 _인바운드_ 포트를 사용합니다. 계획 수립 시 이러한 포트를 참조하십시오.
+
+이러한 수신 규칙은 모든 NetApp Console 배포 모드에 적용됩니다.
+
+[cols="10,10,80"]
+|===
+| 프로토콜 | 포트 | 목적 
+
+
+| HTTP | 80  a| 
+* 클라이언트 웹 브라우저에서 로컬 사용자 인터페이스로의 HTTP 액세스를 제공합니다
+* Cloud Volumes ONTAP 업그레이드 프로세스 중에 사용됩니다.
+
+
+
+
+| HTTPS | 443 | 클라이언트 웹 브라우저에서 로컬 사용자 인터페이스로의 HTTPS 액세스를 제공합니다 
+|===
