@@ -897,7 +897,6 @@
   <block id="371acb072fb244306a15b7ff5193bce9" category="list-text"><block ref="371acb072fb244306a15b7ff5193bce9" category="inline-link-macro-rx"></block></block>
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">NetApp Console IAM용 API에 대해 알아보십시오.</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
-  <block id="823d0c76da1241a2b4bacad6a700ad94" category="summary">NetApp Console 로컬 배포가 공급자, 프록시 및 보안 결정을 포함하여 OpenAI 및 OpenAI 호환 모델과 어떻게 통합되는지 알아보십시오.</block>
   <block id="aaa31fb12388ee6f380920310c04b753" category="doc">NetApp Console 로컬 배포에서 LLM 통합에 대해 알아보세요.</block>
   <block id="345b50b0707634d277d7a44851e59fe4" category="paragraph">NetApp Console 로컬 배포는 AI 기반 스토리지 관리를 위해 대규모 언어 모델(LLM)에 연결됩니다. 설정 후 사용자는 자연어를 사용하여 스토리지를 프로비저닝하고, 경고를 조사하고, 스토리지 관련 지침을 얻을 수 있습니다.</block>
   <block id="4f9d5100edf765a8f2ae1c53a1a257cc" category="paragraph">AI 기반 관리 기능을 통해 사용자는 요청 사항을 일반적인 언어로 설명할 수 있으며, Console 로컬 배포를 통해 스토리지 정책을 적용할 수 있습니다.</block>
@@ -920,7 +919,6 @@
   <block id="fcc55126fd45a515695466fda4602164" category="paragraph">NetApp Console 로컬 배포는 다음 LLM 공급자 유형을 지원합니다.</block>
   <block id="873109553cafbb3e957f0cc91186aa99" category="list-text">직접 OpenAI 모델에 액세스하려면 *OpenAI*를 사용하십시오.</block>
   <block id="fee6af50bc6105fefb846f7e518fb7cf" category="list-text">엔터프라이즈 게이트웨이 또는 프록시 서비스 등 호환 엔드포인트의 경우 *OpenAI 호환*.</block>
-  <block id="9b5550554d175b4703c9783519160fad" category="list-text">Anthropic의 Claude 모델을 위한 Anthropic.</block>
   <block id="7de1d980a668ed0c9d00649c3750c5d1" category="paragraph">모델 사용 가능 여부는 구성한 엔드포인트에 따라 다릅니다. Console 로컬 배포 목록에서 모델을 선택하십시오.</block>
   <block id="64c716e8b3c375cb10518555f2cc559d" category="inline-link-macro">NetApp Console 로컬 배포에서 지원되는 LLM 제공업체 및 모델에 대해 알아보십시오</block>
   <block id="42e3047ea36dd2b663d0f3f5d7b20152" category="paragraph">지원되는 모델에 대한 자세한 내용은 <block ref="1a3a7e8df14b08dab1953f3a058a454f" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -3169,7 +3167,6 @@
   <block id="3730b696052b51ae22af2269ff6edfbd" category="paragraph">NetApp은 vCenter 환경에 NetApp Console 로컬 배포 설치를 지원합니다. OVA 파일에는 VMware 환경에 배포할 수 있는 사전 구성된 VM 이미지가 포함되어 있습니다.</block>
   <block id="15e605ee974fa55f027726848cc8afff" category="section-title">OVA를 다운로드하거나 URL을 복사합니다.</block>
   <block id="0581616b53582ac26aae5d26a64dd995" category="paragraph">OVA를 다운로드합니다.</block>
-  <block id="e1a2daca3267d204edcee05245d2283c" category="list-text">NetApp 지원 사이트에서 Console 로컬 배포 소프트웨어를 다운로드하십시오.</block>
   <block id="fbf739c4dddaccc70b331772ffa91a55" category="section-title">VCenter에 NetApp Console 로컬 배포를 배포합니다</block>
   <block id="2dc9f6815a8338fe4cef7c144fd9501e" category="paragraph">콘솔 로컬 배포를 진행하려면 VCenter 환경에 로그인하십시오.</block>
   <block id="19070c8313a6999045690aa5c39cd703" category="list-text">환경에 따라 필요한 경우 자체 서명 인증서를 신뢰할 수 있는 인증서 목록에 업로드하십시오. 설치 후 이 인증서를 교체할 수 있습니다.</block>
@@ -3218,7 +3215,6 @@
   <block id="336e4351e57a856f458961abc5062751" category="list-text">제공업체 유형 결정: OpenAI 또는 OpenAI 호환. <block ref="78f935c14127e9543a594b2e8112c798" category="inline-link-macro-rx"></block></block>
   <block id="d8bd49d8fe4a0de7a2b03c1aec99e88b" category="list-text">선택한 공급자 경로에 대한 유효한 API 키입니다.</block>
   <block id="12415726cf97af159e3e05710842f040" category="list-text">제공업체 경로의 엔드포인트 URL입니다.</block>
-  <block id="761c475526d6aca6a6c425ee949f082a" category="list-text">조직에서 필요한 경우 프록시 또는 게이트웨이 URL입니다.</block>
   <block id="0a3c869dbd390ca2cdefafd338d2cf3d" category="list-text">필요한 경우 LLM 제공자 계정의 사용자 이름 또는 단일 사인온(SSO) ID입니다.</block>
   <block id="cfe024af8356a3decd0f09b47eff88fa" category="list-text">콘솔 로컬 배포에서 선택한 엔드포인트까지의 네트워크 액세스.</block>
   <block id="1f3d7608a574b42ba681dcef64704661" category="list-text">허용하려는 어시스턴트 작업에 대한 스토리지 클래스 및 역할 기반 액세스 제어.</block>
@@ -3633,7 +3629,6 @@
   <block id="bfd15aa26ba0ced782240c4a8b7e517e" category="sidebar">스토리지 관리</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 및 커뮤니티</block>
   <block id="fae210aa9f9d8906ee39264d97001f11" category="sidebar">NetApp Console 로컬 배포</block>
-  <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 노트</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
@@ -3756,4 +3751,8 @@
   <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">마켓플레이스 구독 및 자체 라이선스 사용</block>
   <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">Bring-your-own-license</block>
   <block id="955bb7127a670884e7aac906d810238a" category="sidebar">콘솔 로컬 배포 API 참조</block>
+  <block id="c88543bdef944177133ea29faedf50df" category="summary">NetApp Console 로컬 배포가 공급자 및 보안 결정을 포함하여 OpenAI 및 OpenAI 호환 모델과 어떻게 통합되는지 알아보십시오.</block>
+  <block id="7886cf4f03a683503e8235a0eef59e73" category="list-text">*Anthropic*은 Anthropic의 Claude 모델을 위한 제품입니다.</block>
+  <block id="dc666edc3ed6edcb6babcae67d26fcd2" category="list-text"><block ref="5574d9b8352359225831a51c7e6c17ee" category="inline-link-macro-rx"></block>에서 Console 로컬 배포 소프트웨어를 다운로드하십시오.</block>
+  <block id="ad8f5be1c708f8e891508a0a9c643e0a" category="sidebar">NetApp 신뢰 센터</block>
 </blocks>

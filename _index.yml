@@ -93,7 +93,7 @@ indexpage:
     links:
     - title: NetApp Console 로컬 배포
       url: https://www.netapp.com/console
-    - title: NetApp Data Services
-      url: https://www.netapp.com/data-services/
     - title: NetApp 커뮤니티
       url: https://community.netapp.com/
+    - title: NetApp 신뢰 센터
+      url: https://trust.netapp.com/

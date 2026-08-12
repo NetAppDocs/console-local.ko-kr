@@ -63,7 +63,7 @@ NetApp은 vCenter 환경에 NetApp Console 로컬 배포 설치를 지원합니�
 
 OVA를 다운로드합니다.
 
-. NetApp 지원 사이트에서 Console 로컬 배포 소프트웨어를 다운로드하십시오.
+. link:https://mysupport.netapp.com/site/products/all/details/ncl/downloads-tab["NetApp 지원 사이트"^]에서 Console 로컬 배포 소프트웨어를 다운로드하십시오.
 
 
 

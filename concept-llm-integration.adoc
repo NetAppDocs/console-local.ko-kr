@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-llm-integration.html 
-keywords: LLM, AI, artificial intelligence, AI-assisted management, large language model, proxy, openai-compatible, netapp console 
-summary: NetApp Console 로컬 배포가 공급자, 프록시 및 보안 결정을 포함하여 OpenAI 및 OpenAI 호환 모델과 어떻게 통합되는지 알아보십시오. 
+keywords: LLM, AI, artificial intelligence, AI-assisted management, large language model,  openai-compatible, netapp console 
+summary: NetApp Console 로컬 배포가 공급자 및 보안 결정을 포함하여 OpenAI 및 OpenAI 호환 모델과 어떻게 통합되는지 알아보십시오. 
 ---
 = NetApp Console 로컬 배포에서 LLM 통합에 대해 알아보세요.
 :hardbreaks:
@@ -67,7 +67,7 @@ NetApp Console 로컬 배포는 다음 LLM 공급자 유형을 지원합니다.
 
 * 직접 OpenAI 모델에 액세스하려면 *OpenAI*를 사용하십시오.
 * 엔터프라이즈 게이트웨이 또는 프록시 서비스 등 호환 엔드포인트의 경우 *OpenAI 호환*.
-* Anthropic의 Claude 모델을 위한 Anthropic.
+* *Anthropic*은 Anthropic의 Claude 모델을 위한 제품입니다.
 
 
 모델 사용 가능 여부는 구성한 엔드포인트에 따라 다릅니다. Console 로컬 배포 목록에서 모델을 선택하십시오.
