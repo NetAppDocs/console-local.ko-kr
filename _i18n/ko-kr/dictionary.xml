@@ -644,7 +644,6 @@
   <block id="651199ccd6df9afe47c1a01cb2014b9a" category="summary">NetApp Console 로컬 배포의 스토리지 알림이 조직 및 전체 플릿에서 온프레미스 ONTAP 클러스터의 상태를 모니터링하는 데 어떻게 도움이 되는지 알아보십시오.</block>
   <block id="46dd71654e83b60d5a2b63a64c91c06b" category="doc">NetApp Console 로컬 배포의 알림에 대해 알아보기</block>
   <block id="96753cfc199c67944d48d5550d8a331e" category="paragraph">NetApp Console 로컬 배포는 온프레미스 ONTAP 클러스터 및 NetApp Backup and Recovery 작업의 상태 문제를 식별하는 알림을 생성합니다.</block>
-  <block id="0f666f93d79761d7ae4fe8424d7a778b" category="paragraph">Console 로컬 배포는 ONTAP 클러스터 및 Backup and Recovery 작업에서 발생하는 경고를 단일 보기로 통합합니다.  경고 페이지에는 대시보드, 경고 목록 및 시스템 보기가 포함되어 있어 조직 전체의 경고를 검토하거나 특정 플릿 또는 시스템으로 범위를 지정할 수 있습니다.  각 경고에는 영향을 받는 시스템, 심각도 및 영향 영역이 표시됩니다.</block>
   <block id="0855169a6f83f70eb10d05419bbd0b1b" category="paragraph">콘솔 로컬 배포에서 알림을 사용하여 다음을 수행하세요.</block>
   <block id="df580541dc1d5961973ae67dcad8ac67" category="list-text">용량, 연결성, 데이터 보호, 성능 및 보안 문제를 감지합니다.</block>
   <block id="a412e02ff5572e68270492382a758d4c" category="list-text">경고의 심각도와 영향 범위에 따라 우선순위를 정하십시오.</block>
@@ -653,27 +652,20 @@
   <block id="9b9ee1193cec05dc2a41ed3e6ece1ea0" category="list-text">알림 목록을 CSV 파일로 내보내 오프라인 분석을 할 수 있습니다.</block>
   <block id="5992368e63ad83386054845741a8a33e" category="section-title">경보 심각도 및 영향 영역</block>
   <block id="af16cc6229a519a3b6fda7956cf3bbb6" category="paragraph">각 경고에는 심각도와 영향 영역이 포함되어 있습니다.</block>
-  <block id="a9c60291ee333f9f8b30a1d56049f2e3" category="list-text">*심각도*는 긴급성을 나타내며, 가장 높은 단계부터 가장 낮은 단계까지 다음과 같습니다: Critical, Major, Minor, Warning, Info.</block>
-  <block id="8746c2cdf631ab24a14a3cef70775b09" category="list-text">*영향 영역*은 영향을 받는 도메인을 나타냅니다: 용량, 연결성, 데이터 보호, 성능 및 보안.</block>
   <block id="b464c96719ac8e689bf809558b1fbfb1" category="section-title">경보 발생원 및 범위</block>
-  <block id="6c6025ea2f97b33e2c486828e0d64c65" category="list-text">*ONTAP 알림*은 Console 로컬 배포에서 검색한 온프레미스 클러스터의 ONTAP 이벤트 관리 시스템(EMS)에서 발생합니다. <block ref="9e05df594689e3a41c64bf5428dd8f1b" category="inline-link-macro-rx"></block></block>
   <block id="84a123db43de03103a06de7c20323cfc" category="inline-link-macro">NetApp Backup and Recovery 알림에 대해 자세히 알아보십시오.</block>
   <block id="ea0f0b01214b1b6564dedd1ccc0ef789" category="list-text">*NetApp Backup and Recovery alerts*는 백업 및 복구 작업에서 발생합니다. <block ref="ce19bb3d3f0370071bd0a63bda9b1cb0" category="inline-link-macro-rx"></block></block>
   <block id="8f7cb705f10a2a8a43e44be4e26bce29" category="list-text">사용자 권한에 따라 볼 수 있는 플릿이 결정됩니다. 전체 조직, 특정 플릿 또는 개별 시스템으로 보기 범위를 지정할 수 있습니다. *시스템 상태* 탭에서는 시스템별 상태를 확인할 수 있으며, *알림* 탭에서는 선택한 범위에 대한 현재 알림 목록을 볼 수 있습니다.</block>
   <block id="e4512e69eb5052bb89ae3cb05beb2048" category="list-text">CSV 내보내기 파일에는 현재 범위, 검색어 및 필터가 반영됩니다.</block>
-  <block id="357c988d7b614f4a678bdeab216e8c0d" category="section-title">경고 알림 규칙</block>
   <block id="0cd5a479aeee5c75de6058d04d42884c" category="paragraph">알림 규칙을 생성하여 어떤 알림이 발생하고 누가 알림을 받을지 결정합니다. 알림 규칙은 다음과 같은 특징을 가집니다.</block>
   <block id="bd219bf7059c2b33f0ec554be065e6f1" category="list-text">이 기능은 ONTAP 관리 또는 Backup and Recovery 등의 서비스, 심각도, 영향 영역 및 대상 시스템에 대한 알림을 매칭합니다.</block>
   <block id="b2f7eced90ff21e599ef62d0fb532997" category="list-text">이메일 전송의 경우, 지정된 액세스 역할을 가진 사용자에게 알림을 보냅니다. 웹훅 전송의 경우, 구성된 엔드포인트로 알림 데이터를 전송하며, 해당 데이터에 대한 액세스는 Console 로컬 배포가 아닌 수신 애플리케이션에서 제어합니다.</block>
-  <block id="5969773a182e2f8badfffe0e0dba85f4" category="list-text">이는 특정 시스템에 적용되며, 전체 플릿에는 적용되지 않습니다.</block>
   <block id="e4b0a25eea6bb99ae00f0d8840506e6a" category="list-text">예정된 유지보수 윈도우 동안 예상되는 알림을 차단하기 위해 해당 기능을 음소거할 수 있습니다.</block>
   <block id="4cf933aaee95403e05d1324cc29e0b21" category="paragraph">콘솔 로컬 배포에는 설치 직후 활성화되는 기본 알림 규칙이 포함되어 있습니다. 이 기본 규칙은 모든 서비스와 시스템에서 Critical 심각도 경고를 모니터링하고 콘솔 알림 센터로만 알림을 전송합니다. 이메일 또는 웹훅 전송은 사용자가 설정하기 전까지는 구성되지 않습니다. 이 규칙을 확인하고 조정할 수 있으며, 환경에 맞는 사용자 지정 규칙을 생성할 수도 있습니다.</block>
   <block id="31a344bb0e11e5a55503d8881257edf1" category="paragraph">정보 수준 알림은 알림 페이지에 표시되지만, 정보 심각도 수준을 포함하는 규칙을 명시적으로 생성하지 않는 한 알림으로 전송되지 않습니다.</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">관련 정보</block>
   <block id="82a2d6c3a1797413a862c7f45ba90fc6" category="inline-link-macro">경고 모니터링 및 조사</block>
   <block id="c4b4941c3014489a62b6f0fd2b9cbe09" category="list-text"><block ref="c4b4941c3014489a62b6f0fd2b9cbe09" category="inline-link-macro-rx"></block></block>
-  <block id="bf4a2ffc2bbdd132b48f1c5434b4d680" category="inline-link-macro">알림 규칙 생성 및 관리</block>
-  <block id="d0dcba044d6a8dc4a29573e265cf2310" category="list-text"><block ref="d0dcba044d6a8dc4a29573e265cf2310" category="inline-link-macro-rx"></block></block>
   <block id="ae385747b29e51a9811e8ce7976b7c6b" category="inline-link-macro">NetApp Console 로컬 배포의 ONTAP 경고에 대해 알아봅니다</block>
   <block id="e77eeb959a8d6ff16124b745150a7b75" category="list-text"><block ref="e77eeb959a8d6ff16124b745150a7b75" category="inline-link-macro-rx"></block></block>
   <block id="98a9a9e956c44874c27b78d15a00bb40" category="summary">NetApp Console 로컬 배포에서 사전 정의된 홈 페이지 대시보드와 사용자 지정 대시보드가 어떻게 함께 작동하는지 알아보십시오.</block>
@@ -2333,49 +2325,30 @@
   <block id="53ccb7bd8c0be53a952139ebd4454132" category="paragraph-title">필수 액세스 역할</block>
   <block id="ab92140b4fca6a428c4d9dd6177333dc" category="paragraph">Super admin, Organization admin, Storage admin, Operations support analyst 또는 NetApp Backup and Recovery의 기타 관리자 역할. <block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>.</block>
   <block id="181c0a0c09dfe0f8ba7b3346903c6def" category="paragraph">알림 규칙을 사용하여 환경에 맞는 채널을 통해 적절한 알림을 적절한 담당자에게 전달하고, 관련 없는 알림으로 인한 불필요한 정보를 줄이십시오. 알림 규칙은 알림 페이지를 보완하는 역할을 합니다. 알림 워크플로에서 알림을 조사하거나 해결한 후, 규칙을 사용하여 향후 유사한 알림이 전달되는 방식을 제어할 수 있습니다.</block>
-  <block id="9d9e3ddcd0ba1071d2727b34998919fe" category="paragraph">알림 규칙은 서비스, 심각도, 영향 영역 등 사용자가 정의한 조건에 따라 경고를 일치시킨 후, 사용자가 선택한 채널을 통해 알림을 전달합니다. Console 로컬 배포에는 기본 알림 규칙이 포함되어 있어 이를 확인하고 조정할 수 있으며, 사용자 지정 규칙을 직접 만들 수도 있습니다. 또한, 유지보수 윈도우와 같은 예정된 이벤트 기간 동안 알림을 일시적으로 차단하도록 규칙을 음소거할 수 있습니다.</block>
   <block id="ef9e7cefa30ba8567d3175e4dd97d705" category="inline-link-macro">알림 전달 구성</block>
   <block id="ed25804203fe0cfacd7338fe370fab02" category="list-text">이메일로 알림을 보내려면 조직 관리자가 콘솔 로컬 배포에서 이메일 서버를 구성해야 합니다. 외부 시스템으로 알림을 보내려면 조직 관리자가 웹훅을 구성해야 합니다. 자세한 단계는 <block ref="672eea012e5868d936761017846dcdbf" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="6be1395fcc81300b6bceb20c8b98659a" category="list-text">콘솔 로컬 배포 알림 센터는 기본적으로 알림을 표시하므로 콘솔 내 알림을 위한 추가 설정이 필요하지 않습니다.</block>
   <block id="aa0688cb1a2561ce4a0b9e33ec24c385" category="section-title">알림 규칙 보기</block>
   <block id="3fd13d8d5fe12b342d50496d8c1b14ea" category="paragraph">알림 규칙 페이지는 조직에 적용되는 모든 규칙을 검토하고 관리하는 중심 공간입니다. 각 규칙에는 주요 속성이 표시되므로 알림 동작을 신속하게 평가하고 조정할 수 있습니다.</block>
   <block id="994fd7486592f0f379c8f7c736e9858a" category="list-text">왼쪽 탐색 메뉴에서 *상태 &gt; 알림*을 선택합니다.</block>
-  <block id="232cdeb16b6b2880fb174bcdb7470db1" category="list-text">*알림 설정*을 선택합니다.</block>
   <block id="3ea34819819081b3d79348ba42359018" category="list-text">목록에 있는 규칙을 검토하십시오. 각 규칙에는 활성 상태, 이름, 모니터링하는 서비스 및 심각도 수준, 알림을 수신할 권한이 있는 역할, 활성화된 전달 채널, 마지막 수정 시간, 그리고 예약된 알림 중지 기간이 표시됩니다.</block>
   <block id="386565a9df34302963e2a006eda691f7" category="list-text">특정 규칙을 찾으려면 필터 및 검색 컨트롤을 사용하여 활성 상태, 서비스, 심각도, 역할, 채널 또는 음소거 상태별로 필터링합니다.</block>
   <block id="18fcc442133be306ba0fe4ee156658f9" category="section-title">알림 규칙 생성</block>
   <block id="91c2e6e70b23b2568543595701eead74" category="paragraph">알림 규칙을 생성하여 알림을 발생시키는 조건과 알림 전달 방식을 정의하십시오.</block>
-  <block id="aa9b63f1bf13ee27e6302024b407c536" category="admonition">전체 시스템에 대한 알림 규칙은 설정할 수 없습니다. 특정 시스템에 대해서만 설정할 수 있습니다. 시스템이 많은 대규모 환경에서는 시스템별로 규칙을 중복해서 만드는 대신, 심각도에 따라 포괄적인 규칙을 만드는 것을 고려하십시오. 예를 들어, 모든 시스템을 포괄하는 Critical 규칙 하나를 포괄적인 규칙으로 사용하고, 다른 라우팅이나 수신자가 필요한 시스템에 대해서는 추가적인 개별 규칙을 만들 수 있습니다.</block>
   <block id="6a1b057cf8bcf8cfcb7fd2f2e5190889" category="paragraph-title">모든 시스템에 걸쳐 발생하는 중요 경고에 대한 알림 규칙 예시</block>
-  <block id="df54dc817bfa65461d11b98d1e80e8dd" category="paragraph">어떤 시스템에서 발생하든 모든 중요 알림을 놓치지 않고 확인하고 싶다고 가정해 보겠습니다. 모든 중요 알림을 스토리지 관리자용 Console Notification Center로 전송하는 포괄적인 규칙을 만들 수 있습니다.</block>
   <block id="4bbe632b2568b2274341aa0b83187f54" category="paragraph">이 예시에서는 다음과 같은 설정으로 규칙을 생성합니다.</block>
   <block id="61cf57ee3e9221a4a1af8b64894c7068" category="list-text">*서비스*: 전체</block>
-  <block id="96c8440cf70ffc5c99d3b6537771f675" category="list-text">*심각도*: 심각</block>
-  <block id="c0eb8fd624cbe8c25fc9c9407c7efea7" category="list-text">*IAM 역할*: 스토리지 관리자</block>
-  <block id="c59b712970cde5ff67eb6de5c8da29fa" category="list-text">*시스템*: (모든 시스템에 적용하려면 이 항목을 비워 두십시오)</block>
-  <block id="60d59c713d87c9724aa352ce6a1b5b34" category="list-text">*전달 방식*: Console Notification Center</block>
   <block id="24d167f15a64099d232cbac6cb917eaa" category="paragraph">이 규칙을 적용하면 스토리지 관리자는 모든 시스템의 중요 경고에 대해 Console에서 알림을 받게 됩니다. 이 규칙은 기본 규칙 역할을 하며, 필요에 따라 더욱 세분화된 규칙을 추가하여 보완할 수 있습니다.</block>
   <block id="04a7d6a2d7e7d71268015fdcc29916b9" category="paragraph-title">스토리지 관리자 용량 알림에 대한 대상 지정 알림 규칙 예시</block>
   <block id="87d32c9b50b31ec68f42710a8b498763" category="paragraph">예를 들어, 스토리지 관리자가 특정 프로덕션 시스템의 심각한 용량 문제에 즉시 대응해야 하지만, 심각도가 낮은 알림이 관리자의 받은 편지함에 넘쳐나는 것을 원치 않는다고 가정해 보겠습니다. 이 경우, 해당 시스템에서 심각한 용량 부족 알림이 발생했을 때만 스토리지 관리자에게 이메일을 보내는 특정 규칙을 만들 수 있습니다.</block>
-  <block id="8d5c68803a7483180c2f579d68754ca3" category="list-text">*서비스*: ONTAP 관리</block>
-  <block id="d76c9afc46a2bb4ffe8c662d24c3edbe" category="list-text">*영향 영역*: 용량</block>
-  <block id="50d993cad5510cc3b2bb8e1d14be3848" category="list-text">*시스템*: &lt;system_name&gt;</block>
-  <block id="c809d6a68c232dcd6de973aa0339cb80" category="list-text">*전달 방법*: 이메일</block>
   <block id="252e427d2b81f9a3381633ba3969aa27" category="paragraph">이 규칙이 적용되면 Console 로컬 배포는 심각한 용량 경고가 발생할 때 지정된 시스템의 모든 스토리지 관리자에게 이메일을 보냅니다. 경고 또는 정보성 경고 등 심각도가 낮은 경고는 이메일을 생성하지 않으므로 팀은 긴급한 조치가 필요한 문제에 집중할 수 있습니다.</block>
-  <block id="4c63fbe84255b1ec2a74b41ab272605d" category="list-text">*알림 설정*을 선택한 다음 *규칙 추가*를 선택합니다.</block>
   <block id="250976a2b8b2604800b3ad0e6e3ef5f3" category="list-text">규칙이 적용되는 조건을 정의하십시오.</block>
   <block id="de50f3dcf9e49c743a0a88531b406dab" category="list-text">*규칙 이름*: 간결하고 설명적인 이름을 입력합니다. 이 필드는 필수입니다.</block>
   <block id="00d401a946554da9480911973c7c00c1" category="list-text">*규칙 설명*: 선택적으로 규칙의 목적에 대한 추가 컨텍스트를 입력합니다.</block>
   <block id="3b715376b628913b6afe9e9e38110dfb" category="list-text">*서비스*: 규칙이 적용되는 ONTAP 또는 플랫폼 서비스를 하나 이상 선택하십시오.</block>
   <block id="59748e8bb2446fd93cbff6d3aafaea68" category="list-text">*역할*: 규칙이 실행될 때 알림을 받으려면 사용자가 가져야 하는 액세스 역할을 선택하십시오.</block>
   <block id="1c176ff939cc688d8fcbfca4a11a6d45" category="list-text">*심각도 수준*: Critical, Warning, Error, Information 등 규칙이 모니터링할 심각도 수준을 선택합니다.</block>
-  <block id="077f073ee19af6e75c93d302db769b91" category="list-text">*영향 영역*: 용량 또는 성능 등 일치시킬 운영 영역을 선택하십시오.</block>
-  <block id="beb055f49bc5e9306f77d5676880c887" category="list-text">*경고 이름*: 규칙을 트리거하는 특정 경고 유형을 선택하십시오.</block>
-  <block id="f7689ae17ad0ec5b65160f8cab6da1a8" category="list-text">*시스템*: 규칙이 적용될 시스템 컨텍스트를 선택합니다.</block>
   <block id="99194c98d427b169878eeb0ceba35480" category="list-text">알림을 받을 채널을 선택하십시오:</block>
-  <block id="5112c21de19690f21dfd0064336fe8de" category="list-text">*이메일*: 선택한 역할을 가진 사용자에게 알림 이메일을 보냅니다. 이메일 서버가 구성되어 있어야 합니다.</block>
-  <block id="b1e0543a1c0bcd7043c7a36363478e54" category="list-text">웹훅: 외부 시스템으로 알림 데이터를 전송합니다. 구성된 웹훅 통합을 선택해야 합니다.</block>
-  <block id="08eea354ae8007e70c04ae40c4189cae" category="list-text">*Console Notification Center*: 선택된 역할을 가진 사용자에게 실시간 알림을 표시합니다.</block>
   <block id="86762968ec8f9332f58d8c0a6a2aa88f" category="list-text">선택적으로, 유지보수 윈도우 등 계획된 기간 동안 이 규칙의 알림을 억제하려면 *알림 음소거* 일정을 설정하고, 음소거 기간을 반복하려면 반복 일정을 선택하세요. 규칙당 여러 개의 음소거 기간을 추가할 수 있으며, 이는 주간 패치 등 반복적인 유지보수 주기에 유용합니다.</block>
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">*생성*을 선택합니다.</block>
   <block id="097f6ad8650956a694d1f6618a1835bc" category="section-title">알림 규칙 활성화 또는 비활성화</block>
@@ -2408,7 +2381,6 @@
   <block id="38f6a4f788dc0bd7558156d75efe8105" category="paragraph">NetApp Console 로컬 배포에서 경고를 모니터링하고 조사하여 스토리지 상태를 안정적으로 유지하고 중단을 최소화하십시오.</block>
   <block id="521327c34bbf46075820c1d409196127" category="paragraph">조직 전체 또는 특정 플릿에 대한 활성 알림을 확인하고, 심각도 및 영향 영역별로 우선순위를 지정하고, 근본 원인을 조사하여 문제가 확대되기 전에 해결할 수 있습니다. 알림에 권장 조치 또는 Fix It 옵션이 포함된 경우 조사 단계에서 바로 문제 해결 단계로 넘어갈 수 있습니다.</block>
   <block id="e7738982e1706c423ed1dc4d154a847c" category="paragraph-title">필수 액세스 역할</block>
-  <block id="cbfb02cc13518d81307068ccf3ad42c2" category="paragraph">페더레이션 관리자 및 페더레이션 뷰어 역할을 제외한 모든 역할. 페더레이션 관리자 또는 페더레이션 뷰어 역할을 가진 사용자는 알림을 볼 수 없습니다. <block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>.</block>
   <block id="8925988857ff65e89454a4eb593456c2" category="paragraph">ONTAP 알림의 경우, System Manager 및 Workload Analyzer 등 툴에 알림 페이지에서 직접 액세스하여 문제를 조사하고 해결할 수 있습니다.</block>
   <block id="375606b0ccfefde5bee17bc22b7d863d" category="paragraph">외부 보고를 위해 알림 목록을 CSV 파일로 내보내 오프라인 분석을 수행할 수 있습니다.</block>
   <block id="fc55a582a8dba8c098b8ae6afe46eb47" category="inline-link-macro">알림 알림을 설정하는 방법을 알아보십시오.</block>
@@ -2426,7 +2398,6 @@
   <block id="8ba926ef4f90ffefbd189d250c5b3d19" category="list-text">다음을 포함하여 확인해야 할 알림에 따라 대시보드를 필터링합니다.</block>
   <block id="3f4983c4d6a52d72256e16993979c96e" category="list-text">심각도 (Critical, Warning 또는 Informational)</block>
   <block id="cef4a8d30c1b18c6e2bed3dedd59f542" category="list-text">영향 지역별로 분류된 중요 경보</block>
-  <block id="6efcfe6a265e05264d40d3dda6f3a76e" category="list-text">영향 영역(보안, 보호, 가용성, 성능, 용량 또는 구성)</block>
   <block id="856fb1b715c481e17f07d981ccc7ebf4" category="section-title">모든 알림 보기</block>
   <block id="69eb2dcfcf0f3a463a90960e81522f1e" category="paragraph">알림 탭을 사용하여 선택한 범위에 대한 모든 활성 알림 목록을 볼 수 있습니다. 목록은 현재 조직 또는 플릿 범위를 반영하여 업데이트되며, 이름이나 설명으로 특정 알림을 검색할 수 있습니다.</block>
   <block id="b86d6a92a51eed6dfd9938fac60df907" category="list-text">선택한 범위에 대한 모든 활성 알림 목록을 보려면 *알림* 탭을 선택하십시오.</block>
@@ -2438,7 +2409,6 @@
   <block id="65f78453bc07f64ca861c0ecfe39b780" category="list-text">선택한 범위 내 시스템과 관련된 경고 요약을 보려면 *시스템 상태* 탭을 선택하십시오.</block>
   <block id="42e73fcad32a3ab24bb2fab9280da0d9" category="list-text">해당 시스템 행에서 *알림 보기*를 선택하면 해당 시스템과 관련된 활성 알림의 전체 목록을 볼 수 있습니다.</block>
   <block id="0dc68aa31a49ba83f70b63f2b13bd416" category="section-title">경보 조사</block>
-  <block id="34419c92550cbb45bc553b2679b6cf50" category="paragraph">알림을 조사하여 알림이 발생한 원인과 알림을 받은 사람을 확인할 수 있습니다.</block>
   <block id="b00e88e4dda7b3a7db43247892b70bdf" category="paragraph">ONTAP 경고를 조사할 때, 경고를 발생시킨 시스템의 System Manager 인터페이스로 직접 이동하여 추가 세부 정보를 확인하고 조치를 취할 수도 있습니다.</block>
   <block id="23c5bc9e250e82c9b5bf441030d5bdd6" category="list-text">어느 탭에서든 조사하려는 알림의 이름을 선택하여 세부 정보를 확인합니다.</block>
   <block id="9f64c529078a13eebc43993d1ac578d4" category="inline-image-macro">알림 세부 정보 보기</block>
@@ -2612,10 +2582,6 @@
   <block id="5b7fa871f0c8458f8606108c4cfd4e0f" category="list-text">기존 구성을 지우려면 *Clear fields* 를 선택합니다.</block>
   <block id="a3013708d2cf8c341a84dca962344504" category="list-text">이메일 서버에 대한 새 연결 정보를 입력하십시오.</block>
   <block id="21023e438743ec26a85fc29888772fe0" category="list-text">테스트가 성공하면 *저장*을 선택하여 새 구성을 저장합니다.</block>
-  <block id="102683a93268c2aad1e3d9ec49c6f6ce" category="section-title">이메일 서버 구성 제거</block>
-  <block id="4ce419a04c17b42f5c371b2953946ebf" category="paragraph">Console 로컬 배포에서 더 이상 이메일을 보내지 않으려면 이메일 서버 구성을 제거할 수 있습니다.</block>
-  <block id="d36c245423608ab3299af01950915d86" category="list-text">시스템 구성 페이지를 열려면 *Configuration*을 선택하십시오.</block>
-  <block id="b41468ddb6280e56c1f532bdaa2a21c4" category="list-text">*저장* 을 선택하여 지워진 구성을 저장합니다. 이렇게 하면 Console 로컬 배포에서 이메일 서버 구성이 제거됩니다.</block>
   <block id="6a254a34bb4844c3f68630aa0250b116" category="section-title">웹훅 구성</block>
   <block id="f19efafccb40e70e49d027a90324485e" category="paragraph">콘솔 로컬 배포에서 다른 툴 또는 서비스로 알림을 보내도록 웹훅을 설정합니다. 여러 개의 웹훅을 구성하여 각각 다른 엔드포인트를 가리키도록 할 수 있습니다. 예를 들어 하나는 SIEM용이고 다른 하나는 온콜 호출 서비스용입니다.</block>
   <block id="40654a9753bb71b1c30d40fe1fcb0377" category="paragraph">웹훅을 생성한 후에는 스토리지 관리자 역할을 가진 사용자가 특정 알림 규칙에 웹훅을 할당할 수 있습니다. 예를 들어, 중요 알림은 이메일로 전송하고 모든 알림은 웹훅을 통해 타사 모니터링 툴로 전송할 수 있습니다.</block>
@@ -3215,7 +3181,6 @@
   <block id="336e4351e57a856f458961abc5062751" category="list-text">제공업체 유형 결정: OpenAI 또는 OpenAI 호환. <block ref="78f935c14127e9543a594b2e8112c798" category="inline-link-macro-rx"></block></block>
   <block id="d8bd49d8fe4a0de7a2b03c1aec99e88b" category="list-text">선택한 공급자 경로에 대한 유효한 API 키입니다.</block>
   <block id="12415726cf97af159e3e05710842f040" category="list-text">제공업체 경로의 엔드포인트 URL입니다.</block>
-  <block id="0a3c869dbd390ca2cdefafd338d2cf3d" category="list-text">필요한 경우 LLM 제공자 계정의 사용자 이름 또는 단일 사인온(SSO) ID입니다.</block>
   <block id="cfe024af8356a3decd0f09b47eff88fa" category="list-text">콘솔 로컬 배포에서 선택한 엔드포인트까지의 네트워크 액세스.</block>
   <block id="1f3d7608a574b42ba681dcef64704661" category="list-text">허용하려는 어시스턴트 작업에 대한 스토리지 클래스 및 역할 기반 액세스 제어.</block>
   <block id="6d4074b2f4345e60985cf590c19c3368" category="section-title">LLM을 NetApp Console 로컬 배포에 연결합니다</block>
@@ -3235,9 +3200,6 @@
   <block id="1de83f5da1c16cfca8ca9ae1534dcf3b" category="paragraph"><block ref="263da31548d1ff54f99ec1ad656a62e4" category="inline-link-macro-rx"></block>.</block>
   <block id="4e0ef856d01b17ebeacb44ab6e813a5b" category="section-title">LLM 통합이 제대로 작동하는지 확인하십시오.</block>
   <block id="649811a3ff05f0c93f06c2fdaa3bbeed" category="paragraph">구성을 저장한 후 어시스턴트 가용성 및 동작을 확인하십시오.</block>
-  <block id="d7f8652c7bc65256b550f9446fb404f0" category="list-text">*Console assistant* 버튼이 NetApp Console 로컬 배포 대시보드에 표시되는지 확인합니다.</block>
-  <block id="32755bc8ea4985295f55809c96237bd0" category="list-text">도우미를 *읽기 전용* 모드로 열고 기본 쿼리를 실행합니다.</block>
-  <block id="6a0aa36fa7b572549e4bf529b93925a4" category="list-text">어시스턴트를 *읽기/쓰기* 모드로 열고 저장소 변경 작업 실행 전에 사용자 확인이 필요한지 확인하십시오.</block>
   <block id="b9218edb7fcba77407a69cc8446ba839" category="list-text">액션 워크플로가 필요한 사용자가 필요한 역할 기반 액세스 제어 권한을 가지고 있는지 확인하십시오.</block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="inline-link-macro">NetApp Console 어시스턴트 사용</block>
   <block id="7d69bfcb234231881e32fc0c2d9f1364" category="paragraph">유효성 검사가 완료되면 사용자는 대시보드에서 Console assistant를 열고 일반 언어로 작업을 설명할 수 있습니다. 사용 예 및 최종 사용자 워크플로는 <block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -3755,4 +3717,35 @@
   <block id="7886cf4f03a683503e8235a0eef59e73" category="list-text">*Anthropic*은 Anthropic의 Claude 모델을 위한 제품입니다.</block>
   <block id="dc666edc3ed6edcb6babcae67d26fcd2" category="list-text"><block ref="5574d9b8352359225831a51c7e6c17ee" category="inline-link-macro-rx"></block>에서 Console 로컬 배포 소프트웨어를 다운로드하십시오.</block>
   <block id="ad8f5be1c708f8e891508a0a9c643e0a" category="sidebar">NetApp 신뢰 센터</block>
+  <block id="86fe53164e7d48e6addafc1fcdf26111" category="paragraph">콘솔 로컬 배포는 ONTAP 클러스터 및 백업/복구 작업에서 발생하는 경고를 단일 보기로 통합합니다.  경고 페이지에는 대시보드, 경고 목록, 그리고 조직 내 모든 시스템의 경고를 표시하는 보기가 포함되어 있습니다.  각 경고는 영향을 받는 시스템, 심각도 및 영향 영역을 식별합니다.</block>
+  <block id="fe055be6fd6957c00b782e6ba2e57773" category="list-text">*심각도*는 긴급성을 나타내며, 가장 높은 단계부터 가장 낮은 단계까지 중요, 경고, 정보 순으로 나열됩니다.</block>
+  <block id="60e4151f41d4a03ae921c4866360316f" category="list-text">*영향 영역*은 영향을 받는 도메인(가용성, 용량, 구성, 성능, 보호 및 보안)을 식별합니다.</block>
+  <block id="4f4677e32164d37927668f239193f729" category="list-text">*ONTAP 알림*은 콘솔 로컬 배포에서 검색한 온프레미스 클러스터의 ONTAP 이벤트 관리 시스템(EMS)과 ONTAP에서 수집된 모니터링 메트릭에서 발생합니다. <block ref="9e05df594689e3a41c64bf5428dd8f1b" category="inline-link-macro-rx"></block></block>
+  <block id="b9ce699225d62badaa143b23f2a286ac" category="section-title">알림 규칙</block>
+  <block id="a9dd2aada57993b6f95023192190ead8" category="list-text">이는 조직 내 모든 시스템에 적용됩니다.</block>
+  <block id="a7ba1daf0536691400747397351ab72f" category="inline-link-macro">알림 규칙 생성 및 관리</block>
+  <block id="4bdf746b4e7f6e6dfeb75b163f3de933" category="list-text"><block ref="4bdf746b4e7f6e6dfeb75b163f3de933" category="inline-link-macro-rx"></block></block>
+  <block id="6449f494e438a56acab5430a8fa9d46f" category="paragraph">알림 규칙은 서비스, 심각도, 영향 영역 등 사용자가 정의한 조건에 따라 경고를 일치시킨 후, 사용자가 선택한 채널을 통해 알림을 전달합니다. 콘솔 로컬 배포에는 기본 알림 규칙이 포함되어 있으며, 이를 확인하고 조정할 수 있고 사용자 지정 규칙을 직접 생성할 수도 있습니다. 또한 유지 관리 기간과 같은 예정된 이벤트 동안 알림을 일시적으로 차단하기 위해 규칙을 음소거할 수도 있습니다.</block>
+  <block id="e35f5087596b0e7233f53786114a613a" category="admonition">알림 규칙은 조직 내 모든 시스템에 적용됩니다.</block>
+  <block id="192722772d82aacac1ca6123672325c6" category="paragraph">어떤 시스템에서 발생하든 모든 중요 알림을 놓치지 않고 확인하고 싶다고 가정해 보겠습니다. 모든 중요 알림을 스토리지 관리자용 콘솔 UI 알림으로 전송하는 포괄적인 규칙을 만들 수 있습니다.</block>
+  <block id="d7ccc5bae6b4903d6c255b3b045a4e55" category="list-text">*심각도 수준*: Critical</block>
+  <block id="423dffa169e3740d81b0a59fd14bc925" category="list-text">*역할*: 스토리지 관리자</block>
+  <block id="3ee7a18f4aab3d155275f688c812b12b" category="list-text">*전달 채널*: 콘솔 UI 알림</block>
+  <block id="7c20f1cc356d3fb78cba60fb83153974" category="list-text">*서비스*: ONTAP Management</block>
+  <block id="830f3e0189ace7d0a984dfbb36e2fdc7" category="list-text">*영향 영역*: 용량</block>
+  <block id="1be5a6074654d08ae3538b278b8a8485" category="list-text">*전달 채널*: 이메일</block>
+  <block id="c922d0c540b57d391bd538d480dfc9cd" category="list-text">*알림 규칙*을 선택한 다음 *규칙 추가*를 선택합니다.</block>
+  <block id="a988d3b5adb4dd67097b18a868770bb4" category="list-text">*영향 영역*: 용량 또는 성능 등 일치시킬 운영 영역을 선택하십시오.</block>
+  <block id="867364563b61efd0618777d3d71d7f8f" category="list-text">*알림*: 모든 알림이 정책에 따라 전송됨을 나타냅니다.</block>
+  <block id="576412b3f5d3de4868980e97973e7d8b" category="list-text">*시스템*: 조직 내 모든 시스템에서 보고된 경고는 정책에 따라 알림이 전송됨을 나타냅니다.</block>
+  <block id="ee71ff4f683cea1809ca49786f486a63" category="list-text">*이메일 알림*: 선택한 역할을 가진 사용자에게 알림 이메일을 보냅니다. 이메일 서버가 구성되어 있어야 합니다.</block>
+  <block id="9d127813c946fea889954dd0fde53b15" category="list-text">*웹훅 연동*: 외부 시스템으로 알림 데이터를 전송합니다. 구성된 웹훅 연동을 선택해야 합니다.</block>
+  <block id="3896fb60fecaecbb0615fc54dd14d98a" category="list-text">*Console UI notifications*: 선택된 역할을 가진 사용자에게 실시간 알림을 표시합니다.</block>
+  <block id="c12f8f1d006dc546dc07a83b341eb41d" category="paragraph">모든 역할. 알림은 사용자가 볼 권한이 있는 리소스에 대해서만 표시됩니다. 사용 가능한 리소스 목록에 리소스가 표시되지 않으면 해당 리소스에 대한 알림을 볼 권한이 없는 것입니다. <block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>.</block>
+  <block id="038da7e0743ee2312ac64e6eca9d2b12" category="list-text">영향 영역(가용성, 용량, 구성, 성능, 보호 또는 보안)</block>
+  <block id="15dabf59f40706e7567510f6c6998de1" category="list-text">구성 드리프트로 인한 알림만 보려면 드리프트 알림을 사용합니다</block>
+  <block id="6c630ee602118044ab23bd89b0b79149" category="paragraph">경고를 조사하여 경고가 발생한 원인을 확인할 수 있습니다.</block>
+  <block id="30ed16d592d987bc97f9c257fb0d026c" category="list-text">필요한 경우 LLM 공급자 계정의 사용자 이름 또는 ID입니다.</block>
+  <block id="e90cfbea605d047e2c768be5cc0d5d90" category="list-text">콘솔 도우미를 읽기 전용 모드로 열고 기본 쿼리를 실행합니다.</block>
+  <block id="ddbbb4fd6daa8474cc88e6beb3919a85" category="list-text">*콘솔 도우미*를 *읽기/쓰기* 모드로 열고 스토리지 변경 작업 실행 전에 사용자 확인이 필요한지 확인하십시오.</block>
 </blocks>
