@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network requirements, ports, on-premises, TCP, HTTP, HTTPS, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local 
-summary: 콘솔 에이전트는 온프레미스 Linux 호스트에 수동으로 설치할 경우 _인바운드_ 포트를 사용합니다. 계획 수립 시 이러한 포트를 참조하십시오. 
+keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local, inbound ports, OVA 
+summary: NetApp Console 로컬 배포 OVA는 자체 내부 방화벽을 관리합니다. 환경에서 VM에 외부 방화벽 정책이 적용되는 경우 관리 호스트에서 다음 인바운드 포트에 접근할 수 있는지 확인하십시오. 
 ---
-= NetApp Console 로컬 배포에서 온프레미스 Console 에이전트용 포트
+= NetApp Console 로컬 배포를 위한 인바운드 포트
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,39 @@ summary: 콘솔 에이전트는 온프레미스 Linux 호스트에 수동으로 
 
 
 [role="lead"]
-NetApp Console 로컬 배포에서 콘솔 에이전트는 온프레미스 Linux 호스트에 수동으로 설치할 경우 _인바운드_ 포트를 사용합니다. 계획 수립 시 이러한 포트를 참조하십시오.
-
-이러한 수신 규칙은 모든 NetApp Console 배포 모드에 적용됩니다.
+NetApp Console 로컬 배포 OVA는 자체 내부 방화벽을 관리합니다. 환경에서 VM에 외부 방화벽 정책이 적용되는 경우 관리 호스트에서 다음 인바운드 포트에 접근할 수 있는지 확인하십시오.
 
 [cols="10,10,80"]
 |===
-| 프로토콜 | 포트 | 목적 
+| 포트 | 프로토콜 | 목적 
 
 
-| HTTP | 80  a| 
-* 클라이언트 웹 브라우저에서 로컬 사용자 인터페이스로의 HTTP 액세스를 제공합니다
-* Cloud Volumes ONTAP 업그레이드 프로세스 중에 사용됩니다.
+| 22 | TCP | 원격 유지 관리 및 진단 셸 액세스를 위한 SSH 
 
 
+| 123 | UDP | 시간 동기화를 위한 NTP 
 
 
-| HTTPS | 443 | 클라이언트 웹 브라우저에서 로컬 사용자 인터페이스로의 HTTPS 액세스를 제공합니다 
+| 2379 | TCP | RKE2 컨트롤 플레인 etcd 클라이언트 트래픽을 위한 etcd 클라이언트 API 
+
+
+| 2380 | TCP | etcd 멤버 간 복제를 위한 etcd 피어 포트 
+
+
+| 6443 | TCP | kubectl 및 RKE2 API 접근을 위한 Kubernetes API 서버 
+
+
+| 8472 | UDP | RKE2 노드 간 포드 간 트래픽을 위한 Canal/Flannel VXLAN 오버레이 
+
+
+| 9091 | TCP | Calico Felix CNI 상태 및 메트릭을 위한 메트릭 엔드포인트 
+
+
+| 9100 | TCP | 호스트 메트릭 스크래핑을 위한 Prometheus node_exporter 
+
+
+| 9345 | TCP | RKE2 슈퍼바이저 및 서버 등록 엔드포인트 
+
+
+| 10250 | TCP | 메트릭 서버 및 kube-apiserver에서 kubelet으로의 Kubelet API 
 |===

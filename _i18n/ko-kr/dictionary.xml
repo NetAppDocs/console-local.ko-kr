@@ -2160,19 +2160,8 @@
   <block id="16b1391fb12c1729b459d4078411bff9" category="cell">클라이언트가 권한이 필요한 ONTAP_ADMIN$ 공유에 연결을 시도했지만, 로그인한 사용자는 이 SVM에서 활성화된 Vscan 스캐너 풀에 속해 있지 않습니다.</block>
   <block id="ffeaca4f7d6a46d7049fc8e2b7f0b27b" category="cell">볼륨 랜섬웨어 방지 모니터링</block>
   <block id="f36dfd228964cdbde57b7f8b77815fd4" category="cell">볼륨의 랜섬웨어 방지 상태가 변경되었습니다.</block>
-  <block id="8750ee5b8e03e45a2b63152d73f5465c" category="summary">콘솔 에이전트는 온프레미스 Linux 호스트에 수동으로 설치할 경우 _인바운드_ 포트를 사용합니다. 계획 수립 시 이러한 포트를 참조하십시오.</block>
-  <block id="741d67235c3ef4adaff2b42902e2d185" category="doc">NetApp Console 로컬 배포에서 온프레미스 Console 에이전트용 포트</block>
-  <block id="970d420fc1a295c82b114cc434d08e14" category="paragraph">NetApp Console 로컬 배포에서 콘솔 에이전트는 온프레미스 Linux 호스트에 수동으로 설치할 경우 _인바운드_ 포트를 사용합니다. 계획 수립 시 이러한 포트를 참조하십시오.</block>
-  <block id="186772c5d8658de6d80f0ce647f8b68c" category="paragraph">이러한 수신 규칙은 모든 NetApp Console 배포 모드에 적용됩니다.</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">프로토콜</block>
   <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">포트</block>
-  <block id="293c9ea246ff9985dc6f62a650f78986" category="cell">HTTP</block>
-  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
-  <block id="63b34d7f22329c0eb7915fca7a346007" category="list-text">클라이언트 웹 브라우저에서 로컬 사용자 인터페이스로의 HTTP 액세스를 제공합니다</block>
-  <block id="7e0ccd7729abca8ae58e9ceff3fd0b87" category="list-text">Cloud Volumes ONTAP 업그레이드 프로세스 중에 사용됩니다.</block>
-  <block id="0e8433f9a404f1f3ba601c14b026d321" category="cell">HTTPS</block>
-  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
-  <block id="2f0c197eb73a7c6da10b03384f241025" category="cell">클라이언트 웹 브라우저에서 로컬 사용자 인터페이스로의 HTTPS 액세스를 제공합니다</block>
   <block id="67ff18000868836147456b90ed3c09d8" category="summary">NetApp Console 로컬 배포에서 사용할 수 있는 시스템 정의 스토리지 클래스 정책을 참조하십시오.</block>
   <block id="e5c10406aeb9ecc88bc3d6ff3824ca76" category="doc">NetApp Console 로컬 배포에서 사전 정의된 스토리지 클래스 정책 검토</block>
   <block id="06870dc681e77e4ce51cc638cf6d849a" category="paragraph">NetApp Console 로컬 배포에는 네 가지 정책 유형 모두에 걸쳐 시스템 정의 정책이 포함됩니다. 스토리지 클래스를 생성하거나 사용자 지정할 때 워크로드 요구 사항에 가장 적합한 정책을 확인하려면 이 참조를 활용하십시오.</block>
@@ -2600,10 +2589,7 @@
   <block id="7cdb1f2af961d23797553a855f761e28" category="list-text">테스트가 성공하면 *저장*을 선택하여 웹훅을 생성합니다.</block>
   <block id="ff67c1e8def8da7cf2d07b0c822de82b" category="inline-link-macro">알림 규칙을 만들고 알림 전송을 위한 웹훅을 할당하는 방법을 알아보십시오.</block>
   <block id="0f877db416e2ad40a2e559c42f1ce5cf" category="paragraph">웹훅을 저장하면 알림 전송 옵션 등 웹훅이 지원되는 위치에서 사용자가 선택할 수 있습니다.<block ref="669ccaec6c1dcee5862e49b40f39ec42" category="inline-link-macro-rx"></block></block>
-  <block id="086ed22d27145a0af40cfd83a074e87c" category="summary">콘솔 로컬 배포를 완료한 후 기존 vCenter 또는 ESXi 호스트를 변경할 수 있습니다. 예를 들어 콘솔 로컬 배포를 호스팅하는 VM 인스턴스의 CPU 또는 RAM을 늘릴 수 있습니다.</block>
-  <block id="4eea2d45bb5749e6b54f45f112048c3f" category="paragraph">NetApp Console 로컬 배포를 사용하면 콘솔 로컬 배포를 배포한 후 기존 vCenter 또는 ESXi 호스트를 변경할 수 있습니다. 예를 들어 콘솔 로컬 배포를 호스팅하는 VM 인스턴스의 CPU 또는 RAM을 늘릴 수 있습니다.</block>
   <block id="94e57c616c0770ea6904ed2397bb0c43" category="paragraph">VM 웹 콘솔을 사용하여 다음 유지 관리 작업을 수행하십시오.</block>
-  <block id="9a3ecb0cd9521bfd7a2e3a2834d9a866" category="list-text">디스크 크기 늘리기</block>
   <block id="aa9d9bd66060cd759418870198f87aa2" category="list-text">콘솔 로컬 배포를 다시 시작합니다</block>
   <block id="eaa97a74be674590f501aafbddcdc12b" category="list-text">정적 경로 업데이트</block>
   <block id="4f366b69ce0f39237eb284d461ee957a" category="list-text">검색 도메인 업데이트</block>
@@ -2619,19 +2605,6 @@
   <block id="d93984b8c2a8824c883a08022dc2371b" category="paragraph"><block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> 사용자의 비밀번호를 변경할 수 있습니다.</block>
   <block id="dfc06183e38ae0a25b4ca48c3a849dc3" category="list-text">를 입력하여<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block><block ref="9b685fecb65f77899f1ea4fd1e767722" prefix=" " category="inline-code"></block> 메뉴를 봅니다.</block>
   <block id="f8d68d435a716537321667f6d83873ef" category="list-text">Enter<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>를 입력하여 유지보수 사용자 암호를 변경하고 화면의 안내에 따라 진행하십시오.</block>
-  <block id="7bdccee6307bdfcab6b328e3b58873ac" category="section-title">가상 머신 인스턴스의 CPU 또는 RAM을 늘립니다.</block>
-  <block id="8ab8872d165876c227474a223e048a96" category="paragraph">콘솔 로컬 배포를 호스팅하는 VM 인스턴스의 CPU 또는 RAM을 늘릴 수 있습니다.</block>
-  <block id="9c1e3b597971db8490ccfbe471a560c0" category="paragraph">VCenter 또는 ESXi 호스트에서 VM 인스턴스 설정을 편집한 다음 유지 관리 콘솔을 사용하여 변경 사항을 적용하십시오.</block>
-  <block id="32011cb24074435157601af044ce5663" category="list-title">VSphere 클라이언트에서의 단계</block>
-  <block id="4cb240d37182d6c74e799680ccf1db95" category="list-text">VM 인스턴스를 마우스 오른쪽 버튼으로 클릭하고 *설정 편집*을 선택합니다.</block>
-  <block id="888d5124c37691bc77f9fd61458331aa" category="list-text">/opt 또는 /var 파티션에 사용되는 하드 드라이브 공간을 늘리십시오.</block>
-  <block id="e4e53d6b5475fac95593fb46c84ee67f" category="list-text">/opt에 사용되는 하드 드라이브 공간을 늘리려면 *하드 디스크 2*를 선택하십시오.</block>
-  <block id="c12cae49029925639b6d7b94b5bd87e6" category="list-text">/var에 사용되는 하드 드라이브 공간을 늘리려면 *하드 디스크 3*을 선택하십시오.</block>
-  <block id="345e93a96b6e66cb9274dbad975c0db2" category="list-text">변경 사항을 저장합니다.</block>
-  <block id="2f263f0d1841855ba6685c895ba3db8b" category="list-title">유지보수 콘솔에서의 단계</block>
-  <block id="0a733be0407678405ecc94d2553d3cb4" category="list-text">콘솔 로컬 배포를 호스팅하는 VM 인스턴스를 선택하십시오.</block>
-  <block id="a5527426dfe9b3215c0fe0144430c64c" category="list-text">Enter<block ref="feddfc071bb4b3e59bcd10161dac21cc" prefix=" " category="inline-code"></block> 메뉴를 입력하세요.</block>
-  <block id="3d80ea8b1dbf4ad9b1fb81c54b3f4126" category="list-text">입력 <block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>후 화면의 안내에 따라 진행하십시오. 콘솔이 새 설정을 검색하고 파티션 크기를 늘립니다.</block>
   <block id="e8fa8fc0b3796a7fce5b9307b50ed032" category="section-title">콘솔 로컬 배포 VM의 네트워크 설정 보기</block>
   <block id="427a252546c64ee615ec86ef47dc9126" category="paragraph">vSphere 클라이언트에서 콘솔 로컬 배포 VM의 네트워크 설정을 확인하여 네트워크 문제를 점검하거나 해결할 수 있습니다. 다음 네트워크 설정은 확인만 가능하며 업데이트는 불가능합니다. IP 주소 및 DNS 세부 정보.</block>
   <block id="57bc91c2ba2fc0985ecadad76ce00906" category="list-text"><block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>을 입력하여 <block ref="dce011ea921230b4e3061bb70569c598" prefix=" " category="inline-code"></block> 메뉴를 봅니다.</block>
@@ -3748,4 +3721,33 @@
   <block id="30ed16d592d987bc97f9c257fb0d026c" category="list-text">필요한 경우 LLM 공급자 계정의 사용자 이름 또는 ID입니다.</block>
   <block id="e90cfbea605d047e2c768be5cc0d5d90" category="list-text">콘솔 도우미를 읽기 전용 모드로 열고 기본 쿼리를 실행합니다.</block>
   <block id="ddbbb4fd6daa8474cc88e6beb3919a85" category="list-text">*콘솔 도우미*를 *읽기/쓰기* 모드로 열고 스토리지 변경 작업 실행 전에 사용자 확인이 필요한지 확인하십시오.</block>
+  <block id="f9fe4a5426c609bf7ec63303066954e3" category="list-text">ESXi 호스트에서는 VM이 시작될 때 CPU와 메모리가 할당되는 것이 아니라 예약됩니다. 대상 호스트에 최소 16개의 CPU 코어와 64GB를 예약되지 않은 용량으로 사용할 수 있는지 확인하십시오. 호스트에 기존 VM 예약이 있으면 사용 가능한 용량이 줄어듭니다.</block>
+  <block id="fb2aa2f24e94d02ba0aa39b5b1953b02" category="list-text">데이터 저장소는 최소 디스크 쓰기 성능 요건을 충족해야 합니다. fsync p99 쓰기 지연 시간은 20ms 이하, 4K 랜덤 쓰기 IOPS는 200 이상이어야 합니다. 지연 시간이 50ms를 초과하거나 IOPS가 30 미만이면 배포가 실패합니다.</block>
+  <block id="bc30837cb3bcee1ef470300a93faccd1" category="list-text">IPv6는 지원되지 않습니다. 고정 IPv4 주소가 필요합니다.</block>
+  <block id="2938c9aef13e6b9e5ef64008f86cbed9" category="summary">NetApp Console 로컬 배포 OVA는 자체 내부 방화벽을 관리합니다. 환경에서 VM에 외부 방화벽 정책이 적용되는 경우 관리 호스트에서 다음 인바운드 포트에 접근할 수 있는지 확인하십시오.</block>
+  <block id="d640078adcf8eb1ceaf8dbfab6c0720d" category="doc">NetApp Console 로컬 배포를 위한 인바운드 포트</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="0c4e05ccd1abb4e3392fea5423a4af37" category="cell">원격 유지 관리 및 진단 셸 액세스를 위한 SSH</block>
+  <block id="202cb962ac59075b964b07152d234b70" category="cell">123</block>
+  <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
+  <block id="d8cd98eaca923c6ca73ac9374b25eaa7" category="cell">시간 동기화를 위한 NTP</block>
+  <block id="add217938e07bb1fd8796e0315b88c10" category="cell">2379</block>
+  <block id="845bf240dea5c57c12b3d03689df0b54" category="cell">RKE2 컨트롤 플레인 etcd 클라이언트 트래픽을 위한 etcd 클라이언트 API</block>
+  <block id="da4902cb0bc38210839714ebdcf0efc3" category="cell">2380</block>
+  <block id="50cdddb418f7b6b7dad830939b422a69" category="cell">etcd 멤버 간 복제를 위한 etcd 피어 포트</block>
+  <block id="c03afab54002887e7e1d27a1069e206c" category="cell">6443</block>
+  <block id="e2e22dfc9080b9c68b6dbc84bf406d43" category="cell">kubectl 및 RKE2 API 접근을 위한 Kubernetes API 서버</block>
+  <block id="6d1e481bdcf159961818823e652a7725" category="cell">8472</block>
+  <block id="ff130471ec1970c4bda9bde0fb3b8c03" category="cell">RKE2 노드 간 포드 간 트래픽을 위한 Canal/Flannel VXLAN 오버레이</block>
+  <block id="0a7d7a81e8e3a20e4c34748e98ef45f6" category="cell">9091</block>
+  <block id="0f8aa63d0919d42b022ddcfa2e30e1b8" category="cell">Calico Felix CNI 상태 및 메트릭을 위한 메트릭 엔드포인트</block>
+  <block id="fc1dc4549df0335d7f506edb5d66af16" category="cell">9100</block>
+  <block id="b10328ad2875bbddf4d9d49cacb29474" category="cell">호스트 메트릭 스크래핑을 위한 Prometheus node_exporter</block>
+  <block id="76444b3132fda0e2aca778051d776f1c" category="cell">9345</block>
+  <block id="4d65c397f420cfc0233d2763cea9bffc" category="cell">RKE2 슈퍼바이저 및 서버 등록 엔드포인트</block>
+  <block id="183f50a7700982a3ed18ff6d7a5777bf" category="cell">10250</block>
+  <block id="924c6a9c613412a0e4058026aa89a86a" category="cell">메트릭 서버 및 kube-apiserver에서 kubelet으로의 Kubelet API</block>
+  <block id="50a807a194603f6075b05395337e3064" category="summary">콘솔 로컬 배포를 완료한 후 기존 vCenter 또는 ESXi 호스트를 변경할 수 있습니다.</block>
+  <block id="e137fee1052a69e09aea64b66a681285" category="paragraph">NetApp Console 로컬 배포를 사용하면 콘솔 로컬 배포를 배포한 후 기존 vCenter 또는 ESXi 호스트를 변경할 수 있습니다.</block>
 </blocks>
