@@ -48,7 +48,6 @@ NetApp Console 로컬 배포를 설치하기 전에 호스트 시스템이 설�
 
 
 [[set-up-network-access-for-the-netapp-console-local-deployment]]
-[[network-access-agent]]
 === NetApp Console 로컬 배포를 위한 네트워크 액세스 설정
 
 NetApp Console 로컬 배포는 서비스 간 통신을 위해 고정 주소 공간을 사용합니다. 내부 네트워크에는 10.42.0.0/16 및 10.43.0.0/16 IP 범위가 사용됩니다. Console 로컬 배포를 설치하기 전에 Console 로컬 배포에 할당된 VLAN에서 이러한 IP 범위가 다른 VM, DHCP 범위, DNS 레코드 또는 로드 밸런서 VIP 풀에 할당되지 않았는지 확인하십시오.

@@ -197,8 +197,6 @@ sidebar:
         url: "/reference-svm-compliance-categories.html"
     - title: 지식 및 지원
       entries:
-      - title: 지원 등록
-        url: "/task-support-registration.html"
       - title: 도움말 보기
         url: "/task-get-help.html"
   - title: 법적 고지
