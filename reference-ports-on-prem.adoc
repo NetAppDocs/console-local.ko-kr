@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local, inbound ports, OVA 
+keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console local, Console local connectivity, netapp console local, inbound ports, OVA 
 summary: NetApp Console 로컬 배포 OVA는 자체 내부 방화벽을 관리합니다. 환경에서 VM에 외부 방화벽 정책이 적용되는 경우 관리 호스트에서 다음 인바운드 포트에 접근할 수 있는지 확인하십시오. 
 ---
 = NetApp Console 로컬 배포를 위한 인바운드 포트
