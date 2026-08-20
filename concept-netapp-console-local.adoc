@@ -18,6 +18,8 @@ NetApp Console 로컬 배포를 사용하면 NetApp Console 자율 제어 플레
 
 통합 스토리지 관리, 정책 시행, 대규모 자동화 및 AI 기반 운영을 제공합니다. 데이터, 메타데이터 또는 관리 트래픽이 사용자 환경 외부로 유출되지 않습니다.
 
+link:console-differences.html["NetApp Console 로컬 배포와 NetApp Console SaaS 및 프라이빗 모드의 차이점을 알아보십시오."].
+
 
 
 [[deploy-and-operate-console-in-your-own-infrastructure]]

@@ -22,3 +22,5 @@ NetApp Console 로컬 배포의 최신 릴리스에 포함된 새로운 기능 �
 === NetApp Console 로컬 배포 소개
 
 https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Console 로컬 배포 알아보기"].
+
+https://docs.netapp.com/us-en/console-local/console-differences.html["NetApp Console 로컬 배포와 NetApp Console SaaS 및 프라이빗 모드의 차이점을 알아보십시오."].

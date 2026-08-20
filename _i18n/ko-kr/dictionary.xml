@@ -3633,4 +3633,7 @@
   <block id="66ae36e07e30e4c89165201182d037be" category="cell">로컬 사용자를 초대하거나 로컬 사용자의 비밀번호 재설정을 사용하려면 먼저 SMTP 이메일 서버를 구성해야 합니다.</block>
   <block id="d433d6de6ccf389e02982430306a440f" category="cell">로컬 사용자와 Active Directory 사용자 간에 동일한 이메일 주소를 사용할 수 없습니다. 예를 들어, 최초 로컬 조직 관리자가 나중에 Active Directory 사용자로 자신을 추가하는 경우 다른 이메일 주소를 사용해야 합니다.</block>
   <block id="3be37f60cf59fb4438b6120b07ffd2e9" category="admonition">로컬 사용자 초대 링크는 일회용이며 7일 후에 만료됩니다. 사용자가 설정을 완료하기 전에 링크가 만료된 경우, 해당 사용자를 삭제한 후 다시 추가하여 새 초대 링크를 보내십시오.</block>
+  <block id="d2a0f46558d1ad15a1efcaa26aef1b39" category="inline-link">NetApp Console 로컬 배포와 NetApp Console SaaS 및 프라이빗 모드의 차이점을 알아보십시오.</block>
+  <block id="fc43c258a671e0d243e8a95a48956300" category="paragraph"><block ref="a79ef635b40614d2cd5c555de517dd6f" category="inline-link-rx"></block>.</block>
+  <block id="4688d87a2acbed67ab6380ef3dbee717" category="paragraph"><block ref="dff1bfa50abe498b973310763c6748f5" category="inline-link-macro-rx"></block>.</block>
 </blocks>
