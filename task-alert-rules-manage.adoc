@@ -36,6 +36,9 @@ Super admin, Organization admin, Storage admin, Operations support analyst 또�
 
 
 
+NOTE: 콘솔 UI 알림은 24시간 동안 보존됩니다.
+
+
 
 [[view-notification-rules]]
 == 알림 규칙 보기

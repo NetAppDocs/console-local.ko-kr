@@ -3057,8 +3057,6 @@
   <block id="bb1e1ef266584a5a332dfd21a0ceff90" category="list-text">명시적 프록시를 선택한 경우 프록시 서버 호스트 이름 또는 IP 주소와 포트 번호, 사용자 이름 및 비밀번호를 입력하십시오.</block>
   <block id="777fde86c6354cd539ec78cfac87b390" category="list-text">투명 프록시를 선택한 경우 해당 인증서를 업로드하십시오.</block>
   <block id="f6b06d7af2e17b031527e55078cf6bda" category="list-text">*가상 머신 구성*</block>
-  <block id="536601d5f2a0ce3000ead0f9e4f4cfc2" category="list-text">*구성 검사 건너뛰기*: 이 확인란은 기본적으로 선택 해제되어 있습니다. 즉, NetApp Console 로컬 배포 시 네트워크 액세스를 검증하기 위한 구성 검사를 실행합니다.</block>
-  <block id="04157edfd56e309364a7442b42b155a9" category="list-text">NetApp은 설치 과정에 NetApp Console 로컬 배포에 대한 구성 검사가 포함되도록 이 확인란을 선택 해제하는 것을 권장합니다. 구성 검사는 NetApp Console 로컬 배포가 필요한 엔드포인트에 네트워크 액세스할 수 있는지 확인합니다. 연결 문제로 인해 배포가 실패하는 경우, NetApp Console 로컬 배포 호스트에서 유효성 검사 보고서와 로그를 확인할 수 있습니다. 경우에 따라 NetApp Console 로컬 배포에 네트워크 액세스가 가능하다고 확신하는 경우 이 검사를 건너뛸 수 있습니다.</block>
   <block id="4dbd3c987fc3c99f4068f93b9ddf0271" category="list-text">*유지 관리 암호*: <block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> 사용자가 NetApp Console 로컬 배포 유지 관리 콘솔에 액세스할 수 있도록 암호를 설정합니다.</block>
   <block id="cb059a17daa0db402273fce83326bc2b" category="list-text">*NTP 서버*: 시간 동기화를 위해 하나 이상의 NTP 서버를 지정하십시오.</block>
   <block id="fea958d8a6639552d2e73dadaab0eb59" category="list-text">*호스트 이름*: 이 VM의 호스트 이름을 설정하십시오. 검색 도메인을 포함해서는 안 됩니다. 예를 들어, FQDN이 console10.searchdomain.company.com인 경우 console10으로 입력해야 합니다.</block>
@@ -3626,4 +3624,13 @@
   <block id="d2102c65ff11954ccbf42346bfdd3f4f" category="list-text">지원 카드에서 *생성*을 선택하여 로그 및 구성 데이터 묶음을 생성합니다.</block>
   <block id="6d6556399a0b8fc0d6acf274ab50bd15" category="list-text">번들 생성이 완료되면 *다운로드*를 선택합니다. ZIP 파일을 다운로드하라는 메시지가 표시됩니다.</block>
   <block id="c5303cf1b99e0c56f64b84d5b1fa0e9a" category="paragraph">이 시스템은 한 번에 하나의 지원 번들만 유지합니다. 새 지원 번들을 생성하면 이전 번들이 대체됩니다.</block>
+  <block id="5a416b505eeb414e2a13458a4f94ecbf" category="admonition">경고는 NetApp Console 로컬 배포 환경에서 발생 시점으로부터 7일 동안 보관됩니다.</block>
+  <block id="ddd48b069384a5d886b18fc4008bcb18" category="admonition">콘솔 UI 알림은 24시간 동안 보존됩니다.</block>
+  <block id="3732468e73bd908d56c8b63b5774bb20" category="section-title">신원 및 접근 제한</block>
+  <block id="deec4ff19974f12ed781cb9a59064214" category="cell">영역</block>
+  <block id="f3d9abb903127694db460aa9c7f4d7be" category="cell">제한 사항</block>
+  <block id="16492f4d2028d9a0f96c4e1590b65f2c" category="cell">로컬 사용자 온보딩 및 계정 복구</block>
+  <block id="66ae36e07e30e4c89165201182d037be" category="cell">로컬 사용자를 초대하거나 로컬 사용자의 비밀번호 재설정을 사용하려면 먼저 SMTP 이메일 서버를 구성해야 합니다.</block>
+  <block id="d433d6de6ccf389e02982430306a440f" category="cell">로컬 사용자와 Active Directory 사용자 간에 동일한 이메일 주소를 사용할 수 없습니다. 예를 들어, 최초 로컬 조직 관리자가 나중에 Active Directory 사용자로 자신을 추가하는 경우 다른 이메일 주소를 사용해야 합니다.</block>
+  <block id="3be37f60cf59fb4438b6120b07ffd2e9" category="admonition">로컬 사용자 초대 링크는 일회용이며 7일 후에 만료됩니다. 사용자가 설정을 완료하기 전에 링크가 만료된 경우, 해당 사용자를 삭제한 후 다시 추가하여 새 초대 링크를 보내십시오.</block>
 </blocks>

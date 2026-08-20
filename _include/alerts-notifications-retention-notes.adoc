@@ -1,0 +1,9 @@
+= 
+:allow-uri-read: 
+
+
+
+NOTE: 경고는 NetApp Console 로컬 배포 환경에서 발생 시점으로부터 7일 동안 보관됩니다.
+
+
+NOTE: 콘솔 UI 알림은 24시간 동안 보존됩니다.

@@ -26,6 +26,9 @@ ONTAP 알림의 경우, System Manager 및 Workload Analyzer 등 툴에 알림 �
 외부 보고를 위해 알림 목록을 CSV 파일로 내보내 오프라인 분석을 수행할 수 있습니다.
 
 
+NOTE: 경고는 NetApp Console 로컬 배포 환경에서 발생 시점으로부터 7일 동안 보관됩니다.
+
+
 NOTE: 이메일이나 웹훅을 통해 알림을 받도록 알림 규칙을 설정할 수도 있습니다. link:task-alert-rules-manage.html["알림 알림을 설정하는 방법을 알아보십시오."].
 
 

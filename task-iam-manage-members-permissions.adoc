@@ -94,6 +94,9 @@ link:reference-iam-predefined-roles.html["액세스 역할에 대해 알아보�
 
 
 
+NOTE: 로컬 사용자 초대 링크는 일회용이며 7일 후에 만료됩니다. 사용자가 설정을 완료하기 전에 링크가 만료된 경우, 해당 사용자를 삭제한 후 다시 추가하여 새 초대 링크를 보내십시오.
+
+
 
 [[add-a-service-account]]
 [[service-account]]
