@@ -16,6 +16,8 @@ summary: 워크로드 분석기가 볼륨 수준의 성능, 용량 및 데이터
 [role="lead"]
 NetApp Console 로컬 배포 워크로드 분석기를 사용하여 단일 볼륨의 시간 경과에 따른 동작을 확인할 수 있습니다. 볼륨 자체, 경고 또는 인벤토리에서 성능 저하, 용량 추세 및 리소스 경합 문제를 조사할 수 있습니다.
 
+자연어 관련 질문 및 허용된 리소스 전반에 걸친 고급 분석에는 Console 도우미를 사용하십시오.link:reference-console-assistant-operations.html["지원되는 Console 어시스턴트 작업에 대해 알아보세요."]
+
 
 
 [[how-workload-analyzer-identifies-root-causes]]
