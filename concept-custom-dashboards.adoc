@@ -53,7 +53,7 @@ NetApp Console 로컬 배포에서 사용자 지정 대시보드를 사용하여
 알림:: 중요 경보 건수, 심각도별 경보, 영향 영역별 경보, 최근 경보 및 시간 경과에 따른 경보 추세.
 
 
-미리 정의된 카드 및 메트릭의 전체 카탈로그는 link:reference-dashboard-card-templates.html["NetApp Console 로컬 배포의 사용자 정의 대시보드 카드 및 메트릭에 대해 알아보십시오."]을 참조하십시오.
+link:reference-dashboard-card-templates.html["NetApp Console 로컬 배포의 사용자 정의 대시보드 카드 및 메트릭 카탈로그를 검토하십시오"].
 
 
 

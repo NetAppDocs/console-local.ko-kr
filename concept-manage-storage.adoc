@@ -37,8 +37,6 @@ NetApp Console 로컬 배포에서 플릿 관리란 스토리지 시스템을 �
 
 조직의 리소스 계층 구조는 폴더와 플릿으로 구성됩니다.
 
-계층 구조 및 액세스 모델에 대한 자세한 개요는 link:concept-folders-fleets-overview.html["NetApp Console 로컬 배포에서 폴더 및 플릿에 대해 알아보기"]을 참조하십시오.
-
 * *조직* - 귀사를 대표하는 최상위 조직입니다.
 * *폴더* - 관련 플릿을 체계적으로 관리하는 데 도움이 됩니다. 예를 들어, 각 지역 또는 사업부별로 폴더를 만들고, 각 폴더 안에 플릿을 생성할 수 있습니다. 폴더는 다른 폴더나 플릿을 포함할 수 있습니다. 폴더 수준에서 역할을 할당하면 해당 폴더 내의 모든 플릿에 대해 구성원이 해당 역할을 상속받습니다.
 * *플릿* - 관리하는 스토리지 시스템들을 그룹화합니다. 스토리지 시스템을 플릿에 연결하고, 플릿에 멤버를 지정하여 액세스 권한을 부여할 수 있습니다.
@@ -46,6 +44,8 @@ NetApp Console 로컬 배포에서 플릿 관리란 스토리지 시스템을 �
 
 
 NOTE: 폴더는 조직 관리 툴이며, Organization admin, Folder admin, Folder admin 또는 Fleet admin 역할 등 IAM 권한이 없는 구성원에게는 표시되지 않습니다. 구성원은 폴더가 아닌 플릿에 액세스합니다.
+
+link:concept-folders-fleets-overview.html["NetApp Console 로컬 배포에서 폴더 및 플릿에 대해 자세히 알아보십시오."].
 
 
 
@@ -108,9 +108,10 @@ Console 로컬 배포는 RBAC, 감사 로깅 및 스토리지 클래스 표준�
 [[where-to-go-next]]
 == 다음 단계
 
-* 스토리지 표준을 이해하려면 link:concept-storage-classes.html["NetApp Console 로컬 배포에서 스토리지 클래스 및 정책에 대해 알아보기"]을 참조하십시오.
-* 플리트를 생성하고 관리하려면 link:task-iam-manage-folders-fleets.html["폴더 및 플릿 관리"]을 참조하십시오.
+* link:concept-storage-classes.html["NetApp Console 로컬 배포에서 스토리지 클래스 및 정책에 대해 알아보기"].
+* link:task-iam-manage-folders-fleets.html["플리트를 생성하고 관리하는 방법을 알아보십시오."].
 * link:task-provisioning-manual.html["수동으로 스토리지 프로비저닝"]
 * link:task-provisioning-automated.html["스토리지 자동 제공"]
 * link:task-provisioning-agentic.html["AI 지원을 통한 스토리지 제공"]
+* link:reference-console-assistant-operations.html["지원되는 Console 어시스턴트 작업 보기"]
 

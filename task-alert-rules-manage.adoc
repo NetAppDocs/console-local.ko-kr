@@ -31,7 +31,7 @@ Super admin, Organization admin, Storage admin, Operations support analyst 또�
 [[before-you-begin]]
 == 시작하기 전에
 
-* 이메일로 알림을 보내려면 조직 관리자가 콘솔 로컬 배포에서 이메일 서버를 구성해야 합니다. 외부 시스템으로 알림을 보내려면 조직 관리자가 웹훅을 구성해야 합니다. 자세한 단계는 link:task-console-configure-notifications-delivery.html["알림 전달 구성"]을 참조하십시오.
+* 이메일로 알림을 보내려면 조직 관리자가 콘솔 로컬 배포에서 이메일 서버를 구성해야 합니다. 외부 시스템으로 알림을 보내려면 조직 관리자가 웹훅을 구성해야 합니다. link:task-console-configure-notifications-delivery.html["웹훅 구성 방법을 알아보십시오"].
 * 콘솔 로컬 배포 알림 센터는 기본적으로 알림을 표시하므로 콘솔 내 알림을 위한 추가 설정이 필요하지 않습니다.
 
 

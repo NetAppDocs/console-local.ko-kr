@@ -12,192 +12,198 @@ settings:
 sidebar:
   entries:
   - title: NetApp Console 로컬 배포
+    url: "/index.html"
+  - title: 릴리스 노트
     entries:
-    - title: 릴리스 노트
+    - title: 새로운 소식
+      url: "/whats-new.html"
+    - title: 알려진 제한 사항
+      url: "/reference-local-known-limitations.html"
+    - title: NetApp Console 로컬 배포와 NetApp Console 비교
+      url: "/console-differences.html"
+  - title: 시작하기
+    entries:
+    - title: NetApp Console에 대해 알아보세요
+      url: "/concept-netapp-console-local.html"
+    - title: ID 및 액세스 관리에 대해 알아보십시오
+      url: "/concept-identity-and-access-management.html"
+    - title: 플리트 관리에 대해 알아보기
+      url: "/concept-manage-storage.html"
+    - title: 스토리지 등급 및 정책에 대해 알아보기
+      url: "/concept-storage-classes.html"
+    - title: LLM 통합(AI 기반 관리)에 대해 알아보기
+      url: "/concept-llm-integration.html"
+    - title: NetApp Backup and Recovery에 대해 알아보세요
+      url: "/concept-data-services.html"
+  - title: 설치 및 설정
+    entries:
+    - title: NetApp Console 설정 빠른 시작
+      url: "/task-quick-start-console-setup.html"
+    - title: NetApp Console 설치
       entries:
-      - title: 새로운 소식
-        url: "/whats-new.html"
-      - title: 알려진 제한 사항
-        url: "/reference-local-known-limitations.html"
-      - title: NetApp Console 로컬 배포와 NetApp Console 비교
-        url: "/console-differences.html"
-    - title: 시작하기
-      entries:
-      - title: NetApp Console에 대해 알아보세요
-        url: "/concept-netapp-console-local.html"
-      - title: ID 및 액세스 관리에 대해 알아보십시오
-        url: "/concept-identity-and-access-management.html"
-      - title: 플리트 관리에 대해 알아보기
-        url: "/concept-manage-storage.html"
-      - title: 스토리지 등급 및 정책에 대해 알아보기
-        url: "/concept-storage-classes.html"
-      - title: LLM 통합(AI 기반 관리)에 대해 알아보기
-        url: "/concept-llm-integration.html"
-      - title: NetApp Backup and Recovery에 대해 알아보세요
-        url: "/concept-data-services.html"
-    - title: 설치 및 설정
-      entries:
-      - title: NetApp Console 설정 빠른 시작
-        url: "/task-quick-start-console-setup.html"
       - title: NetApp Console 설치
-        entries:
-        - title: NetApp Console 설치
-          url: "/task-install-agent-on-prem-ova.html"
-      - title: Console 조직 계획 수립
-        entries:
-        - title: ID 및 액세스 시작하기
-          url: "/task-iam-fleet-mgmt-get-started.html"
-        - title: 폴더와 플릿에 대해 알아보기
-          url: "/concept-folders-fleets-overview.html"
-        - title: 역할 기반 액세스 제어(RBAC)에 대해 알아보십시오.
-          url: "/concept-iam-rbac.html"
-      - title: Console 조직을 설정합니다
-        entries:
-        - title: 폴더 및 플릿 생성
-          url: "/task-iam-manage-folders-fleets.html"
-        - title: NetApp Console에 스토리지 시스템 추가
-          url: "/task-add-systems.html"
-        - title: 리소스를 폴더 및 플릿과 연결합니다
-          url: "/task-iam-manage-resources.html"
-        - title: 멤버를 추가하고 초기 역할을 할당합니다.
-          url: "/task-iam-manage-members-permissions.html"
-        - title: 액세스 역할
-          entries:
-          - title: NetApp Console 액세스 역할
-            url: "/reference-iam-predefined-roles.html"
-          - title: 플랫폼 역할
-            url: "/reference-iam-platform-roles.html"
-          - title: 운영 지원 분석가 직무
-            url: "/reference-iam-analyst-roles.html"
-          - title: 스토리지 역할
-            url: "/reference-iam-storage-roles.html"
-          - title: 백업 및 복구 역할
-            url: "/reference-iam-backup-rec-roles.html"
-      - title: Console 통합 및 서비스 구성
-        entries:
-        - title: NetApp Console을 Active Directory와 통합
-          url: "/task-iam-active-directory-integrate.html"
-        - title: LLM을 연결하고 NetApp Console 도우미를 활성화하십시오
-          url: "/task-llm-connect.html"
-        - title: LLM 통합 문제 해결
-          url: "/task-llm-troubleshoot-integration.html"
-        - title: 알림 전달 구성
-          url: "/task-console-configure-notifications-delivery.html"
-    - title: NetApp Console 사용
+        url: "/task-install-agent-on-prem-ova.html"
+    - title: Console 조직 계획 수립
       entries:
-      - title: NetApp Console에 로그인합니다
-        url: "/task-logging-in.html"
-      - title: 플리트와 연결된 시스템 보기
-        url: "/task-iam-switch-fleets.html"
-      - title: NetApp Console 사용자 설정 관리
-        url: "/task-user-settings.html"
-      - title: NetApp Console 어시스턴트 사용
-        url: "/task-console-asst-use.html"
-    - title: NetApp Console에서 스토리지 관리
+      - title: ID 및 액세스 시작하기
+        url: "/task-iam-fleet-mgmt-get-started.html"
+      - title: 폴더와 플릿에 대해 알아보기
+        url: "/concept-folders-fleets-overview.html"
+      - title: 역할 기반 액세스 제어(RBAC)에 대해 알아보십시오.
+        url: "/concept-iam-rbac.html"
+    - title: Console 조직을 설정합니다
       entries:
-      - title: 스토리지 관리에 대해 알아보기
-        url: "/concept-manage-storage.html"
-      - title: 스토리지 동작 표준화
+      - title: 폴더 및 플릿 생성
+        url: "/task-iam-manage-folders-fleets.html"
+      - title: NetApp Console에 스토리지 시스템 추가
+        url: "/task-add-systems.html"
+      - title: 리소스를 폴더 및 플릿과 연결합니다
+        url: "/task-iam-manage-resources.html"
+      - title: 멤버를 추가하고 초기 역할을 할당합니다.
+        url: "/task-iam-manage-members-permissions.html"
+      - title: 액세스 역할
         entries:
-        - title: 스토리지 클래스에 대해 알아보기
-          url: "/concept-storage-classes.html"
-        - title: 스토리지 클래스 정책에 대해 알아보기
-          url: "/concept-storage-class-policies.html"
-        - title: 사전 정의된 스토리지 클래스 정책을 검토합니다.
-          url: "/reference-storage-class-policies.html"
-        - title: 스토리지 클래스 생성
-          url: "/task-storage-class-manage.html"
-      - title: 스토리지 프로비저닝
-        url: "/task-provisioning-manual.html"
-    - title: 스토리지 상태 모니터링
+        - title: NetApp Console 액세스 역할
+          url: "/reference-iam-predefined-roles.html"
+        - title: 플랫폼 역할
+          url: "/reference-iam-platform-roles.html"
+        - title: 운영 지원 분석가 직무
+          url: "/reference-iam-analyst-roles.html"
+        - title: 스토리지 역할
+          url: "/reference-iam-storage-roles.html"
+        - title: 백업 및 복구 역할
+          url: "/reference-iam-backup-rec-roles.html"
+    - title: Console 통합 및 서비스 구성
       entries:
-      - title: NetApp Console에서 스토리지 상태 모니터링에 대해 알아봅니다
-        url: "/concept-monitor-storage.html"
-      - title: 대시보드로 모니터링
+      - title: NetApp Console을 Active Directory와 통합
+        url: "/task-iam-active-directory-integrate.html"
+      - title: LLM을 연결하고 NetApp Console 도우미를 활성화하십시오
+        url: "/task-llm-connect.html"
+      - title: LLM 통합 문제 해결
+        url: "/task-llm-troubleshoot-integration.html"
+      - title: 알림 전달 구성
+        url: "/task-console-configure-notifications-delivery.html"
+  - title: NetApp Console 사용
+    entries:
+    - title: NetApp Console에 로그인합니다
+      url: "/task-logging-in.html"
+    - title: 플리트와 연결된 시스템 보기
+      url: "/task-iam-switch-fleets.html"
+    - title: NetApp Console 사용자 설정 관리
+      url: "/task-user-settings.html"
+    - title: NetApp Console 어시스턴트 사용
+      url: "/task-console-asst-use.html"
+    - title: 지원되는 콘솔 어시스턴트 작업
+      url: "/reference-console-assistant-operations.html"
+  - title: NetApp Console에서 스토리지 관리
+    entries:
+    - title: 스토리지 관리에 대해 알아보기
+      url: "/concept-manage-storage.html"
+    - title: 스토리지 동작 표준화
+      entries:
+      - title: 스토리지 클래스에 대해 알아보기
+        url: "/concept-storage-classes.html"
+      - title: 스토리지 클래스 정책에 대해 알아보기
+        url: "/concept-storage-class-policies.html"
+      - title: 사전 정의된 스토리지 클래스 정책을 검토합니다.
+        url: "/reference-storage-class-policies.html"
+      - title: 스토리지 클래스 생성
+        url: "/task-storage-class-manage.html"
+    - title: 스토리지 프로비저닝
+      url: "/task-provisioning-manual.html"
+    - title: AI 지원을 통한 스토리지 제공
+      url: "/task-provisioning-agentic.html"
+  - title: 스토리지 상태 모니터링
+    entries:
+    - title: NetApp Console에서 스토리지 상태 모니터링에 대해 알아봅니다
+      url: "/concept-monitor-storage.html"
+    - title: 대시보드로 모니터링
+      entries:
+      - title: 홈페이지 통계 보기
+        url: "/task-storage-dashboard.html"
+      - title: 사용자 지정 대시보드 사용
         entries:
-        - title: 홈페이지 통계 보기
-          url: "/task-storage-dashboard.html"
-        - title: 사용자 지정 대시보드 사용
-          entries:
-          - title: 맞춤형 대시보드에 대해 알아보기
-            url: "/concept-custom-dashboards.html"
-          - title: 대시보드 시작하기
-            url: "/task-dashboard-get-started.html"
-          - title: 사용자 지정 대시보드 만들기
-            url: "/task-dashboard-create.html"
-          - title: 대시보드 카드 사용자 지정
-            url: "/task-customize-dashboard-cards.html"
-          - title: 사용자 지정 대시보드 카드 및 측정항목 참조
-            url: "/reference-dashboard-card-templates.html"
+        - title: 맞춤형 대시보드에 대해 알아보기
+          url: "/concept-custom-dashboards.html"
+        - title: 대시보드 시작하기
+          url: "/task-dashboard-get-started.html"
+        - title: 사용자 지정 대시보드 만들기
+          url: "/task-dashboard-create.html"
+        - title: 대시보드 카드 사용자 지정
+          url: "/task-customize-dashboard-cards.html"
+        - title: 사용자 지정 대시보드 카드 및 측정항목 참조
+          url: "/reference-dashboard-card-templates.html"
+      - title: 사용자 지정 대시보드 관리
+        entries:
         - title: 사용자 지정 대시보드 관리
-          entries:
-          - title: 사용자 지정 대시보드 관리
-            url: "/task-dashboard-manage.html"
-      - title: 인벤토리를 사용하여 플리트 모니터링
-        url: "/concept-monitor-fleets-inventory.html"
-      - title: 경고 수정
-        entries:
-        - title: 알림에 대해 알아보기
-          url: "/concept-console-alerts.html"
-        - title: 알림 보기
-          url: "/task-alerts-monitor.html"
-        - title: 알림에 대한 알림 규칙 구성
-          url: "/task-alert-rules-manage.html"
-        - title: 스토리지 클래스 드리프트 수정
-          url: "/task-storage-class-drift-remediate.html"
-        - title: 경고 수정 작업
-          url: "/reference-alert-remediation.html"
-      - title: 성능 문제 조사
-        entries:
-        - title: 워크로드 분석기에 대해 알아보기
-          url: "/concept-workload-analyzer.html"
-        - title: 볼륨의 높은 지연 시간 조사
-          url: "/task-analyzer-volume-latency-investigate.html"
-        - title: 볼륨의 높은 처리량 수요 조사
-          url: "/task-analyzer-volume-throughput-investigate.html"
-        - title: 볼륨의 용량 증가 조사
-          url: "/task-analyzer-volume-capacity-investigate.html"
-        - title: 워크로드 분석기 메트릭 참조
-          url: "/reference-workload-analyzer-metrics.html"
-    - title: NetApp Console 로컬 배포를 관리하고 모니터링합니다.
+          url: "/task-dashboard-manage.html"
+    - title: 인벤토리를 사용하여 플리트 모니터링
+      url: "/concept-monitor-fleets-inventory.html"
+    - title: 경고 수정
       entries:
-      - title: NetApp Console 로컬 배포 관리에 대해 알아보세요.
-        url: "/concept-administer-netapp-console-local.html"
-      - title: NetApp Console 로컬 배포 작업 감사
-        url: "/task-audit-console-activity.html"
-      - title: Licenses and subscriptions
-        url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
-      - title: NetApp Console 유지 관리
-        entries:
-        - title: NetApp Console VM을 유지 관리합니다.
-          url: "/task-console-local-vm-config.html"
-      - title: 사용자 및 접근 권한 관리
-        entries:
-        - title: 멤버 액세스 관리(멤버 중심)
-          url: "/task-iam-manage-roles.html"
-        - title: 플리트 액세스 할당 관리(플리트 중심)
-          url: "/task-iam-users-fleets-assign.html"
-        - title: 멤버 보안 관리
-          url: "/task-manage-member-security.html"
-    - title: 참조
+      - title: 알림에 대해 알아보기
+        url: "/concept-console-alerts.html"
+      - title: 알림 보기
+        url: "/task-alerts-monitor.html"
+      - title: 알림에 대한 알림 규칙 구성
+        url: "/task-alert-rules-manage.html"
+      - title: 스토리지 클래스 드리프트 수정
+        url: "/task-storage-class-drift-remediate.html"
+      - title: 경고 수정 작업
+        url: "/reference-alert-remediation.html"
+    - title: 성능 문제 조사
       entries:
-      - title: NetApp Console 로컬 배포 API
-        entries:
-        - title: 조직 및 플릿 ID
-          url: "/task-iam-rename-organization.html"
-        - title: 콘솔 로컬 배포 API 참조
-          url: https://docs.netapp.com/us-en/console-local-automation/index.html
-      - title: 지원되는 LLM 제공자 및 모델
-        url: "/reference-llm-supported-models.html"
-      - title: ONTAP 알림 참조
-        url: "/reference-ontap-alerts.html"
-      - title: 클러스터 보안 규정 준수 범주
-        url: "/reference-cluster-compliance-categories.html"
-      - title: 스토리지 VM 보안 규정 준수 범주
-        url: "/reference-svm-compliance-categories.html"
-    - title: 지식 및 지원
+      - title: 워크로드 분석기에 대해 알아보기
+        url: "/concept-workload-analyzer.html"
+      - title: 볼륨의 높은 지연 시간 조사
+        url: "/task-analyzer-volume-latency-investigate.html"
+      - title: 볼륨의 높은 처리량 수요 조사
+        url: "/task-analyzer-volume-throughput-investigate.html"
+      - title: 볼륨의 용량 증가 조사
+        url: "/task-analyzer-volume-capacity-investigate.html"
+      - title: 워크로드 분석기 메트릭 참조
+        url: "/reference-workload-analyzer-metrics.html"
+  - title: NetApp Console 로컬 배포를 관리하고 모니터링합니다.
+    entries:
+    - title: NetApp Console 로컬 배포 관리에 대해 알아보세요.
+      url: "/concept-administer-netapp-console-local.html"
+    - title: NetApp Console 로컬 배포 작업 감사
+      url: "/task-audit-console-activity.html"
+    - title: 라이센스
+      url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
+    - title: NetApp Console 유지 관리
       entries:
-      - title: 도움말 보기
-        url: "/task-get-help.html"
+      - title: NetApp Console VM을 유지 관리합니다.
+        url: "/task-console-local-vm-config.html"
+    - title: 사용자 및 접근 권한 관리
+      entries:
+      - title: 멤버 액세스 관리(멤버 중심)
+        url: "/task-iam-manage-roles.html"
+      - title: 플리트 액세스 할당 관리(플리트 중심)
+        url: "/task-iam-users-fleets-assign.html"
+      - title: 멤버 보안 관리
+        url: "/task-manage-member-security.html"
+  - title: 참조
+    entries:
+    - title: NetApp Console 로컬 배포 API
+      entries:
+      - title: 조직 및 플릿 ID
+        url: "/task-iam-rename-organization.html"
+      - title: 콘솔 로컬 배포 API 참조
+        url: https://docs.netapp.com/us-en/console-local-automation/index.html
+    - title: 지원되는 LLM 제공자 및 모델
+      url: "/reference-llm-supported-models.html"
+    - title: 지원되는 콘솔 어시스턴트 작업
+      url: "/reference-console-assistant-operations.html"
+    - title: ONTAP 알림 참조
+      url: "/reference-ontap-alerts.html"
+    - title: 클러스터 보안 규정 준수 범주
+      url: "/reference-cluster-compliance-categories.html"
+    - title: 스토리지 VM 보안 규정 준수 범주
+      url: "/reference-svm-compliance-categories.html"
+  - title: 지식 및 지원
+    entries:
+    - title: 도움말 보기
+      url: "/task-get-help.html"
   - title: 법적 고지
     url: "/legal-notices.html"

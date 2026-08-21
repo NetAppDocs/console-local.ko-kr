@@ -101,17 +101,18 @@ summary: NetApp Console 로컬 배포에서 스토리지 클래스와 스토리�
 
 스토리지 클래스는 플릿과 연결됩니다. 스토리지 클래스를 플릿과 연결하면 해당 클래스는 플릿 내의 모든 프로비저닝에서 사용할 수 있게 됩니다. 이를 통해 플릿에 프로비저닝된 모든 워크로드가 동일한 표준을 따르게 되므로, 플릿은 관련 클러스터 전반에 걸쳐 일관된 스토리지 동작을 구현하는 핵심적인 방법이 됩니다.
 
-함대 구성 방법에 대한 자세한 내용은 link:concept-manage-storage.html["NetApp Console 로컬 배포에서 플릿 관리에 대해 알아보십시오."]을 참조하십시오.
+link:concept-manage-storage.html["NetApp Console 로컬 배포에서 플릿 관리에 대해 알아보십시오."].
 
 
 
 [[where-to-go-next]]
 == 다음 단계
 
-* 함대 조직에 대해 알아보려면 link:concept-manage-storage.html["NetApp Console 로컬 배포에서 플릿 관리에 대해 알아보십시오."]을 참조하십시오.
-* 정책 및 스토리지 클래스를 생성하려면 link:task-storage-class-manage.html["스토리지 클래스 및 정책 관리"]을 참조하십시오.
+* link:concept-manage-storage.html["NetApp Console 로컬 배포에서 플릿 관리에 대해 알아보십시오."].
+* link:task-storage-class-manage.html["스토리지 클래스 및 정책 관리"].
 * link:task-provisioning-manual.html["수동으로 스토리지 프로비저닝"]
 * link:task-provisioning-automated.html["스토리지 자동 제공"]
 * link:task-provisioning-agentic.html["AI 지원을 통한 스토리지 제공"]
-* 드리프트 분석 및 해결 방법은 link:task-storage-class-drift-remediate.html["스토리지 클래스 드리프트 수정"]을 참조하십시오.
+* link:reference-console-assistant-operations.html["지원되는 Console 어시스턴트 작업 보기"]
+* link:task-storage-class-drift-remediate.html["스토리지 클래스 드리프트 문제를 해결하는 방법을 알아보십시오."]
 
