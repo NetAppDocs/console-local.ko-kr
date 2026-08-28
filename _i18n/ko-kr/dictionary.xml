@@ -2468,27 +2468,19 @@
   <block id="a9000c4acfd5c08b7b8d7de29052aac5" category="list-text">분석기가 수요 증가와 동시에 용량 또는 스냅샷이 급격히 증가하는 것을 보여주는 경우, 해당 증가가 볼륨에 어떤 영향을 미칠 수 있는지 파악하기 위해 용량 및 스냅샷 지표를 검토하십시오.</block>
   <block id="42a91a5617368256a8de8b25fe27c329" category="paragraph"><block ref="f7c67828ff7f607ca1bc8919fb69ebbf" category="inline-link-macro-rx"></block>. <block ref="9e153fbb74c19e5f630133420be99e05" category="inline-link-macro-rx"></block>.</block>
   <block id="f75243783aae9e7bfb7abafe2d6d3b8c" category="summary">감사 페이지에서 사용자 활동(UI 및 API에서 시작된 활동 모두 포함)을 감사하고 콘솔에서 수행하는 작업 상태를 모니터링하여 해결해야 할 문제가 있는지 확인할 수 있습니다. 감사 페이지에서 상태를 확인하거나 감사 로그를 자체 syslog 서버로 전송하도록 구성할 수 있습니다.</block>
-  <block id="58c54c7b590a741efbd405c94ded9c1b" category="paragraph">감사 페이지에서 UI와 API를 통해 시작된 사용자 활동을 모두 감사할 수 있으며, NetApp Console 로컬 배포에서 작업 상태와 작업을 시작한 사용자를 모니터링할 수 있습니다.</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">필수 역할</block>
   <block id="e0eda6c794ad821fdacf3da5db44cb48" category="paragraph">슈퍼 관리자, 조직 관리자, 폴더 및 플릿 관리자, 운영 지원 분석가, 슈퍼 뷰어, 조직 뷰어 또는 폴더 및 플릿 뷰어. <block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>.</block>
-  <block id="897a81a7274c262992e7cc7f6867adf4" category="paragraph">콘솔 로컬 배포에서 감사 활동을 확인하거나, 감사 로그를 CSV 파일로 다운로드하거나, 웹훅을 사용하여 감사 로그를 자체 syslog 서버로 전송하도록 구성할 수 있습니다.</block>
   <block id="da8be55f3871d0a372174a9f477823f0" category="section-title">Audit 페이지에서 사용자 활동 감사</block>
-  <block id="9db935187270e9463d3c97a81c631027" category="paragraph">감사 페이지를 사용하여 누가 작업을 수행했는지 또는 작업 상태를 확인할 수 있습니다.</block>
-  <block id="f5176b3b2c78c79f2d8d2a9fce59ec07" category="paragraph">감사 페이지에는 사용자가 조직 내에서 완료한 작업이 표시됩니다. 예를 들어, 누가 조직에 구성원을 추가했는지, 플릿이 성공적으로 삭제되었는지 등을 확인할 수 있으며, 사용자가 조직에서 수행한 다른 스토리지 관리 작업도 볼 수 있습니다.</block>
   <block id="b724b6f0e9bd6d4851344d51f2cb40fc" category="paragraph">감사 로그에는 다음 서비스에 대한 활동 내역이 표시됩니다.</block>
   <block id="df9f3a2c2e961fb8338278c76b2e448a" category="list-text">테넌트 관리: 사용자 추가, 플릿 생성, 리소스 연결 등 조직 관리와 관련된 작업입니다.</block>
   <block id="4185957ddf7d1b5e3043c21f93f9b6d3" category="list-text">스토리지 관리: 스토리지 리소스 관리와 관련된 작업입니다.</block>
   <block id="740519dc6dd7c95dc5a661caaddd08a0" category="list-text">연합: 연합 생성, 연합 조직 추가 또는 제거 등 연합 관리와 관련된 작업입니다.</block>
   <block id="aa46e79c9c39c9b3aa215604efa5eb2c" category="list-text">*관리 &gt; 감사*를 선택합니다.</block>
-  <block id="e8bcacc75837d7d116d27b0912ef8827" category="list-text">표 위에 있는 필터를 사용하여 표에 표시되는 작업을 변경합니다.</block>
-  <block id="3031af9277fd81e368c5bfe8edccd8e5" category="paragraph">예를 들어, *서비스* 필터를 사용하여 특정 서비스와 관련된 작업을 표시하거나, *사용자* 필터를 사용하여 특정 사용자 계정과 관련된 작업을 표시할 수 있습니다.</block>
   <block id="a2d62fc9ff55ca3578bca22a03bfeb4e" category="section-title">ID 및 액세스 관리 작업에 대한 감사 로그 필터링</block>
-  <block id="b47972fc47da176fee2b5945d1512385" category="paragraph">멤버 추가, 플릿 생성 또는 리소스 삭제 등 조직 관리와 관련된 작업만 보려면 Tenancy 서비스별로 감사 로그를 필터링하십시오.</block>
   <block id="4bff463066dd752ee016143b8a1f56a6" category="list-text">필터를 사용하여 결과를 좁힙니다. *서비스*를 선택한 다음 *테넌트*를 선택합니다.</block>
   <block id="388dadc2c14bab87b8bcc62f6c76a95d" category="list-text">다른 필터를 사용하여 결과를 더욱 세분화할 수 있습니다.</block>
   <block id="c9726ff4f70650c857eaf23bb51de567" category="paragraph">예를 들어, *사용자* 필터를 사용하여 특정 사용자 계정이 수행한 IAM 작업을 표시할 수 있습니다.</block>
   <block id="5393c2b8908e1f48ca31ccf7d8bb057c" category="section-title">감사 페이지에서 감사 로그 다운로드</block>
-  <block id="95e9b23238ddd8479992115173ab7048" category="paragraph">감사 페이지에서 감사 로그를 CSV 파일로 다운로드할 수 있습니다. 이를 통해 조직 내 사용자가 수행하는 작업의 기록을 유지할 수 있습니다. 다운로드한 CSV 파일에는 감사 페이지의 필터 설정이나 표시 열과 관계없이 모든 감사 로그 열이 포함됩니다.</block>
   <block id="a485c1defdaf491b2f5cf7219289d8cc" category="list-text">*감사* 페이지에서 표의 오른쪽 상단에 있는 다운로드 아이콘을 선택합니다.</block>
   <block id="61698078caca443ab3276eaf6da68c26" category="doc">NetApp Console 로컬 배포에서 NetApp Console 어시스턴트 사용</block>
   <block id="59142dd8097fc5d816523b76490538ee" category="paragraph">NetApp Console 로컬 배포에서 NetApp Console 어시스턴트를 사용하여 스토리지를 관리하고 자연어로 답변을 얻으십시오. 필요한 사항을 일반 언어로 설명하면 NetApp Console 로컬 배포가 스토리지 정책 및 역할 기반 액세스 내에서 해당 작업을 수행합니다.</block>
@@ -3715,4 +3707,13 @@
   <block id="beb0e01e7e36ff62ee977dd31ad8b0c7" category="list-text">도우미의 응답을 따르세요. 요청에 따라 도우미는 정보를 반환하거나, 추가 정보를 요청하거나, 작업을 수행하기 전에 확인을 요청할 수 있습니다.</block>
   <block id="69200085693b2c07a9fd57550280affd" category="paragraph">스토리지 환경을 변경하지 않고 허용된 범위 내에서 용량 및 성능 상태를 조사합니다. 파악하려는 리소스, 범위, 메트릭 및 기간을 지정하는 읽기 전용 질문을 입력하십시오. 어시스턴트가 지원되는 메트릭에 대한 분석 결과를 반환하며 스토리지를 변경하지 않습니다.</block>
   <block id="a320b4ddc74c3e0d5cf1e99a74a477c7" category="list-text">*문제 해결* 등 권장되는 해결 조치를 선택하십시오.</block>
+  <block id="0357e7ee5d63c9b015d917447bd17e44" category="paragraph">규정 준수 검토 중에 관리 활동을 문서화하여 액세스 변경 사항을 확인하고 NetApp Console 로컬 배포 전반에 걸쳐 작업 기록을 보존하십시오.</block>
+  <block id="a2f5eaf80bcdf173527dfc64a6a64416" category="paragraph">콘솔 로컬 배포에서 감사 활동을 확인하고 감사 로그를 CSV 파일로 다운로드할 수 있습니다.</block>
+  <block id="12b45e42c264512a3833dccc0d3bcf22" category="paragraph">인시던트 해결 또는 운영 책임 확인을 위해 NetApp Console 로컬 배포 전반에 걸쳐 변경 사항을 추적하려면 관리 활동을 모니터링하십시오.</block>
+  <block id="c82e61f9a450b60bf8f88d80b2002367" category="paragraph">감사 페이지에는 사용자가 조직 내에서 완료한 작업이 표시됩니다. 예를 들어, 누가 조직에 구성원을 추가했는지 확인하거나, 사용자가 플릿을 삭제했는지 확인하거나, 사용자가 조직에서 수행하는 기타 스토리지 관리 작업을 볼 수 있습니다.</block>
+  <block id="89c6b9f0a19ad66cc2a968e4012a1cd1" category="list-text">표 위의 필터를 사용하여 시간 범위, 서비스, 작업, 리소스, 사용자 또는 상태별로 감사 활동을 좁힐 수 있습니다.</block>
+  <block id="a4fd3a9f5e77f8f43da93716404f70b5" category="paragraph">감사 기록에는 사용자의 신원을 확인할 수 있는 경우 해당 작업을 수행한 사용자가 표시됩니다. 사용자의 신원을 확인할 수 없는 경우에는 이름 대신 사용자의<block ref="1cd101a4da14a833018679c5f52a1b96" prefix=" " category="inline-code"></block> 정보가 표시됩니다.</block>
+  <block id="4e1a1e7b8efe108b690da878451d0a8b" category="paragraph">예를 들어, *서비스* 필터를 사용하여 특정 서비스와 관련된 작업을 표시하거나 *사용자* 필터를 사용하여 특정 사용자 계정과 관련된 작업을 표시할 수 있습니다.</block>
+  <block id="ae8c879a42f4e5075028b4c740849cdf" category="paragraph">조직 리소스를 누가 수정했는지 확인하고 정확한 보안 조사를 지원하기 위해 액세스 관리 변경 사항을 검토합니다.</block>
+  <block id="1c0679d5195b4dd09500e158593c6031" category="paragraph">규정 준수 검토 및 향후 사고 조사에 도움이 되도록 조직 활동에 대한 독립적인 기록을 보존하십시오. 다운로드한 CSV 파일에는 필터를 적용하거나 표시되는 열을 변경하더라도 모든 감사 로그 열이 포함됩니다.</block>
 </blocks>
