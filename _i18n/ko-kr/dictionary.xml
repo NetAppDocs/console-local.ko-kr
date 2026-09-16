@@ -453,8 +453,6 @@
   <block id="c689fa25946d46da8f6a7efbcd7168ea" category="paragraph">에이전트는 <block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block>을 사용하여 <block ref="a23365e1ae67810a7446b65d3be9a5d0" prefix=" " category="inline-code"></block> 디렉터리와 그 내용을 설치합니다.</block>
   <block id="bb10ef2c23f410792fcbd03b913a73b2" category="list-text"><block ref="ca905eb4a00d34150573153a09e2e79b" prefix="" category="inline-code"></block>: 40GiB의 여유 공간이 필요합니다.</block>
   <block id="27ff1f9070d810259fd05323c4e31904" category="paragraph">콘솔 에이전트는 Docker 또는 Podman이 이 디렉터리 내에 컨테이너를 생성하도록 설계되었기 때문에<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block> 이 공간이 필요합니다. 구체적으로, 컨테이너는<block ref="af5045a6e72956f67984a97cd3e8b9da" prefix=" " category="inline-code"></block> 디렉터리에 생성됩니다. 외부 마운트 또는 심볼릭 링크는 이 공간에서 작동하지 않습니다.</block>
-  <block id="57d8ea3b46119392eb93bf8ac3897270" category="list-text">CPU: 16코어 또는 16개의 vCPU</block>
-  <block id="66359cf2dd3a32d550ed76b685e652e1" category="list-text">RAM: 64 GB</block>
   <block id="680bf96524219dc64fa3e3d6074bf710" category="list-text">디스크 공간: 596GB (씩 프로비저닝 권장)</block>
   <block id="6fc0cd97e3282b970c695d7dbeebf3f2" category="list-text">vSphere 7.0u3 이상, 가상 하드웨어 버전 19 이상</block>
   <block id="fea0f702d4271201382c08e403cebafd" category="admonition">콘솔 에이전트는 UID 및 GID 범위 19000~19200을 예약합니다. 이 범위는 고정되어 있으며 수정할 수 없습니다. 호스트에서 타사 소프트웨어가 이 범위 내의 UID 또는 GID를 사용하는 경우 에이전트 설치가 실패합니다. NetApp은 충돌을 방지하기 위해 타사 소프트웨어가 없는 호스트를 사용할 것을 권장합니다.</block>
@@ -3512,7 +3510,6 @@
   <block id="30ed16d592d987bc97f9c257fb0d026c" category="list-text">필요한 경우 LLM 공급자 계정의 사용자 이름 또는 ID입니다.</block>
   <block id="e90cfbea605d047e2c768be5cc0d5d90" category="list-text">콘솔 도우미를 읽기 전용 모드로 열고 기본 쿼리를 실행합니다.</block>
   <block id="ddbbb4fd6daa8474cc88e6beb3919a85" category="list-text">*콘솔 도우미*를 *읽기/쓰기* 모드로 열고 스토리지 변경 작업 실행 전에 사용자 확인이 필요한지 확인하십시오.</block>
-  <block id="f9fe4a5426c609bf7ec63303066954e3" category="list-text">ESXi 호스트에서는 VM이 시작될 때 CPU와 메모리가 할당되는 것이 아니라 예약됩니다. 대상 호스트에 최소 16개의 CPU 코어와 64GB를 예약되지 않은 용량으로 사용할 수 있는지 확인하십시오. 호스트에 기존 VM 예약이 있으면 사용 가능한 용량이 줄어듭니다.</block>
   <block id="fb2aa2f24e94d02ba0aa39b5b1953b02" category="list-text">데이터 저장소는 최소 디스크 쓰기 성능 요건을 충족해야 합니다. fsync p99 쓰기 지연 시간은 20ms 이하, 4K 랜덤 쓰기 IOPS는 200 이상이어야 합니다. 지연 시간이 50ms를 초과하거나 IOPS가 30 미만이면 배포가 실패합니다.</block>
   <block id="bc30837cb3bcee1ef470300a93faccd1" category="list-text">IPv6는 지원되지 않습니다. 고정 IPv4 주소가 필요합니다.</block>
   <block id="2938c9aef13e6b9e5ef64008f86cbed9" category="summary">NetApp Console 로컬 배포 OVA는 자체 내부 방화벽을 관리합니다. 환경에서 VM에 외부 방화벽 정책이 적용되는 경우 관리 호스트에서 다음 인바운드 포트에 접근할 수 있는지 확인하십시오.</block>
@@ -3716,4 +3713,7 @@
   <block id="4e1a1e7b8efe108b690da878451d0a8b" category="paragraph">예를 들어, *서비스* 필터를 사용하여 특정 서비스와 관련된 작업을 표시하거나 *사용자* 필터를 사용하여 특정 사용자 계정과 관련된 작업을 표시할 수 있습니다.</block>
   <block id="ae8c879a42f4e5075028b4c740849cdf" category="paragraph">조직 리소스를 누가 수정했는지 확인하고 정확한 보안 조사를 지원하기 위해 액세스 관리 변경 사항을 검토합니다.</block>
   <block id="1c0679d5195b4dd09500e158593c6031" category="paragraph">규정 준수 검토 및 향후 사고 조사에 도움이 되도록 조직 활동에 대한 독립적인 기록을 보존하십시오. 다운로드한 CSV 파일에는 필터를 적용하거나 표시되는 열을 변경하더라도 모든 감사 로그 열이 포함됩니다.</block>
+  <block id="4e2631c6a272a31e284ef25e345044a4" category="list-text">CPU: 16코어 또는 16개의 vCPU(예약됨)</block>
+  <block id="1c79bf4bb50e04e0a86202e73216460a" category="list-text">RAM: 64 GB (예약됨)</block>
+  <block id="43e1d149efe94e65609c12dcb5cab779" category="list-text">ESXi 호스트에서는 가상 머신이 시작될 때 CPU와 메모리가 할당되는 것이 아니라 예약됩니다. 대상 호스트에 최소 16개의 CPU 코어와 64GB의 예약 용량이 확보되어 있는지 확인하십시오. 호스트에 이미 예약된 가상 머신이 있는 경우 사용 가능한 용량이 줄어듭니다.</block>
 </blocks>
