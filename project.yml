@@ -169,8 +169,8 @@ sidebar:
       url: "/concept-administer-netapp-console-local.html"
     - title: NetApp Console 로컬 배포 작업 감사
       url: "/task-audit-console-activity.html"
-    - title: 라이센스
-      url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
+    - title: NetApp Console 로컬 배포에서 라이선스 관리
+      url: "/task-manage-licenses.html"
     - title: NetApp Console 유지 관리
       entries:
       - title: NetApp Console VM을 유지 관리합니다.

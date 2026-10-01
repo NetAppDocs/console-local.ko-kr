@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: task-manage-licenses.html 
+keywords: licenses, licensing, NetApp Backup and Recovery, NetApp Console local deployment, BYOL, bring-your-own-license, direct license 
+summary: NetApp Console 로컬 배포에서 NetApp Backup and Recovery의 직접 라이선스를 관리합니다. 
+---
+= NetApp Console 로컬 배포에서 라이선스 관리
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 로컬 배포에서 NetApp Backup and Recovery 라이선스를 관리하십시오. 이 라이선스는 NetApp Console 조직과 연결된 모든 시스템에서 사용할 수 있는 플로팅 라이선스입니다. 라이선스가 충분한 백업 용량을 제공하는 경우 다른 라이선스를 구매할 필요가 없습니다. 라이선스를 추가, 업데이트 및 제거할 수 있으며 사용된 용량, 라이선스 용량 및 라이선스 만료일을 확인할 수 있습니다.
+
+
+NOTE: NetApp Console 로컬 배포에는 라이선스가 필요하지 않습니다. NetApp Backup and Recovery는 현재 NetApp Console 로컬 배포에서 직접 라이선스를 지원하는 유일한 서비스입니다. 이 라이선스를 BYOL(Bring Your Own License) 라이선스라고도 합니다. 자세한 내용은 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetApp 백업 및 복구 라이선스 문서"^]을 참조하십시오.
+
+.필수 액세스 역할
+콘솔 로컬 배포에서 라이선스를 관리하려면 Super admin 또는 Organization admin 역할이 있어야 합니다.
+
+
+
+[[add-a-license]]
+== 라이선스를 추가합니다
+
+라이선스 파일을 업로드하여 Console 조직에 라이선스를 추가합니다.
+
+.시작하기 전에
+라이선스 파일을 생성하려면 클라우드 서비스 일련 번호와 NetApp Console 조직 ID가 필요합니다.
+
+.단계
+. *관리 > 라이선스*를 선택합니다.
+. *직접 라이센스* 탭을 선택합니다.
+. *라이선스 추가*를 선택합니다.
+. NetApp 지원 사이트의 *시스템 > 소프트웨어 라이선스* 탭으로 이동하여 라이선스 파일을 생성하십시오.
+. *라이선스 추가* 대화 상자로 돌아가서 *업로드*를 선택하고 라이선스 파일을 선택합니다.
+. 라이선스를 설치하려면 *라이선스 추가*를 선택하십시오.
+
+
+해당 라이선스는 *직접 라이선스* 표에 표시되며, *라이선스 및 용량 배분* 요약이 업데이트됩니다.
+
+
+
+[[view-license-status]]
+== 라이선스 상태 보기
+
+*직접 라이선스* 탭에서 설치된 라이선스와 해당 상태를 확인하십시오. 표에는 서비스, 일련 번호, 유형, 사용 용량, 라이선스 용량 및 라이선스 만료일이 표시됩니다. *라이선스 및 용량 분배* 요약에는 설치된 라이선스 수와 NetApp Backup and Recovery에 할당된 용량이 표시됩니다.
+
+각 행의 작업 메뉴 image:icon-action.png["점 세 개가 있는 아이콘"] 에서 라이선스를 업데이트하거나 제거할 수 있습니다.
+
+.단계
+. *관리 > 라이선스*를 선택합니다.
+. *직접 라이센스* 탭을 선택합니다.
+. 표와 *License and Capacity Distribution* 요약을 검토하십시오.
+
+
+
+
+[[update-a-license]]
+== 라이센스 업데이트
+
+예를 들어 라이선스가 갱신되거나 용량 또는 만료일이 변경되는 경우 Console 조직에서 기존 라이선스를 교체합니다.
+
+.단계
+. *관리 > 라이선스*를 선택합니다.
+. *직접 라이센스* 탭을 선택합니다.
+. 업데이트할 라이선스의 작업 메뉴 image:icon-action.png["점 세 개가 있는 아이콘"]를 선택하고 *라이선스 업데이트*를 선택합니다.
+. *라이선스 업데이트* 대화 상자에서 *업로드*를 선택하고 새 라이선스 파일을 선택합니다.
+. 업데이트를 확인하려면 *라이선스 업데이트*를 선택합니다.
+
+
+라이선스가 업데이트되면 선택한 행에 새 라이선스 용량과 만료일이 표시됩니다. *라이선스 및 용량 배분* 요약도 업데이트됩니다.
+
+
+
+[[remove-a-license]]
+== 라이선스를 제거합니다
+
+콘솔 조직에서 라이선스를 제거하십시오. 라이선스 제거는 영구적입니다. 제거된 라이선스는 더 이상 NetApp Backup and Recovery에 용량이나 사용 기간을 제공하지 않습니다. 라이선스가 만료되면 기존 정책에 따른 백업 및 복원은 계속되지만, 새 백업 정책을 생성하거나 추가 워크로드 및 데이터스토어에 대한 보호를 확장할 수 없습니다.
+
+.단계
+. *관리 > 라이선스*를 선택합니다.
+. *직접 라이센스* 탭을 선택합니다.
+. 제거하려는 라이선스의 작업 메뉴 image:icon-action.png["점 세 개가 있는 아이콘"] 를 선택하고 *라이선스 제거*를 선택하십시오.
+. *라이선스 제거* 확인 대화 상자에서 안내 메시지에 표시된 일련 번호를 확인하십시오.
+. 라이선스를 영구적으로 제거하려면 *제거*를 선택하십시오.
+
+
+해당 라이선스는 *직접 라이선스* 테이블에서 제거되고 *라이선스 및 용량 배분* 요약이 업데이트됩니다.

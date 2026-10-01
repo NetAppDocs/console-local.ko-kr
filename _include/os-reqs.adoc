@@ -169,7 +169,7 @@ AWS EC2 인스턴스 유형:: 위의 CPU 및 RAM 요구 사항을 충족하는 �
 IMDSv2 사용 시 PUT 응답 홉 제한:: EC2 인스턴스에서 IMDSv2가 활성화된 경우(새 EC2 인스턴스의 기본 설정임), 인스턴스의 PUT 응답 홉 제한을 3으로 변경해야 합니다. EC2 인스턴스에서 이 제한을 변경하지 않으면 에이전트를 설정하려고 할 때 UI 초기화 오류가 발생합니다.
 +
 --
-* link:task-require-imdsv2.html["Amazon EC2 인스턴스에서 IMDSv2 사용을 필수로 지정합니다."]
+* https://docs.netapp.com/us-en/console-setup-admin/task-require-imdsv2.html["Amazon EC2 인스턴스에서 IMDSv2 사용을 필수로 지정합니다."^]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWS 문서: PUT 응답 홉 제한 변경"^]
 
 
