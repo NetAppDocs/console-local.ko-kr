@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-llm-connect.html 
-keywords: LLM, AI, connect, large language model, console assistant, openai, openai-compatible, proxy, netapp console 
+keywords: LLM, AI, connect, large language model, console assistant, openai, openai-compatible proxy, netapp console 
 summary: 지원되는 LLM 엔드포인트를 연결하여 NetApp Console 로컬 배포에서 Console 도우미 및 AI 기반 관리 기능을 활성화하십시오. 
 ---
 = LLM을 연결하고 NetApp Console 로컬 배포에서 NetApp Console 어시스턴트를 활성화합니다
@@ -37,7 +37,7 @@ LLM을 연결하려면 공급자 경로를 선택하고 엔드포인트 세부 �
 
 콘솔 도우미가 조직에 구성된 거버넌스 경계 내에서 작동할 수 있도록 공급자 자격 증명과 엔드포인트 액세스 권한을 준비하십시오.
 
-* 릴리스 및 엔드포인트에서 지원하는 제공업체 유형 결정: OpenAI, OpenAI 호환 또는 Anthropic.
+* 제공업체 유형 선택: OpenAI, OpenAI 호환 프록시 또는 Anthropic
 * 선택한 공급자 경로에 대한 유효한 API 키입니다.
 * 제공업체 경로의 엔드포인트 URL입니다.
 * 필요한 경우 LLM 공급자 계정의 사용자 이름 또는 ID입니다.
@@ -59,17 +59,16 @@ link:reference-llm-supported-models.html["NetApp Console 로컬 배포에서 지
 . 메뉴를 선택한 다음 *편집*을 선택합니다.
 . *제공자 유형*에서 제공자 유형을 선택하십시오.
 +
-link:concept-llm-integration.html["NetApp Console 로컬 배포에서 LLM 통합에 대해 알아보세요."].
-
-. 공급자 엔드포인트를 입력하라는 메시지가 표시되면 선택한 공급자 경로의 엔드포인트 URL을 입력하십시오.
-. *사용자 이름* 필드에 공급자 경로에서 요구하는 경우 사용자 이름 또는 SSO ID를 입력하십시오.
-. *API 키* 필드에 선택한 공급자 경로의 API 키를 붙여넣습니다.
-. 목록에서 모델을 선택합니다.
-. 구성을 검토한 다음 *저장*을 선택합니다.
-+
-구성을 저장하기 전에 공급자 유형, 엔드포인트 URL, API 키 및 선택한 모델을 검토하십시오.
+** 직접 OpenAI 모델에 액세스하려면 *OpenAI*를 사용하십시오.
+** 엔터프라이즈 게이트웨이 또는 프록시 서비스를 사용하기 위한 *OpenAI 호환 프록시*입니다.
+** *Anthropic*은 Anthropic의 Claude 모델을 위한 제품입니다.
 
 
+
+
+link:concept-llm-integration.html["NetApp Console 로컬 배포에서 LLM 통합에 대해 알아보세요."]. . 공급자 엔드포인트를 입력하라는 메시지가 표시되면 선택한 공급자 경로의 엔드포인트 URL을 입력하십시오. . *사용자 이름* 필드에 공급자 경로에서 요구하는 경우 사용자 이름 또는 SSO ID를 입력하십시오. . *API 키* 필드에 선택한 공급자 경로의 API 키를 붙여넣습니다. . 목록에서 모델을 선택합니다. . 구성을 검토한 다음 *저장*을 선택합니다.
+
++ 구성을 저장하기 전에 공급자 유형, 엔드포인트 URL, API 키 및 선택한 모델을 검토하십시오.
 
 
 
