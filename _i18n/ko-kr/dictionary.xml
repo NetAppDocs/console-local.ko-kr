@@ -3738,6 +3738,10 @@
   <block id="06b44c661a84a26e0ce1a017b3a10bf5" category="list-text">엔터프라이즈 게이트웨이 또는 프록시 서비스를 사용하기 위한 *OpenAI 호환 프록시*입니다.</block>
   <block id="06cec8d93319a0a41f62ded52e6e388b" category="list-text">*OpenAI 호환 프록시* — 엔터프라이즈 게이트웨이 또는 프록시 서비스를 사용하여 지원되는 모델에 연결합니다.</block>
   <block id="b1cda2c8041bdb2e7c757f55bc07d4e0" category="list-text">제공업체 유형 선택: OpenAI, OpenAI 호환 프록시 또는 Anthropic</block>
-  <block id="a9e0ed29bcf0eb9114558aea8e38b3dd" category="paragraph"><block ref="ab74dc1a527eb39bc2a75230306dc5a0" category="inline-link-macro-rx"></block>. . 공급자 엔드포인트를 입력하라는 메시지가 표시되면 선택한 공급자 경로의 엔드포인트 URL을 입력하십시오. . *사용자 이름* 필드에 공급자 경로에서 요구하는 경우 사용자 이름 또는 SSO ID를 입력하십시오. . *API 키* 필드에 선택한 공급자 경로의 API 키를 붙여넣습니다. . 목록에서 모델을 선택합니다. . 구성을 검토한 다음 *저장*을 선택합니다.</block>
-  <block id="3202e0a5b24589a1f3bedee597ddb7d9" category="paragraph">+ 구성을 저장하기 전에 공급자 유형, 엔드포인트 URL, API 키 및 선택한 모델을 검토하십시오.</block>
+  <block id="cf72c8170aef768cae71f4e2a449acaf" category="list-text">공급자 엔드포인트를 입력하라는 메시지가 표시되면 선택한 공급자 경로의 엔드포인트 URL을 입력하십시오.</block>
+  <block id="d78f26f4373007724d98776e20cd9322" category="list-text">*사용자 이름* 필드에 공급자 경로에서 요구하는 경우 사용자 이름 또는 SSO ID를 입력하십시오.</block>
+  <block id="b2914c614292093e506dbf4a10fd671c" category="list-text">*API 키* 필드에 선택한 공급자 경로의 API 키를 붙여넣습니다.</block>
+  <block id="73d0a6de3953116536b1666d0db7c78a" category="list-text">목록에서 모델을 선택합니다.</block>
+  <block id="f646c307a4396cd41f6593ce84be57d7" category="list-text">구성을 검토한 다음 *저장*을 선택합니다.</block>
+  <block id="26033ba1ab8ce1319bdb0de963d1cdcc" category="paragraph">구성을 저장하기 전에 공급자 유형, 엔드포인트 URL, API 키 및 선택한 모델을 검토하십시오.</block>
 </blocks>
